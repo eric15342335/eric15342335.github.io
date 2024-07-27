@@ -1,0 +1,28 @@
+/* Inter font (https://fonts.google.com/specimen/Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    /* We use system-ui and -apple-system as fallbacks to ensure a native look
+    on different operating systems. system-ui provides a system font on
+    Windows and Linux, while -apple-system does the same for macOS and iOS */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Reset default margin to ensure consistent spacing across browsers */
+    margin: 0;
+    /* Add padding to create space around the content for better readability */
+    padding: 1.25em;
+    text-align: center;
+    /* Applies simple dark theme */
+    background-color: #111;
+    color: #eee;
+}
+.bottom-bar {
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
