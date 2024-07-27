@@ -1,5 +1,3 @@
-/* Inter font (https://fonts.google.com/specimen/Inter) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 body {
     /* We use system-ui and -apple-system as fallbacks to ensure a native look
     on different operating systems. system-ui provides a system font on
@@ -14,15 +12,30 @@ body {
     background-color: #111;
     color: #eee;
 }
+/* Bottom bar styles */
 .bottom-bar {
+    /* Add space above the bottom bar */
     margin-top: 20px;
+    /* Add padding to top and bottom elements, no padding on sides */
     padding: 10px 0;
+    /* Add a light gray border on top */
     border-top: 1px solid #eee;
+    /* Use flexbox for layout */
     display: flex;
+    /* Distribute space evenly between flex items */
     justify-content: space-between;
 }
 .contact-link {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+/* For anchor tags */
+a {
+    color: #aaf;
+    text-decoration: none; /* Removes underline when not hovered */
+}
+/*Add styles for hover state */
+a:hover {
+    text-decoration: underline;
 }
