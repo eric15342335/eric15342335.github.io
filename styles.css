@@ -12,9 +12,8 @@ body {
     background-color: #111;
     color: #eee;
 }
-/* Bottom bar styles */
-.bottom-bar {
-    /* Add space above the bottom bar */
+.separation-bar {
+    /* Add space above the bar */
     margin-top: 20px;
     /* Add padding to top and bottom elements, no padding on sides */
     padding: 10px 0;
@@ -25,14 +24,25 @@ body {
     /* Distribute space evenly between flex items */
     justify-content: space-between;
 }
-.contact-link {
+.center-element {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
+.course-table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #cfc;
+    border-collapse: collapse; /* Share borders between adjacent cells */
+}
+/* Cells border */
+.course-table th,
+.course-table td {
+    border: 1px solid #cfc;
+}
 /* For anchor tags */
 a {
-    color: #aaf;
+    color: #ccf;
     text-decoration: none; /* Removes underline when not hovered */
 }
 /*Add styles for hover state */
