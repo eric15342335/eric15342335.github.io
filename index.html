@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <!-- SEO and metadata -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="eric15342335 Github Pages">
   <meta name="keywords" content="eric15342335">
   <meta name="author" content="Eric">
+  <link rel="canonical" href="https://eric15342335.github.io/">
   <title>Eric's GitHub Pages</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css"
+    media="print" onload="this.media='all'">
+
+  <!-- Preload JavaScript -->
+  <link rel="preload" href="script.js" as="script">
+
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
     media="print" onload="this.media='all'">
-  <!-- End Google Fonts: Inter -->
-  <link rel="stylesheet" href="styles.css"
-    media="print" onload="this.media='all'">
-  <link rel="canonical" href="https://eric15342335.github.io/">
-  <link rel="icon" href="favicon.jpg">
+
+  <!-- Fallback for JavaScript-disabled browsers -->
+  <noscript>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+  </noscript>
 </head>
 <body>
   <header>
     <h1>Welcome to Eric's GitHub Pages</h1>
   </header>
+
   <main>
     <h2>Projects</h2>
     <p>
@@ -37,8 +49,10 @@
         [Documentation]
       </a>
     </p>
+
     <!-- Horizontal Separation -->
     <div class="separation-bar"></div>
+
     <!-- New section about courses -->
     <h2>Studied Courses</h2>
     <table class="course-table">
@@ -104,6 +118,7 @@
     </table>
     <!-- End table of courses -->
   </main>
+
   <!-- Content below the bottom bar -->
   <footer>
     <div class="separation-bar">
@@ -111,15 +126,25 @@
       rel="noopener noreferrer">
       Source Code
       </a>
-      <button id="Rickroll" class="center-element"
-        onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
-        aria-label="Surprise button">
+
+      <!-- Button for rickroll surprise, hidden when JavaScript is disabled -->
+      <noscript>
+        <style>
+          #rickroll-button {
+            display: none;
+          }
+        </style>
+      </noscript>
+      <button id="rickroll-button" class="center-element" aria-label="Surprise button">
         Click me
       </button>
+
       <a href="mailto:eric310@connect.hku.hk">
         Contact
       </a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
