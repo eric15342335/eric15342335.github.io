@@ -1,51 +1,8 @@
-:root {
-    --bg-color: #111;
-    --text-color: #eee;
-    --border-color: #beb;
-    --link-color: #aaf;
-}
-body {
-    /* We use system-ui and -apple-system as fallbacks to ensure a native look
-    on different operating systems. system-ui provides a system font on
-    Windows and Linux, while -apple-system does the same for macOS and iOS */
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    /* Reset default margin to ensure consistent spacing across browsers */
-    margin: 0;
-    /* Add padding to create space around the content for better readability */
-    padding: 1.25em;
-    text-align: center;
-    /* Applies simple dark theme */
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-.separation-bar {
-    /* Add space above the bar */
-    margin-top: 1.25em;
-    /* Add padding to top and bottom elements, no padding on sides */
-    padding: 0.625em 0;
-    /* Add a light gray border on top */
-    border-top: 1px solid var(--text-color);
-    /* Use flexbox for layout */
-    display: flex;
-    /* Distribute space evenly between flex items */
-    justify-content: space-between;
-}
 /* Center an element horizontally using absolute positioning */
 .center-element {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-}
-.course-table {
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid var(--border-color);
-    border-collapse: collapse; /* Share borders between adjacent cells */
-}
-/* Cells border */
-.course-table th,
-.course-table td {
-    border: 1px solid var(--border-color);
 }
 /* For anchor tags */
 a {
