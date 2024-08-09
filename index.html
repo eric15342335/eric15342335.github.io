@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="styles.css"
     media="print" onload="this.media='all'">
 
-  <!-- Preload JavaScript -->
-  <link rel="preload" href="script.js" as="script">
+  <!-- JavaScript -->
+  <script defer src="script.js"></script>
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,11 +45,26 @@
         /* Reset default margin to ensure consistent spacing across browsers */
         margin: 0;
         /* Add padding to create space around the content for better readability */
-        padding: 1.25em;
+        /* top | left and right | bottom */
+        padding: 1.25em 1.25em 5em;
         text-align: center;
         /* Applies simple dark theme */
         background-color: var(--bg-color);
         color: var(--text-color);
+    }
+    /* Horizontal Separation Bar */
+    .separation-bar {
+        /* Add space above the bar */
+        margin-top: 1.25em;
+        /* Add padding to top and bottom elements, no padding on sides */
+        /* top | left and right | bottom */
+        padding: 0.625em 0 0;
+        /* Add a light gray border on top */
+        border-top: 1px solid var(--text-color);
+        /* Use flexbox for layout */
+        display: flex;
+        /* Distribute space evenly between flex items */
+        justify-content: space-between;
     }
   </style>
 </head>
@@ -59,6 +74,13 @@
   </header>
 
   <main>
+    <!-- Curriculum Vitae -->
+    <a href="ChengHoMingCV.pdf" rel="noopener noreferrer" title="Download CV">
+      Download my CV
+    </a>
+
+    <div class="separation-bar"></div>
+
     <h2>Projects</h2>
     <p>
       Stock Market Simulator
@@ -74,21 +96,6 @@
       </a>
     </p>
 
-    <!-- Horizontal Separation -->
-    <style>
-      .separation-bar {
-          /* Add space above the bar */
-          margin-top: 1.25em;
-          /* Add padding to top and bottom elements, no padding on sides */
-          padding: 0.625em 0;
-          /* Add a light gray border on top */
-          border-top: 1px solid var(--text-color);
-          /* Use flexbox for layout */
-          display: flex;
-          /* Distribute space evenly between flex items */
-          justify-content: space-between;
-      }
-    </style>
     <div class="separation-bar"></div>
 
     <!-- New section about courses -->
@@ -195,7 +202,5 @@
       </a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
