@@ -1,3 +1,6 @@
+:root {
+    --link-color: #aaf;
+}
 /* Center an element horizontally using absolute positioning */
 .center-element {
     position: absolute;
