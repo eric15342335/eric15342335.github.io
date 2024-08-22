@@ -1,18 +1,18 @@
 :root {
-    --link-color: #aaf;
+  --link-color: #aaf;
 }
 /* Center an element horizontally using absolute positioning */
 .center-element {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* For anchor tags */
 a {
-    color: var(--link-color);
-    text-decoration: none; /* Removes underline when not hovered */
+  color: var(--link-color);
+  text-decoration: none; /* Removes underline when not hovered */
 }
 /*Add styles for hover state */
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

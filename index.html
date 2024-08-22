@@ -40,33 +40,33 @@
       --border-color: #beb;
     }
     body {
-        /* We use system-ui and -apple-system as fallbacks to ensure a native look
-        on different operating systems. system-ui provides a system font on
-        Windows and Linux, while -apple-system does the same for macOS and iOS */
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        /* Reset default margin to ensure consistent spacing across browsers */
-        margin: 0;
-        /* Add padding to create space around the content for better readability */
-        /* top | left and right | bottom */
-        padding: 1.25em 1.25em 5em;
-        text-align: center;
-        /* Applies simple dark theme */
-        background-color: var(--bg-color);
-        color: var(--text-color);
+      /* We use system-ui and -apple-system as fallbacks to ensure a native look
+      on different operating systems. system-ui provides a system font on
+      Windows and Linux, while -apple-system does the same for macOS and iOS */
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      /* Reset default margin to ensure consistent spacing across browsers */
+      margin: 0;
+      /* Add padding to create space around the content for better readability */
+      /* top | left and right | bottom */
+      padding: 1.25em 1.25em 5em;
+      text-align: center;
+      /* Applies simple dark theme */
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
     /* Horizontal Separation Bar */
     .separation-bar {
-        /* Add space above the bar */
-        margin-top: 1.25em;
-        /* Add padding to top and bottom elements, no padding on sides */
-        /* top | left and right | bottom */
-        padding: 0.625em 0 0;
-        /* Add a light gray border on top */
-        border-top: 1px solid var(--text-color);
-        /* Use flexbox for layout */
-        display: flex;
-        /* Distribute space evenly between flex items */
-        justify-content: space-between;
+      /* Add space above the bar */
+      margin-top: 1.25em;
+      /* Add padding to top and bottom elements, no padding on sides */
+      /* top | left and right | bottom */
+      padding: 0.625em 0 0;
+      /* Add a light gray border on top */
+      border-top: 1px solid var(--text-color);
+      /* Use flexbox for layout */
+      display: flex;
+      /* Distribute space evenly between flex items */
+      justify-content: space-between;
     }
   </style>
 </head>
@@ -103,15 +103,17 @@
     <!-- New section about courses -->
     <style>
       .course-table {
-          margin-left: auto;
-          margin-right: auto;
-          border: 1px solid var(--border-color);
-          border-collapse: collapse; /* Share borders between adjacent cells */
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid var(--border-color);
+        border-collapse: collapse; /* Share borders between adjacent cells */
+        margin-top: 0.5em; /* Add spacing above the table */
       }
       /* Cells border */
       .course-table th,
       .course-table td {
-          border: 1px solid var(--border-color);
+        border: 1px solid var(--border-color);
+        padding: 0.2em; /* Add padding inside cells for spacing */
       }
     </style>
     <h2>Studied Courses</h2>
