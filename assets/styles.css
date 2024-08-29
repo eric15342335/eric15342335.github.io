@@ -19,5 +19,5 @@ a:focus {
 }
 a:focus,
 button:focus {
-  outline: 2px solid #aaf;
+  outline: 2px solid var(--link-color);
 }
