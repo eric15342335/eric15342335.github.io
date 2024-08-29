@@ -13,6 +13,11 @@ a {
   text-decoration: none; /* Removes underline when not hovered */
 }
 /* Add styles for hover state */
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
+}
+a:focus,
+button:focus {
+  outline: 2px solid #aaf;
 }
