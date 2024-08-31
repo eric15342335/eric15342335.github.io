@@ -38,12 +38,10 @@
       --bg-color: #111;
       --text-color: #eee;
       --border-color: #beb;
+      --link-color: #aaf;
     }
     body {
-      /* We use system-ui and -apple-system as fallbacks to ensure a native look
-      on different operating systems. system-ui provides a system font on
-      Windows and Linux, while -apple-system does the same for macOS and iOS */
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', sans-serif;
       /* Reset default margin to ensure consistent spacing across browsers */
       margin: 0;
       /* Add padding to create space around the content for better readability */
@@ -68,6 +66,40 @@
       /* Distribute space evenly between flex items */
       justify-content: space-between;
     }
+    .course-table {
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid var(--border-color);
+      border-collapse: collapse; /* Share borders between adjacent cells */
+      margin-top: 0.5em; /* Add spacing above the table */
+    }
+    /* Cells border */
+    .course-table th,
+    .course-table td {
+      border: 1px solid var(--border-color);
+      padding: 0.2em; /* Add padding inside cells for spacing */
+    }
+    /* Center an element horizontally using absolute positioning */
+    .center-element {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    /* For anchor tags */
+    a {
+      color: var(--link-color);
+      text-decoration: none; /* Removes underline when not hovered */
+    }
+    /* Add styles for hover state */
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+    a:focus,
+    button:focus {
+      outline: 2px solid var(--link-color);
+    }
+
   </style>
 </head>
 <body>
@@ -101,21 +133,6 @@
     <div class="separation-bar"></div>
 
     <!-- New section about courses -->
-    <style>
-      .course-table {
-        margin-left: auto;
-        margin-right: auto;
-        border: 1px solid var(--border-color);
-        border-collapse: collapse; /* Share borders between adjacent cells */
-        margin-top: 0.5em; /* Add spacing above the table */
-      }
-      /* Cells border */
-      .course-table th,
-      .course-table td {
-        border: 1px solid var(--border-color);
-        padding: 0.2em; /* Add padding inside cells for spacing */
-      }
-    </style>
     <h2>Studied Courses</h2>
     <table class="course-table">
       <tr>
