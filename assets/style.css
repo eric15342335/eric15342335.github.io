@@ -7,11 +7,11 @@
   --floating-menu-hover-bg-color: #555;
 }
 
+/* Margin is outside the border, padding is inside the border */
+
 body {
   font-family: 'Inter', sans-serif;
-  /* Reset default margin to ensure consistent spacing across browsers */
   margin: 0;
-  /* Add padding to create space around the content for better readability */
   /* top | left and right | bottom */
   padding: 1.25em 1.25em 5em;
   padding-top: 50px;
@@ -68,41 +68,41 @@ a:focus, a:hover {
 }
 
 .floating-menu {
-  position: fixed;
+  position: fixed; /* Stay in place when scrolling */
   inset: 0 0 auto 0;
-  width: 100%;
+  width: 100%; /* Full width */
   background-color: var(--floating-menu-bg-color);
   z-index: 1000; /* Ensure the menu is on top of other elements */
 }
 
 .floating-menu li a {
-  display: block;
+  display: block; /* Block elements for full width */
   color: var(--text-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer; /* Change cursor on hover */
   transition: background-color 0.3s ease;  
 }
 
 .floating-menu ul, .floating-menu li  {
-  float: left;
-  list-style-type: none;
+  float: left; /* Align menu items horizontally */
+  list-style-type: none; /* Remove default list dots */
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .floating-menu li a:hover, .floating-menu li button:hover,
 .floating-menu li a:focus, .floating-menu li button:focus {
   background-color: var(--floating-menu-hover-bg-color);
-  outline: auto;
+  outline: auto; /* Add focus outline */
 }
 
 .sitemap-menu {
-  list-style-type: none;
+  list-style-type: none; /* Remove default list dots */
   line-height: 1.5;
   text-align: center;
   word-wrap: break-word;
