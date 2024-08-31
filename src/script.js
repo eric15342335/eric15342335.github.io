@@ -18,19 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('visibilitychange', handleVisibilityChange);
 });
 
+/**
+ * Redirects the user to the Rick Roll video if confirmed.
+ * If not confirmed, removes the Rick Roll button.
+ */
 const redirectToYouTube = () => {
   if (confirm(CONFIRM_MESSAGE)) {
     window.location.href = RICKROLL_URL;
   } else {
-    const button = document.getElementById(RICKROLL_BUTTON_ID);
-    if (button) {
-      button.remove();
-    } else {
-      console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found for removal.`);
-    }
+    removeRickrollButton();
   }
 };
 
+const removeRickrollButton = () => {
+  const button = document.getElementById(RICKROLL_BUTTON_ID);
+  if (button) {
+    button.remove();
+  } else {
+    console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found for removal.`);
+  }
+};
+
+/**
+ * Handles the visibility change of the document.
+ * If the document becomes hidden, sets the document title to COMEBACK_TITLE.
+ * If the document becomes visible again, sets the document title to ORIGINAL_TITLE.
+ */
 const handleVisibilityChange = () => {
   if (document.visibilityState === 'hidden') {
     document.title = COMEBACK_TITLE;
