@@ -1,0 +1,109 @@
+:root {
+  --bg-color: #111;
+  --text-color: #fff;
+  --border-color: #beb;
+  --link-color: #aaf;
+  --floating-menu-bg-color: #333;
+  --floating-menu-hover-bg-color: #555;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Reset default margin to ensure consistent spacing across browsers */
+  margin: 0;
+  /* Add padding to create space around the content for better readability */
+  /* top | left and right | bottom */
+  padding: 1.25em 1.25em 5em;
+  padding-top: 50px;
+  text-align: center;
+  /* Applies simple dark theme */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Horizontal Separation Bar */
+.separation-bar {
+  /* Add space above the bar */
+  margin-top: 1.25em;
+  /* Add padding to top and bottom elements, no padding on sides */
+  /* top | left and right | bottom */
+  padding: 0.625em 0 0;
+  /* Add a light gray border on top */
+  border-top: 1px solid var(--text-color);
+  display: flex;
+  /* Distribute space evenly between flex items */
+  justify-content: space-between;
+}
+
+.course-table {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--border-color);
+  border-collapse: collapse; /* Share borders between adjacent cells */
+  margin-top: 0.5em; /* Add spacing above the table */
+}
+
+/* Cells border */
+.course-table th,
+.course-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.2em;
+}
+
+/* For anchor tags */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:focus, a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+  transition: color 0.6s ease;
+}
+
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+.floating-menu {
+  position: fixed;
+  inset: 0 0 auto 0;
+  width: 100%;
+  background-color: var(--floating-menu-bg-color);
+  z-index: 1000; /* Ensure the menu is on top of other elements */
+}
+
+.floating-menu li a {
+  display: block;
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  
+}
+
+.floating-menu ul, .floating-menu li  {
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.floating-menu li a:hover, .floating-menu li button:hover,
+.floating-menu li a:focus, .floating-menu li button:focus {
+  background-color: var(--floating-menu-hover-bg-color);
+  outline: auto;
+}
+
+.sitemap-menu {
+  list-style-type: none;
+  line-height: 1.5;
+  text-align: center;
+  word-wrap: break-word;
+}

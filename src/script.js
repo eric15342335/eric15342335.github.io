@@ -2,20 +2,44 @@
 
 const RICKROLL_URL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 const CONFIRM_MESSAGE = 'Are you sure you want to leave this page?';
+const RICKROLL_BUTTON_ID = 'rickroll-button';
+const BUTTON_REMOVED_KEY = 'rickrollButtonRemoved';
+
 const ORIGINAL_TITLE = document.title;
 const COMEBACK_TITLE = `Come back to ${ORIGINAL_TITLE}!`;
-const RICKROLL_BUTTON_ID = 'rickroll-button';
 
-// Modifying button requires the DOM to be fully loaded
+const NAVBAR_HTML_PATH = 'assets/navbar.html';
+const NAVBAR_PLACEHOLDER_ID = 'nav-placeholder';
+
+const FOOTER_HTML_PATH = 'assets/footer.html';
+const FOOTER_PLACEHOLDER_ID = 'footer-placeholder';
+
 document.addEventListener('DOMContentLoaded', () => {
-  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
-  if (rickrollButton) {
-    rickrollButton.addEventListener('click', redirectToYouTube);
-  } else {
-    console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
-  }
-
   document.addEventListener('visibilitychange', handleVisibilityChange);
+
+  fetch(NAVBAR_HTML_PATH)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(NAVBAR_PLACEHOLDER_ID).innerHTML = data;
+      
+      const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
+      // Check if the button was previously removed
+      if (sessionStorage.getItem(BUTTON_REMOVED_KEY) === 'true') {
+        removeRickrollButton();
+      } else if (rickrollButton) {
+        rickrollButton.addEventListener('click', redirectToYouTube);
+      } else {
+        console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
+      }
+    })
+    .catch(error => console.error('Error loading navigation:', error));
+  
+  fetch(FOOTER_HTML_PATH)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(FOOTER_PLACEHOLDER_ID).innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
 });
 
 /**
@@ -27,6 +51,8 @@ const redirectToYouTube = () => {
     window.location.href = RICKROLL_URL;
   } else {
     removeRickrollButton();
+    // Cache the button removed state
+    sessionStorage.setItem(BUTTON_REMOVED_KEY, 'true');
   }
 };
 
