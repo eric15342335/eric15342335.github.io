@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Redirecting to home page">
+  <meta name="bot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+
+  <link rel="preconnect" href="../index.html">
+  <meta http-equiv="refresh" content="2; url=../index.html">
+  <script type="text/javascript">
+    // JavaScript redirect as a fallback
+    setTimeout(function() {
+      window.location.href = "../index.html";
+    }, 2000);
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111;
+    }
+    .message {
+      text-align: center;
+      color: #eee
+    }
+    .message p {
+      margin: 0.5em 0;
+    }
+    a {
+      color: #aaf;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h1>Redirecting...</h1>
+    <p>You are being redirected to the home page.</p>
+    <p>If you are not redirected automatically, follow this
+      <a href="../index.html" aria-label="Go to home page">
+        link to the home page</a>.
+    </p>
+  </div>
+</body>
+</html>

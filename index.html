@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <!-- SEO and metadata -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="eric15342335 Github Pages">
-  <meta name="keywords" content="eric15342335">
-  <meta name="author" content="Eric">
+  <meta name="keywords" content="Eric, eric15342335, Cheng Ho Ming, HKU, BASc(AppliedAI)">
+  <meta name="author" content="eric15342335">
   <link rel="canonical" href="https://eric15342335.github.io/index.html">
   <title>Eric's GitHub Pages</title>
 
-  <!-- Non-critical stylesheet -->
-  <link rel="stylesheet" href="assets/styles.css"
-    media="print" onload="this.media='all'">
-
   <!-- JavaScript -->
   <script defer src="src/script.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css">
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,93 +27,19 @@
 
   <!-- Fallback for JavaScript-disabled browsers -->
   <noscript>
-    <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
   </noscript>
 
-  <!-- CSS variables -->
-  <style>
-    :root {
-      --bg-color: #111;
-      --text-color: #eee;
-      --border-color: #beb;
-      --link-color: #aaf;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      /* Reset default margin to ensure consistent spacing across browsers */
-      margin: 0;
-      /* Add padding to create space around the content for better readability */
-      /* top | left and right | bottom */
-      padding: 1.25em 1.25em 5em;
-      text-align: center;
-      /* Applies simple dark theme */
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-    /* Horizontal Separation Bar */
-    .separation-bar {
-      /* Add space above the bar */
-      margin-top: 1.25em;
-      /* Add padding to top and bottom elements, no padding on sides */
-      /* top | left and right | bottom */
-      padding: 0.625em 0 0;
-      /* Add a light gray border on top */
-      border-top: 1px solid var(--text-color);
-      /* Use flexbox for layout */
-      display: flex;
-      /* Distribute space evenly between flex items */
-      justify-content: space-between;
-    }
-    .course-table {
-      margin-left: auto;
-      margin-right: auto;
-      border: 1px solid var(--border-color);
-      border-collapse: collapse; /* Share borders between adjacent cells */
-      margin-top: 0.5em; /* Add spacing above the table */
-    }
-    /* Cells border */
-    .course-table th,
-    .course-table td {
-      border: 1px solid var(--border-color);
-      padding: 0.2em; /* Add padding inside cells for spacing */
-    }
-    /* Center an element horizontally using absolute positioning */
-    .center-element {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    /* For anchor tags */
-    a {
-      color: var(--link-color);
-      text-decoration: none; /* Removes underline when not hovered */
-    }
-    /* Add styles for hover state */
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-    }
-    a:focus,
-    button:focus {
-      outline: 2px solid var(--link-color);
-    }
-
-  </style>
 </head>
 <body>
+  <!-- Navigation bar placeholder, will be populated by JavaScript -->
+  <div id="nav-placeholder"></div>
+
   <header>
-    <h1>Welcome to Eric's GitHub Pages</h1>
+    <h1>Welcome to Eric's GitHub Pages!</h1>
   </header>
 
   <main>
-    <!-- Curriculum Vitae -->
-    <a href="assets/ChengHoMingCV.pdf" rel="noopener noreferrer" title="Download CV">
-      Download my CV
-    </a>
-
-    <div class="separation-bar"></div>
-
     <h2>Projects</h2>
     <p>
       Stock Market Simulator
@@ -129,99 +54,9 @@
         [Documentation]
       </a>
     </p>
-
-    <div class="separation-bar"></div>
-
-    <!-- New section about courses -->
-    <h2>Studied Courses</h2>
-    <table class="course-table">
-      <tr>
-        <th>Course Code</th>
-        <th>Course Name</th>
-      </tr>
-      <tr>
-        <td>APAI 1001</td>
-        <td><a href="https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=APAI1001">
-          Artificial intelligence: foundation, philosophy and ethics</a></td>
-      </tr>
-      <tr>
-        <td>BASC 9001</td>
-        <td><!-- Note: This course does not have updated link -->
-          Approaching Interdisciplinarity: Knowledge Beyond Disciplines</td>
-      </tr>
-      <tr>
-        <td>CCST 9003</td>
-        <td><a href="https://commoncore.hku.hk/ccst9003/">
-          Everyday Computing and the Internet</a></td>
-      </tr>
-      <tr>
-        <td>COMP 1117</td>
-        <td><a href="https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp1117.html">
-          Computer programming</a></td>
-      </tr>
-      <tr>
-        <td>COMP 2121</td>
-        <td><a href="https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp2121.html">
-          Discrete mathematics</a></td>
-      </tr>
-      <tr>
-        <td>MATH 1013</td>
-        <td><a href="https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=MATH1013">
-          University mathematics II</a></td>
-      </tr>
-      <tr>
-        <td>CCGL 9059</td>
-        <td><a href="https://commoncore.hku.hk/ccgl9059/">
-          Water in a Changing World</a></td>
-      </tr>
-      <tr>
-        <td>COMP 2113</td>
-        <td><a href="https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp2113.html">
-          Programming technologies</a></td>
-      </tr>
-      <tr>
-        <td>COMP 2120</td>
-        <td><a href="https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp2120.html">
-          Computer organization</a></td>
-      </tr>
-      <tr>
-        <td>STAT 1016</td>
-        <td><a href="https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT1016">
-          Data science 101</a></td>
-      </tr>
-      <tr>
-        <td>STAT 2601</td>
-        <td><a href="https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT2601">
-          Probability and statistics I</a></td>
-      </tr>
-    </table>
-    <!-- End table of courses -->
   </main>
 
-  <!-- Content below the bottom bar -->
-  <footer>
-    <div class="separation-bar">
-      <a href="https://github.com/eric15342335/eric15342335.github.io"
-      rel="noopener noreferrer">
-      Source Code
-      </a>
-
-      <!-- Button for rickroll surprise, hidden when JavaScript is disabled -->
-      <noscript>
-        <style>
-          #rickroll-button {
-            display: none;
-          }
-        </style>
-      </noscript>
-      <button id="rickroll-button" class="center-element" aria-label="Surprise button">
-        Click me
-      </button>
-
-      <a href="mailto:eric310@connect.hku.hk">
-        Contact
-      </a>
-    </div>
-  </footer>
+  <!-- Footer placeholder, will be populated by JavaScript -->
+  <div id="footer-placeholder"></div>
 </body>
 </html>
