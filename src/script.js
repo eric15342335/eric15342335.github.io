@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
       }
+      
+      /* JavaScript to update the scroll indicator */
+      window.addEventListener('scroll', () => {
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercentage = (window.scrollY / maxScroll) * 100;
+        scrollIndicator.style.backgroundPosition = `${100 - scrollPercentage}% 0`;
+      });
     })
     .catch(error => console.error('Error loading navigation:', error));
   
