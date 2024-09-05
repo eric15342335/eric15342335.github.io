@@ -5,7 +5,7 @@
  * This function is executed when the DOM content has finished loading.
  */
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('sitemap.xml')
+  fetch('/sitemap.xml')
     .then(response => response.text())
     .then(data => {
       const parser = new DOMParser();
