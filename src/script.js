@@ -8,10 +8,10 @@ const BUTTON_REMOVED_KEY = 'rickrollButtonRemoved';
 const ORIGINAL_TITLE = document.title;
 const COMEBACK_TITLE = `Come back to ${ORIGINAL_TITLE}!`;
 
-const NAVBAR_HTML_PATH = 'assets/navbar.html';
+const NAVBAR_HTML_PATH = '/pages/common/navbar.html';
 const NAVBAR_PLACEHOLDER_ID = 'nav-placeholder';
 
-const FOOTER_HTML_PATH = 'assets/footer.html';
+const FOOTER_HTML_PATH = '/pages/common/footer.html';
 const FOOTER_PLACEHOLDER_ID = 'footer-placeholder';
 
 const resizeDebounceTime = 100;
