@@ -14,7 +14,10 @@ const NAVBAR_PLACEHOLDER_ID = 'nav-placeholder';
 const FOOTER_HTML_PATH = 'assets/footer.html';
 const FOOTER_PLACEHOLDER_ID = 'footer-placeholder';
 
+const resizeDebounceTime = 100;
+
 document.addEventListener('DOMContentLoaded', () => {
+  console.debug('DOMContentLoaded event fired');
   document.addEventListener('visibilitychange', handleVisibilityChange);
 
   fetch(NAVBAR_HTML_PATH)
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
       // Check if the button was previously removed
-      if (sessionStorage.getItem(BUTTON_REMOVED_KEY) === 'true') {
+      if (buttonClickedBefore()) {
         removeRickrollButton();
       } else if (rickrollButton) {
         rickrollButton.addEventListener('click', redirectToYouTube);
@@ -38,7 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercentage = (window.scrollY / maxScroll) * 100;
         scrollIndicator.style.backgroundPosition = `${100 - scrollPercentage}% 0`;
+        console.debug('Window scrolled');
       });
+
+      window.addEventListener('resize', handleWindowResize);
     })
     .catch(error => console.error('Error loading navigation:', error));
   
@@ -64,10 +70,20 @@ const redirectToYouTube = () => {
   }
 };
 
+const buttonClickedBefore = () => {
+  return sessionStorage.getItem(BUTTON_REMOVED_KEY) === 'true';
+};
+
+const resetButtonState = () => {
+  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
+  sessionStorage.removeItem(BUTTON_REMOVED_KEY);
+  rickrollButton.style.display = 'block';
+};
+
 const removeRickrollButton = () => {
-  const button = document.getElementById(RICKROLL_BUTTON_ID);
-  if (button) {
-    button.remove();
+  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
+  if (rickrollButton) {
+    rickrollButton.style.display = 'none';
   } else {
     console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found for removal.`);
   }
@@ -85,3 +101,26 @@ const handleVisibilityChange = () => {
     document.title = ORIGINAL_TITLE;
   }
 };
+
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(null, args);
+    }, delay);
+  };
+};
+
+const handleWindowResize = debounce(() => {
+  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
+  if (!buttonClickedBefore()) {
+    if (rickrollButton) {
+      resetButtonState();
+    } else {
+      console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
+    }
+    console.debug('Window resized');
+  }
+}, resizeDebounceTime);
+
