@@ -10,18 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(data, 'application/xml');
-      const urls = xmlDoc.getElementsByTagName('url');
+      const urls = xmlDoc.querySelectorAll('url');
       const sitemapList = document.getElementById('sitemap-menu');
 
-      for (let i = 0; i < urls.length; i++) {
-        const loc = urls[i].getElementsByTagName('loc')[0].textContent;
+      urls.forEach(url => {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
-        link.href = loc;
-        link.textContent = loc;
+        link.href = url.textContent;
+        link.textContent = url.textContent;
         listItem.appendChild(link);
         sitemapList.appendChild(listItem);
-      }
+      });
     })
     .catch(error => console.error('Error fetching the sitemap:', error));
 });
