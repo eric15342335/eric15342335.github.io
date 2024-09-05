@@ -102,6 +102,19 @@ a:hover {
   outline: auto;
 }
 
+.external-images {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.external-images img { 
+  gap: 1em;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 12em;
+}
+
 .sitemap-menu {
   list-style-type: none;
   line-height: 1.5;
@@ -127,6 +140,7 @@ a:hover {
   .scroll-indicator {
     display: block;
   }
+
   body {
     padding-top: 6em;
   }
