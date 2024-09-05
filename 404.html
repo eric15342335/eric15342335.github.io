@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="404 Not Found - Page not available">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Not Found - Page not available</title>
+
+  <link rel="preconnect" href="/index.html">
+  <noscript>
+    <meta http-equiv="refresh" content="10; url=/index.html">
+  </noscript>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111;
+    }
+    .message {
+      text-align: center;
+      color: #eee;
+      max-width: 600px;
+      padding: 20px;
+    }
+    .message p {
+      margin: 0.5em 0;
+    }
+    a {
+      color: #aaf;
+      text-decoration: underline;
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+    }
+    #countdown {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    .animate {
+      animation: fadeInOut 1s infinite;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="message" role="alert">
+      <h1>404 Not Found</h1>
+      <p>We're sorry, but the page you're looking for cannot be found.</p>
+      <p>You will be redirected to the home page in <span id="countdown">10</span> seconds.</p>
+      <p>If you are not redirected automatically, please
+        <a href="/index.html" aria-label="Go to home page">
+          click here to go to the home page</a>.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    let countdown = 10;
+    let countdownElement = document.getElementById('countdown');
+    let intervalId = setInterval(function() {
+      countdown--;
+      if (countdown <= 0) {
+        clearInterval(intervalId);
+        window.location.href = "/index.html";
+      } else {
+          countdownElement.textContent = countdown;
+          countdownElement.classList.remove('animate');
+          void countdownElement.offsetWidth; // Trigger reflow to restart animation
+          countdownElement.classList.add('animate');
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
