@@ -15,6 +15,7 @@ const FOOTER_HTML_PATH = "/pages/common/footer.html";
 const FOOTER_PLACEHOLDER_ID = "footer-placeholder";
 
 const resizeDebounceTime = 100;
+const scrollDebounceTime = 10;
 
 document.addEventListener("DOMContentLoaded", () => {
   console.debug("DOMContentLoaded event fired");
@@ -36,17 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       /* JavaScript to update the scroll indicator */
-      window.addEventListener("scroll", () => {
-        const scrollIndicator = document.querySelector(".scroll-indicator");
-        const maxScroll =
-          document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercentage = (window.scrollY / maxScroll) * 100;
-        scrollIndicator.style.backgroundPosition = `${
-          100 - scrollPercentage
-        }% 0`;
-        console.debug("Window scrolled");
-      });
-
+      window.addEventListener("scroll", handleWindowScroll);
       window.addEventListener("resize", handleWindowResize);
     })
     .catch((error) => console.error("Error loading navigation:", error));
@@ -128,3 +119,14 @@ const handleWindowResize = debounce(() => {
     console.debug("Window resized");
   }
 }, resizeDebounceTime);
+
+const handleWindowScroll = debounce(() => {
+  const scrollIndicator = document.querySelector(".scroll-indicator");
+  const maxScroll =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercentage = (window.scrollY / maxScroll) * 100;
+  scrollIndicator.style.backgroundPosition = `${
+    100 - scrollPercentage
+  }% 0`;
+  console.debug("Window scrolled");
+}, scrollDebounceTime);
