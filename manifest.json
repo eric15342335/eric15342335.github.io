@@ -1,0 +1,17 @@
+{
+    "name": "Eric's Github Pages",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/assets/meguru-small.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/meguru-big.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
