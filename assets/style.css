@@ -151,3 +151,15 @@ a:hover {
     display: none;
   }
 }
+
+@media (max-width: 385.5px) {
+  body {
+    padding-top: 9em;
+  }
+}
+
+@media (max-width: 281.5px) {
+  body {
+    padding-top: 12em;
+  }
+}
