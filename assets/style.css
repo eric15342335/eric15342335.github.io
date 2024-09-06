@@ -63,7 +63,7 @@ a:hover {
   display: block;
   color: var(--text-color);
   text-align: center;
-  padding: 1em;
+  padding: calc(1em - 1px);
   text-decoration: none;
   background: none;
   border: none;
@@ -75,9 +75,7 @@ a:hover {
 }
 
 .floating-menu a.image-link {
-  padding: 5.65px;
-  /* Same as .floating-menu li a { margin: ... } for consistency */
-  margin: 1px;
+  padding: 4.65px;
   height: 2.5em;
   display: flex;
   align-items: center;
