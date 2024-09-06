@@ -69,11 +69,15 @@ a:hover {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  /* Needed for firefox when using
+  .floating-menu li a:hover { outline: solid 1px var(--text-color);} */
+  margin: 1px;
 }
 
 .floating-menu a.image-link {
   padding: 5.65px;
-  margin: 0;
+  /* Same as .floating-menu li a { margin: ... } for consistency */
+  margin: 1px;
   height: 2.5em;
   display: flex;
   align-items: center;
@@ -99,7 +103,8 @@ a:hover {
 .floating-menu li a:focus,
 .floating-menu li button:focus {
   background-color: var(--floating-menu-hover-bg-color);
-  outline: auto;
+  /* outline: auto; shows blue (strange) colour instead of white */
+  outline: solid 1px var(--text-color);
 }
 
 .external-images {
