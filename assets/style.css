@@ -5,6 +5,7 @@
   --link-color: #aaf;
   --floating-menu-bg-color: #333;
   --floating-menu-hover-bg-color: #555;
+  --body-margin-left-right: 2vw;
 }
 
 /* latin */
@@ -21,7 +22,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   /* top | left and right | bottom */
-  padding: 3em 2vw 10vh;
+  padding: 3em var(--body-margin-left-right) 10vh;
   text-align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -138,9 +139,10 @@ a:hover {
 }
 
 .scroll-indicator {
-  width: 100%;
+  width: 104vw;
   height: 0.25em;
-  margin: 0.4em -1.3em;
+  margin-top: 0.25em;
+  margin-left: calc(-1 * var(--body-margin-left-right));
   background: linear-gradient(to right, #5a5 0%, #5a5 50%, #ccc 50%, #ccc 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
