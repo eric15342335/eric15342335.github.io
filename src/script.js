@@ -20,46 +20,28 @@ const scrollDebounceTime = 10;
 document.addEventListener("DOMContentLoaded", () => {
   console.debug("DOMContentLoaded event fired");
   document.addEventListener("visibilitychange", handleVisibilityChange);
-
-  fetch(NAVBAR_HTML_PATH)
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById(NAVBAR_PLACEHOLDER_ID).innerHTML = data;
-
-      const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
-      // Check if the button was previously removed
-      if (buttonClickedBefore()) {
-        removeRickrollButton();
-      } else if (rickrollButton) {
-        rickrollButton.addEventListener("click", redirectToYouTube);
-      } else {
-        console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
-      }
-
-      /* JavaScript to update the scroll indicator */
-      window.addEventListener("scroll", handleWindowScroll);
-      window.addEventListener("resize", handleWindowResize);
-    })
-    .catch((error) => console.error("Error loading navigation:", error));
-
-  fetch(FOOTER_HTML_PATH)
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById(FOOTER_PLACEHOLDER_ID).innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading footer:", error));
+  window.addEventListener("scroll", handleWindowScroll);
+  window.addEventListener("resize", handleWindowResize);
+  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
+  if (buttonClickedBefore()) {
+    removeRickrollButton();
+  } else if (rickrollButton) {
+    rickrollButton.addEventListener("click", redirectToYouTube);
+  } else {
+    console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
+  }
 });
 
 /**
  * Redirects the user to the Rick Roll video if confirmed.
  * If not confirmed, removes the Rick Roll button.
+ * The button is removed from the DOM in this session.
  */
 const redirectToYouTube = () => {
   if (confirm(CONFIRM_MESSAGE)) {
     window.location.href = RICKROLL_URL;
   } else {
     removeRickrollButton();
-    // Cache the button removed state
     sessionStorage.setItem(BUTTON_REMOVED_KEY, "true");
   }
 };
@@ -85,11 +67,6 @@ const removeRickrollButton = () => {
   }
 };
 
-/**
- * Handles the visibility change of the document.
- * If the document becomes hidden, sets the document title to COMEBACK_TITLE.
- * If the document becomes visible again, sets the document title to ORIGINAL_TITLE.
- */
 const handleVisibilityChange = () => {
   if (document.visibilityState === "hidden") {
     document.title = COMEBACK_TITLE;
