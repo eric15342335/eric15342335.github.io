@@ -8,7 +8,10 @@ Powered by Github Pages.
 
 ```bash
 assets/         # CSS and PDFs
-pages/          # HTMLs
-pages/common/   # Shared HTMLs for all pages
+assets/font/    # Fonts
+pages/          # HTML pages
+_includes/      # Shared HTMLs for all pages (Jekyll)
 src/            # JavaScripts
 ```
+
+Note that this website uses `Jekyll` for static site generation.
