@@ -13,18 +13,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "screenshots": [
-        {
-            "src": "/assets/meguru-medium.png",
-            "sizes": "320x320",
-            "type": "image/png"
-        },
-        {
-            "src": "/assets/meguru-big.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "form_factor": "wide"
-        }
     ]
 }
