@@ -20,7 +20,8 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 2.5em 1.25em 5em;
+  /* top | left and right | bottom */
+  padding: 3em 2vw 10vh;
   text-align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -150,7 +151,8 @@ a:hover {
 
 .text-description {
   text-align: left;
-  margin: 0 20vh 1em;
+  /* top and bottom | left and right */
+  padding: 0 10vw;
 }
 
 .footer-container {
