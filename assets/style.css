@@ -39,6 +39,7 @@ body {
   margin: 0.5em auto 0;
   border: 1px solid var(--border-color);
   border-collapse: collapse;
+  text-align: justify;
 }
 
 .course-table th,
@@ -47,10 +48,14 @@ body {
   padding: 0.2em;
 }
 
+.course-table #fixed-width-font {
+  font-family: 'Consolas', monospace;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 a:focus,
