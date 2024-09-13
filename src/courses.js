@@ -61,6 +61,13 @@ const createCourseRow = (course) => {
 };
 
 const displayCourses = (courses) => {
+  const loadingSpinner = document.getElementById("loading-spinner");
+  const courseTables = document.getElementById("course-tables");
+  
+  // Hide loading spinner and show course tables
+  loadingSpinner.style.display = "none";
+  courseTables.style.display = "block";
+
   const inProgressTable = document.getElementById(TABLE_IDS.IN_PROGRESS);
   const studiedTable = document.getElementById(TABLE_IDS.STUDIED);
 

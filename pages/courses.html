@@ -46,22 +46,24 @@ permalink: /pages/courses.html
       Artificial Intelligence
       (<a href="https://saasweb.hku.hk/current/aai.php">BASc(AppliedAI)</a>)
     </p>
-    
-    <h2>Course in Progress</h2>
-    <table id="in-progress-table" class="course-table">
-      <tr>
-        <th>Course Code</th>
-        <th>Course Name</th>
-      </tr>
-    </table>
-    
-    <h2>Course Completed</h2>
-    <table id="studied-table" class="course-table">
-      <tr>
-        <th>Course Code</th>
-        <th>Course Name</th>
-      </tr>
-    </table>
+    <div id="loading-spinner" class="loading-spinner" style="display: block;"></div>
+    <div id="course-tables" style="display: none;">
+      <h2>Course in Progress</h2>
+      <table id="in-progress-table" class="course-table">
+        <tr>
+          <th>Course Code</th>
+          <th>Course Name</th>
+        </tr>
+      </table>
+      
+      <h2>Course Completed</h2>
+      <table id="studied-table" class="course-table">
+        <tr>
+          <th>Course Code</th>
+          <th>Course Name</th>
+        </tr>
+      </table>
+    </div>
   </main>
 
   {% include footer.html %}
