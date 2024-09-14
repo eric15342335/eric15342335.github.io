@@ -2,6 +2,7 @@
     "name": "Eric's Github Pages",
     "start_url": "/",
     "display": "standalone",
+    "theme_color": "#2277ee",
     "icons": [
         {
             "src": "/assets/meguru-small.png",
