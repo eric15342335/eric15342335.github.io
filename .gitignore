@@ -1,2 +1,7 @@
 Gemfile.lock
 _site/
+
+node_modules
+eslint.config.mjs
+package-lock.json
+package.json
