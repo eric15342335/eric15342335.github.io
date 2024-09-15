@@ -69,12 +69,26 @@ let FF_FOUC_FIX;
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
       <p>
-        <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=12&theme=radical">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=12&theme=radical" alt="eric15342335 Most Used Languages" width="240" height="192" loading="lazy">
-        </a>
-        <a href="https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical">
-          <img src="https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical" alt="eric15342335 Github Statistics" width="460" height="192" loading="lazy">
-        </a>
+        <div id="loading-spinner" class="loading-spinner" style="display: block;"></div>
+        <div id="github-stats" style="display: none;">
+          <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=12&theme=radical">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=12&theme=radical" alt="eric15342335 Most Used Languages" width="240" height="192" onload="hideSpinner()">
+          </a>
+          <a href="https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical">
+            <img src="https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical" alt="eric15342335 Github Statistics" width="460" height="192" onload="hideSpinner()">
+          </a>
+        </div>
+        <script>
+          let loadedImages = 0;
+          function hideSpinner() {
+            loadedImages++;
+            console.debug("Loaded images:", loadedImages);
+            if (loadedImages === 2) {
+              document.getElementById('loading-spinner').style.display = 'none';
+              document.getElementById('github-stats').style.display = 'block';
+            }
+          }
+        </script>
       </p>
     </div>
   </main>
