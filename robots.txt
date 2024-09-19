@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
+Disallow:
 Sitemap: https://eric15342335.github.io/sitemap.xml
 Sitemap: https://eric15342335.github.io/comp2113-engg1340-group-project/sitemap.xml
 Sitemap: https://eric15342335.github.io/ch19_html/sitemap.xml
