@@ -6,7 +6,7 @@ const TABLE_IDS = {
 };
 
 const CURRENT_YEAR = new Date().getFullYear();
-const CURRENT_SEMESTER = (() => {
+const CURRENT_SEMESTER = (function() {
   const now = new Date();
   const month = now.getMonth() + 1; // getMonth() returns 0-11
 
@@ -18,6 +18,7 @@ const CURRENT_SEMESTER = (() => {
     return 3; // June to August (summer semester)
   }
 })();
+
 const COURSES_JSON_PATH = "/assets/courses.json";
 const FIXED_WIDTH_FONT_CLASS = "fixed-width-font";
 
@@ -32,18 +33,26 @@ const COURSE_PROPERTIES = {
 const currentTimeframeText = " (current semester)";
 const upcomingTimeframeText = " (upcoming semester)";
 
-const fetchCourses = async () => {
-  try {
-    const response = await fetch(COURSES_JSON_PATH);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching courses:", error);
-    return [];
-  }
-};
+// Use XMLHttpRequest instead of fetch
+function fetchCourses(callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", COURSES_JSON_PATH, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      try {
+        var data = JSON.parse(xhr.responseText);
+        callback(null, data);
+      } catch (error) {
+        callback(error, []);
+      }
+    } else if (xhr.readyState === 4) {
+      callback(new Error("Failed to fetch courses."), []);
+    }
+  };
+  xhr.send();
+}
 
-const createCourseRow = (course) => {
+function createCourseRow(course) {
   const row = document.createElement("tr");
   const codeCell = document.createElement("td");
   codeCell.id = FIXED_WIDTH_FONT_CLASS;
@@ -58,9 +67,9 @@ const createCourseRow = (course) => {
   row.appendChild(codeCell);
   row.appendChild(nameCell);
   return row;
-};
+}
 
-const displayCourses = (courses) => {
+function displayCourses(courses) {
   const loadingSpinner = document.getElementById("loading-spinner");
   const courseTables = document.getElementById("course-tables");
   
@@ -74,13 +83,15 @@ const displayCourses = (courses) => {
   let currentSemesterYear = null;
   let currentTable = null;
 
-  courses.forEach((course) => {
-    const { [COURSE_PROPERTIES.YEAR]: year, [COURSE_PROPERTIES.SEMESTER]: semester } = course;
-    const isCurrent = year === CURRENT_YEAR && semester === CURRENT_SEMESTER;
-    const isFuture = year > CURRENT_YEAR || (year === CURRENT_YEAR && semester > CURRENT_SEMESTER);
+  for (var i = 0; i < courses.length; i++) {
+    var course = courses[i];
+    var year = course[COURSE_PROPERTIES.YEAR];
+    var semester = course[COURSE_PROPERTIES.SEMESTER];
+    var isCurrent = year === CURRENT_YEAR && semester === CURRENT_SEMESTER;
+    var isFuture = year > CURRENT_YEAR || (year === CURRENT_YEAR && semester > CURRENT_SEMESTER);
 
-    const semesterYear = `${year} Semester ${semester}`;
-    const targetTable = isCurrent || isFuture ? inProgressTable : studiedTable;
+    var semesterYear = year + " Semester " + semester;
+    var targetTable = isCurrent || isFuture ? inProgressTable : studiedTable;
 
     if (semesterYear !== currentSemesterYear || targetTable !== currentTable) {
       currentSemesterYear = semesterYear;
@@ -102,10 +113,15 @@ const displayCourses = (courses) => {
 
     const row = createCourseRow(course);
     targetTable.appendChild(row);
-  });
-};
+  }
+}
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const courses = await fetchCourses();
-  displayCourses(courses);
+document.addEventListener("DOMContentLoaded", function() {
+  fetchCourses(function(error, courses) {
+    if (!error) {
+      displayCourses(courses);
+    } else {
+      console.error("Error fetching courses:", error);
+    }
+  });
 });

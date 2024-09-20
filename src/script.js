@@ -6,12 +6,12 @@ const RICKROLL_BUTTON_ID = "rickroll-button";
 const BUTTON_REMOVED_KEY = "rickrollButtonRemoved";
 
 const ORIGINAL_TITLE = document.title;
-const COMEBACK_TITLE = `Come back to ${ORIGINAL_TITLE}!`;
+const COMEBACK_TITLE = "Come back to " + ORIGINAL_TITLE + "!";
 
 const resizeDebounceTime = 100;
-const scrollDebounceTime = 10;
+const scrollDebounceTime = 15;
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
   console.debug("DOMContentLoaded event fired");
   document.addEventListener("visibilitychange", handleVisibilityChange);
   window.addEventListener("scroll", handleWindowScroll);
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (rickrollButton) {
     rickrollButton.addEventListener("click", redirectToYouTube);
   } else {
-    console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
+    console.warn('Button with ID "' + RICKROLL_BUTTON_ID + '" not found.');
   }
 });
 
@@ -31,73 +31,77 @@ document.addEventListener("DOMContentLoaded", () => {
  * If not confirmed, removes the Rick Roll button.
  * The button is removed from the DOM in this session.
  */
-const redirectToYouTube = () => {
+function redirectToYouTube() {
   if (confirm(CONFIRM_MESSAGE)) {
     window.location.href = RICKROLL_URL;
   } else {
     removeRickrollButton();
     sessionStorage.setItem(BUTTON_REMOVED_KEY, "true");
   }
-};
+}
 
-const buttonClickedBefore = () => {
+function buttonClickedBefore() {
   return sessionStorage.getItem(BUTTON_REMOVED_KEY) === "true";
-};
+}
 
-const resetButtonState = () => {
+function resetButtonState() {
   const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
   sessionStorage.removeItem(BUTTON_REMOVED_KEY);
-  rickrollButton.style.display = "block";
-};
+  if (rickrollButton) {
+    rickrollButton.style.display = "block";
+  }
+}
 
-const removeRickrollButton = () => {
+function removeRickrollButton() {
   const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
   if (rickrollButton) {
     rickrollButton.style.display = "none";
   } else {
-    console.warn(
-      `Button with ID "${RICKROLL_BUTTON_ID}" not found for removal.`
-    );
+    console.warn('Button with ID "' + RICKROLL_BUTTON_ID + '" not found for removal.');
   }
-};
+}
 
-const handleVisibilityChange = () => {
+function handleVisibilityChange() {
   if (document.visibilityState === "hidden") {
     document.title = COMEBACK_TITLE;
   } else {
     document.title = ORIGINAL_TITLE;
   }
-};
+}
 
-const debounce = (func, delay) => {
+function debounce(func, delay) {
   let timeoutId;
-  return (...args) => {
+  return function() {
+    const args = arguments;
     clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
+    timeoutId = setTimeout(function() {
       func.apply(null, args);
     }, delay);
   };
-};
+}
 
-const handleWindowResize = debounce(() => {
+const handleWindowResize = debounce(function() {
   const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
   if (!buttonClickedBefore()) {
     if (rickrollButton) {
       resetButtonState();
     } else {
-      console.warn(`Button with ID "${RICKROLL_BUTTON_ID}" not found.`);
+      console.warn('Button with ID "' + RICKROLL_BUTTON_ID + '" not found.');
     }
     console.debug("Window resized");
   }
 }, resizeDebounceTime);
 
-const handleWindowScroll = debounce(() => {
+const handleWindowScroll = debounce(function() {
   const scrollIndicator = document.querySelector(".scroll-indicator");
   const maxScroll =
     document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercentage = (window.scrollY / maxScroll) * 100;
-  scrollIndicator.style.backgroundPosition = `${
-    100 - scrollPercentage
-  }% 0`;
+  // Use scrollTop as fallback for scrollY in IE11
+  const scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollPercentage = (scrollY / maxScroll) * 100;
+  if (scrollIndicator) {
+    scrollIndicator.style.backgroundPosition = (100 - scrollPercentage) + "% 0";
+    console.debug("Scroll indicator set to " + scrollPercentage + "%");
+  }
   console.debug("Window scrolled");
 }, scrollDebounceTime);
