@@ -14,6 +14,14 @@ pages/          # HTML pages
 src/            # JavaScripts
 ```
 
+## Browser support
+
+* Chrome
+  * I keep track of [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) [(or PageSpeed Insights)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Feric15342335.github.io%2F) data
+* Firefox
+* Internet Explorer 11 (tested via IE mode in Microsoft Edge)
+* Mobile devices
+
 ## Development
 
 > [!NOTE]
