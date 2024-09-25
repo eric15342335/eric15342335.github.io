@@ -70,14 +70,6 @@ a:hover {
   overflow: hidden;
 }
 
-.navbar ul {
-  flex-direction: row;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  max-height: none;
-  opacity: 1;
-  overflow-x: auto;
-}
-
 .navbar li a {
   display: block;
   color: var(--text-color);
@@ -261,11 +253,11 @@ a:hover {
   .navbar ul {
     display: none;
     max-height: 0;
-    overflow: hidden;
   }
 
   .navbar.open ul {
     display: block;
     max-height: 500px;
+    opacity: 1;
   }
 }
