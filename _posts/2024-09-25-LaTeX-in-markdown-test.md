@@ -30,7 +30,6 @@ $$ \therefore f(0) \text{ is true.} $$
 Assume $S(n)$ is true for some $n=k$ where $k \geq 0$,
 i.e. $0^2+1^2+2^2+3^2+\ldots+k^2=\frac{k(k+1)(2k+1)}{6}$
 
-
 $$
 \begin{align*}
 \text{For $n=k+1$ , L.H.S.} &= 0^2+1^2+2^2+3^2+\ldots+k^2+(k+1)^2 \\
