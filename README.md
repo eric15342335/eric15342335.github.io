@@ -7,11 +7,13 @@ Powered by Github Pages and `Jekyll` (for static site generation).
 ## Folder Structure
 
 ```bash
-_includes/      # Shared HTMLs for all pages (Jekyll)
-assets/         # CSS and PDFs
-assets/font/    # `Inter` font files
-pages/          # HTML pages
-src/            # JavaScripts
+_includes/          # Shared HTMLs for all pages (Jekyll)
+_layouts/post.html  # Layout for blog posts
+_posts/             # Blog posts written in Markdown
+assets/             # CSS and PDFs
+assets/font/        # `Inter` font files
+pages/              # HTML pages
+src/                # JavaScript source code
 ```
 
 ## Browser support

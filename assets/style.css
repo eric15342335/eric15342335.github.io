@@ -241,7 +241,7 @@ a:hover {
 }
 
 /* Media queries for responsive design */
-@media (min-width: 645px) {
+@media (min-width: 709px) {
   .navbar {
     display: flex;
   }
@@ -254,7 +254,7 @@ a:hover {
   }
 }
 
-@media (max-width: 645px) {
+@media (max-width: 709px) {
   .navbar {
     display: block;
   }

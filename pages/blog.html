@@ -1,11 +1,11 @@
 ---
-title: HTML Sitemap
-long_description: Navigate Eric's GitHub Pages with the HTML Sitemap. Find links to all important sections and resources available on the site.
-permalink: /pages/sitemap.html
+title: Blogs
+long_description: Welcome to Eric's personal blog page! Here you can find all my blog posts.
+permalink: /blog/
 ---
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,25 +15,25 @@ permalink: /pages/sitemap.html
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/style.css">
   <script defer src="/src/script.js"></script>
-  <script defer src="/src/sitemap.js"></script>
 
 {% include gtag.html %}
 
   <!-- SEO and metadata -->
-  <meta name="description" content="">
-  <meta name="keywords" content="Eric, eric15342335, Cheng Ho Ming, HKU, BASc(AppliedAI)">
+  <meta name="description" content="{{ page.long_description }}">
+  <meta name="keywords" content="Eric, eric15342335, Cheng Ho Ming, HKU, BASc(AppliedAI), Blog">
   <meta name="author" content="eric15342335">
 
   <!-- Facebook -->
-  <meta property="og:title" content="{{ page.title }} - Eric's Github Pages">
-  <meta property="og:url" content="https://eric15342335.github.io">
+  <meta property="og:url" content="https://eric15342335.github.io/blog/">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Eric's Github Pages">
   <meta property="og:description" content="{{ page.long_description }}">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ page.title }} - Eric's Github Pages">
+  <meta name="twitter:title" content="Eric's Github Pages">
   <meta name="twitter:description" content="{{ page.long_description }}">
+  <meta name="twitter:image" content="/assets/meguru-big.png">
 </head>
 <body>
 {% include gtag2.html %}
@@ -41,12 +41,18 @@ permalink: /pages/sitemap.html
 {% include navbar.html %}
 
 <header>
-  <h1>HTML Sitemap</h1>
+  <h1>Welcome to Eric's personal blog page!</h1>
 </header>
 
 <main>
-  <div id="loading-spinner" class="loading-spinner"></div>
-  <ul class="sitemap-menu" id="sitemap-menu" style="display: none;"></ul>
+  <ul class="sitemap-menu">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small>({{ post.date | date: "%B %d, %Y" }})</small>
+      </li>
+    {% endfor %}
+  </ul>
 </main>
 
 {% include footer.html %}
