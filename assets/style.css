@@ -110,10 +110,10 @@ a:hover {
 }
 
 .navbar .image-link {
-  top: var(--scroll-indicator-height);
+  margin-top: var(--scroll-indicator-height);
   display: flex;
-  align-items: center;
-  height: 100%;
+  align-self: center;
+  vertical-align: middle;
   flex-shrink: 0;
   max-width: fit-content;
 }
@@ -121,21 +121,21 @@ a:hover {
 .navbar .image-link img {
   height: var(--navbar-image-size);
   width: var(--navbar-image-size);
-  margin: auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.navbar-toggler-icon {
+.navbar .image-link .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   height: var(--navbar-image-size);
   width: var(--navbar-image-size);
   background-color: transparent;
   border-color: transparent;
   margin-left: 1em;
+  margin-top: calc(var(--scroll-indicator-height) + 2px);
 }
 
-.navbar-toggler-icon:hover {
+.navbar .image-link .navbar-toggler-icon:hover {
   background-color: var(--navbar-hover-bg-color);
   outline: solid 1px var(--text-color);
   transition: background-color 0.3s ease;
