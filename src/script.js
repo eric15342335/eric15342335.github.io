@@ -13,10 +13,15 @@ const scrollDebounceTime = 15;
 
 document.addEventListener("DOMContentLoaded", function() {
   console.debug("DOMContentLoaded event fired");
+
   document.addEventListener("visibilitychange", handleVisibilityChange);
+
   window.addEventListener("scroll", handleWindowScroll);
+
   window.addEventListener("resize", handleWindowResize);
+
   const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
+  // If the button was removed before, remove it again.
   if (buttonClickedBefore()) {
     removeRickrollButton();
   } else if (rickrollButton) {
@@ -24,6 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
     console.warn('Button with ID "' + RICKROLL_BUTTON_ID + '" not found.');
   }
+
+  const navbarToggle = document.querySelector('.navbar-toggler-icon');
+  const navbar = document.querySelector('.navbar');
+  // Toggle the navbar when the toggle button is clicked, if it exists (for mobile).
+  navbarToggle.addEventListener('click', function() {
+    navbar.classList.toggle('open');
+  });
 });
 
 /**
