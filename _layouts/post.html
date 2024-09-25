@@ -25,8 +25,23 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ page.title }} - Eric's Github Pages">
-<meta name="twitter:description" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.title }}">
   <meta name="twitter:image" content="/assets/meguru-big.png">
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+
+  <!-- MathJax -->
+  <script id="MathJax-script" async crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"
+    integrity="sha384-NuejywWq7I0qomITfCQmoQ6vhoRC4keD8iNHdUWSqnBoPoQIAccbA/d6uU7oZaic">
+  </script>
 </head>
 <body>
 {% include gtag2.html %}
@@ -36,7 +51,7 @@
 <main>
   <article>
     <h1>{{ page.title }}</h1>
-    <small>{{ page.date | date: "%B %d, %Y" }}</small
+    <small>{{ page.date | date: "%B %d, %Y" }}</small>
     <div>
       {{ content }}
     </div>
