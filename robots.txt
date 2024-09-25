@@ -5,3 +5,4 @@ Sitemap: https://eric15342335.github.io/comp2113-engg1340-group-project/sitemap.
 Sitemap: https://eric15342335.github.io/ch19_html/sitemap.xml
 Sitemap: https://eric15342335.github.io/comp2113/sitemap.xml
 Sitemap: https://eric15342335.github.io/c-repo-template/sitemap.xml
+Sitemap: https://eric15342335.github.io/comp2396/sitemap.xml
