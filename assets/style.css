@@ -1,54 +1,54 @@
-/*
-Inline all CSS variables for IE11 support
+/* latin */
+@font-face {
+  src: url(/assets/font/Inter-latin.woff2) format('woff2'), url(/assets/font/Inter-latin.woff) format('woff');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --bg-color: #111;
   --text-color: #fff;
   --border-color: #beb;
   --link-color: #aaf;
-  --floating-menu-bg-color: #333;
-  --floating-menu-hover-bg-color: #555;
+  --navbar-bg-color: #333;
+  --navbar-hover-bg-color: #555;
+  --navbar-image-size: 2.5em;
   --body-margin-left-right: 2vw;
-}
-*/
-
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  /* src: url(/assets/font/Inter-latin.woff2) format('woff2'); */
-  src: url(/assets/font/Inter-latin.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  --scroll-indicator-height: 0.25em;
+  --z-index-navbar: 10;
+  --z-index-scroll-indicator: 11;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  /* top | left and right | bottom */
-  padding: 3em 2vw 10vh; /* Replace var(--body-margin-left-right) */
   text-align: center;
-  background-color: #111; /* Replace var(--bg-color) */
-  color: #fff; /* Replace var(--text-color) */
+  /* top | left and right | bottom */
+  padding: 2.2em var(--body-margin-left-right) 10vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .separation-bar {
   margin-top: 1.25em;
   padding: 0.625em 0 0;
-  border-top: 1px solid #fff; /* Replace var(--text-color) */
+  border-top: 1px solid var(--text-color);
   justify-content: space-between;
 }
 
 .course-table {
   margin: 0.5em auto 0;
-  border: 1px solid #beb; /* Replace var(--border-color) */
+  border: 1px solid var(--border-color);
   border-collapse: collapse;
   text-align: justify;
 }
 
 .course-table th,
 .course-table td {
-  border: 1px solid #beb; /* Replace var(--border-color) */
+  border: 1px solid var(--border-color);
   padding: 0.2em;
 }
 
@@ -57,58 +57,101 @@ body {
 }
 
 a {
-  color: #aaf; /* Replace var(--link-color) */
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 500;
 }
 
 a:focus,
 a:hover {
-  color: #fff; /* Replace var(--text-color) */
+  color: var(--text-color);
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-.floating-menu {
+.scroll-indicator {
+  width: 104vw;
+  height: var(--scroll-indicator-height);
+  margin-left: calc(-1 * var(--body-margin-left-right));
+  background: linear-gradient(to right, #5a5 0%, #5a5 50%, #ccc 50%, #ccc 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.3s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-scroll-indicator);
+}
+
+.navbar {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  background-color: #333; /* Replace var(--floating-menu-bg-color) */
-  z-index: 1000;
+  background-color: var(--navbar-bg-color);
+  z-index: var(--z-index-navbar);
+  text-align: left;
 }
 
-.floating-menu li a {
+.navbar li a {
   display: block;
-  color: #fff; /* Replace var(--text-color) */
+  color: var(--text-color);
   text-align: center;
-  padding: 0.95em; /* padding: calc(1em - 1px); */
+  padding: calc(0.9em - 1px);
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* Needed for firefox when using
-  .floating-menu li a:hover { outline: solid 1px var(--text-color);} */
+  .navbar li a:hover { outline: solid 1px var(--text-color);} */
   margin: 1px;
 }
 
-.floating-menu a.image-link {
-  padding: 4.65px;
-  height: 2.5em;
+.navbar .image-link {
+  top: var(--scroll-indicator-height);
   display: flex;
   align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+  max-width: fit-content;
 }
 
-.floating-menu a.image-link img {
-  height: auto;
-  width: 2.5em;
+.navbar .image-link img {
+  height: var(--navbar-image-size);
+  width: var(--navbar-image-size);
+  margin: auto;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-.floating-menu ul,
-.floating-menu li {
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  height: var(--navbar-image-size);
+  width: var(--navbar-image-size);
+  background-color: transparent;
+  border-color: transparent;
+  margin-left: 1em;
+}
+
+.navbar-toggler-icon:hover {
+  background-color: var(--navbar-hover-bg-color);
+  outline: solid 1px var(--text-color);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar ul {
+  flex-direction: row;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: none;
+  opacity: 1;
+  overflow-x: auto;
+}
+
+.navbar ul,
+.navbar li {
   float: left;
   list-style-type: none;
   margin: 0;
@@ -116,12 +159,12 @@ a:hover {
   overflow: hidden;
 }
 
-.floating-menu li a:hover,
-.floating-menu li button:hover,
-.floating-menu li a:focus,
-.floating-menu li button:focus {
-  background-color: #555; /* Replace var(--floating-menu-hover-bg-color) */
-  outline: solid 1px #fff; /* Replace var(--text-color) */
+.navbar li a:hover,
+.navbar li button:hover,
+.navbar li a:focus,
+.navbar li button:focus {
+  background-color: var(--navbar-hover-bg-color);
+  outline: solid 1px var(--text-color);
 }
 
 .external-images {
@@ -144,20 +187,6 @@ a:hover {
   word-wrap: break-word;
   margin: 0;
   padding: 0;
-}
-
-.scroll-indicator {
-  width: 104vw;
-  height: 0.25em;
-  margin-top: 0.25em;
-  /* margin-left: calc(-1 * var(--body-margin-left-right)); */
-  margin-left: -2vw; /* Fallback for calc */
-  background: linear-gradient(to right, #5a5 0%, #5a5 50%, #ccc 50%, #ccc 100%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  transition: background-position 0.3s ease-out;
-  position: fixed;
-  z-index: 1000;
 }
 
 .text-description {
@@ -197,30 +226,31 @@ a:hover {
   }
 }
 
-@media (max-width: 708.5px) {
-  .scroll-indicator {
-    display: block;
-  }
-
-  body {
-    padding-top: 6em;
-  }
-}
-
 @media (min-width: 708.5px) {
-  .scroll-indicator {
+  .navbar {
+    display: flex;
+  }
+  .navbar ul {
+    display: flex;
+  }
+  
+  .navbar-toggler-icon {
     display: none;
   }
 }
 
-@media (max-width: 385.5px) {
-  body {
-    padding-top: 9em;
+@media (max-width: 708.5px) {
+  .navbar {
+    display: block;
   }
-}
+  .navbar ul {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+  }
 
-@media (max-width: 281.5px) {
-  body {
-    padding-top: 12em;
+  .navbar.open ul {
+    display: block;
+    max-height: 500px;
   }
 }
