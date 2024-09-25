@@ -1,1 +1,11 @@
 timezone: Asia/Hong_Kong
+markdown: kramdown
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
+  title: Eric's Blog on GitHub Pages
+  description: RSS feed for latest posts on Eric's Blog
+  author_name: Cheng Ho Ming, Eric
+  author_email: your-email@example.com
+  author_url: https://eric15342335.github.io/
