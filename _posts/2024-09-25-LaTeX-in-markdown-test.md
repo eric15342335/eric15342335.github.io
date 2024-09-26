@@ -17,10 +17,11 @@ $$
 Let $f(n)$ be $0^2+1^2+2^2+3^2+\ldots+n^2=\frac{n(n+1)(2n+1)}{6}$ ,
 for $\forall n \geq 0$,
 
-For $n=0$,
 $$
-\text{L.H.S.} = 0 \\
+\begin{align*}
+\text{For } n = 0, \ \text{L.H.S.} = 0 \\
 \text{R.H.S.} = 0
+\end{align*}
 $$
 
 $$ \because \text{L.H.S.} = \text{R.H.S.} $$
