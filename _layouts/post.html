@@ -7,7 +7,7 @@
 
 {% include head.html %}
 
-{% include gtag.html %}
+{% include analytics.html %}
 
   <!-- SEO and metadata -->
   <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncatewords: 20 }}">
@@ -54,7 +54,7 @@
   </script>
 </head>
 <body>
-{% include gtag2.html %}
+{% include analytics-body.html %}
 <!-- Navbar -->
 {% include navbar.html %}
 
