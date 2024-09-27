@@ -2,6 +2,8 @@
 title: Homepage
 permalink: /
 long_description: Welcome to Eric's Github Pages! I am a HKU BASc(Applied AI) student passionate about programming. Explore my personal projects, courses taken, and interests in software development.
+github-top-langs: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=14&theme=radical
+github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical
 ---
 
 <!DOCTYPE html>
@@ -79,13 +81,13 @@ long_description: Welcome to Eric's Github Pages! I am a HKU BASc(Applied AI) st
     <div id="loading-spinner" class="loading-spinner" style="display: block;"></div>
 
     <div id="github-stats" style="display: none;">
-      <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=12&theme=radical">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=12&theme=radical"
+      <a href="{{ page.github-top-langs }}">
+        <img src="{{ page.github-top-langs }}"
           alt="eric15342335 Most Used Languages" width="240" height="192" onload="hideSpinner()">
       </a>
 
-      <a href="https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical">
-        <img src="https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical"
+      <a href="{{ page.github-user-stats }}">
+        <img src="{{ page.github-user-stats }}"
           alt="eric15342335 Github Statistics" width="460" height="192" onload="hideSpinner()">
       </a>
     </div>
