@@ -10,3 +10,5 @@ feed:
   author_email: eric310@connect.hku.hk
   author_url: https://eric15342335.github.io/
 theme: null
+include:
+  - .well-known
