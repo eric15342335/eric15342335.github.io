@@ -6,7 +6,11 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Not Found - Page not available</title>
+  
   <link rel="prefetch" href="/index.html">
+
+{% include analytics.html %}
+
   <noscript>
     <meta http-equiv="refresh" content="10; url=/index.html">
   </noscript>
@@ -52,6 +56,9 @@
 </head>
 <body>
 <main>
+
+{% include analytics-body.html %}
+
   <div class="message" role="alert">
     <h1>404 Not Found</h1>
     <p>We're sorry, but the page you're looking for cannot be found.</p>
