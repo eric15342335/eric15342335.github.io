@@ -196,7 +196,17 @@ a:hover {
 .text-description {
   text-align: left;
   /* top and bottom | left and right */
-  padding: 0 10vw;
+  padding: 0 8vw;
+  margin: 0;
+}
+
+.text-description p {
+  margin-top: auto;
+}
+
+.projects-list p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 /* Footer styles */
