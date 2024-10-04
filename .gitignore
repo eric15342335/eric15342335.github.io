@@ -1,6 +1,9 @@
+# Jekyll stuff
 Gemfile.lock
 _site/
+.jekyll-metadata
 
+# npm stuff
 node_modules
 eslint.config.mjs
 package-lock.json
