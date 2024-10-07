@@ -1,6 +1,9 @@
 # [eric15342335.github.io](https://eric15342335.github.io)
 
+[![powered by Jekyll](https://img.shields.io/badge/powered_by-Jekyll-yellow.svg)](https://jekyllrb.com)
 [![pages-build-deployment](https://github.com/eric15342335/eric15342335.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/eric15342335/eric15342335.github.io/actions/workflows/pages/pages-build-deployment)
+
+[![Rss](https://img.shields.io/badge/rss-F88900?style=for-the-badge&logo=rss&logoColor=white)](https://eric15342335.github.io/feed.xml)
 
 Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 
