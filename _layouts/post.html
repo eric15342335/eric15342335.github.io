@@ -59,9 +59,10 @@
 {% include navbar.html %}
 
 <main>
-  <article>
+  <article class="text-description">
     <h1>{{ page.title }}</h1>
-    <small>{{ page.date | date: "%B %d, %Y" }}</small>
+    <small>Post created: {{ page.date | date: "%B %d, %Y" }}</small>
+    <br><br>
     <div>
       {{ content }}
     </div>
