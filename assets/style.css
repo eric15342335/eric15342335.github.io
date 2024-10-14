@@ -98,7 +98,6 @@ a:hover {
   display: flex;
   align-self: center;
   vertical-align: middle;
-  flex-shrink: 0;
   max-width: fit-content;
 }
 
@@ -107,6 +106,11 @@ a:hover {
   width: var(--navbar-image-size);
   border-radius: 50%;
   object-fit: cover;
+}
+
+.navbar .image-link img:hover {
+  box-shadow: 0 0 0 1px white; /* Mimicking a white border using box-shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
 
 /* Navbar toggler for mobile */
