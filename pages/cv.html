@@ -1,0 +1,61 @@
+---
+title: Curriculum Vitae
+permalink: /pages/cv.html
+long_description: Explore Cheng Ho Ming's Curriculum Vitae, a student at HKU studying Applied Artificial Intelligence, with a portfolio of academic and professional achievements.
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - Eric's Github Pages</title>
+
+{% include head.html %}
+
+{% include analytics.html %}
+
+  <!-- SEO and metadata -->
+  <meta name="description" content="{{ page.long_description }}">
+  <meta name="keywords" content="Eric, eric15342335, Cheng Ho Ming, HKU, BASc(AppliedAI)">
+  <meta name="author" content="eric15342335">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="https://eric15342335.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }} - Eric's Github Pages">
+  <meta property="og:description" content="{{ page.long_description }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title }} - Eric's Github Pages">
+  <meta name="twitter:description" content="{{ page.long_description }}">
+  <meta name="twitter:image" content="/assets/meguru-big.png">
+</head>
+<body>
+{% include analytics-body.html %}
+<!-- Navbar -->
+{% include navbar.html %}
+
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
+
+<main>
+  <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+    padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+      src="https://www.canva.com/design/DAGNYKEndbs/tRuxuTbhXdqrVeifVi_LDg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"
+      title="Cheng Ho Ming's Curriculum Vitae">
+    </iframe>
+  </div>
+  <p>
+    <a href="/assets/ChengHoMingCV.pdf">Download my CV</a><br>
+    <small>(Might not be as updated as the one above)</small>
+  </p>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>
