@@ -49,6 +49,12 @@ a:hover {
   transition: color 0.3s ease;
 }
 
+code {
+  font-family: 'Consolas', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 /* Navbar styles */
 .navbar {
   position: fixed;
