@@ -4,6 +4,29 @@ url: https://eric15342335.github.io
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site-wide metadata
+tagline: Eric's GitHub Pages
+
+author:
+  name: Cheng Ho Ming, Eric
+  email: eric310@connect.hku.hk
+  url: https://eric15342335.github.io/
+  github: eric15342335
+
+social:
+  name: eric15342335
+  links:
+    - https://github.com/eric15342335
+    - https://www.linkedin.com/in/eric15342335/
+    - https://www.instagram.com/ericcheng0310/
+
+logo: /assets/meguru-big.png
+
+webmaster_verifications:
+  google: nKhf3k5Ab3PBY31uGwwA-9csMaoM8j2T96heECb4RuM
+
 feed:
   path: feed.xml
   title: Eric's Blog on GitHub Pages
@@ -11,6 +34,7 @@ feed:
   author_name: Cheng Ho Ming, Eric
   author_email: eric310@connect.hku.hk
   author_url: https://eric15342335.github.io/
+
 theme: null
 include:
   - .well-known
