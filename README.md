@@ -29,6 +29,16 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 </details>
 
 <details>
+  <summary><code>.github/</code></summary>
+  GitHub-specific files, including workflows for GitHub Actions.
+</details>
+
+<details>
+  <summary><code>.well-known/</code></summary>
+  Files for web standards (e.g., security policies, verification files).
+</details>
+
+<details>
   <summary><code>assets/</code></summary>
   Static assets like fonts, images, and styles.
   <ul>
@@ -44,6 +54,9 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 <details>
   <summary><code>src/</code></summary>
   JavaScript source files.
+  <ul>
+    <li><code>thirdparty/</code>: Minified external javascript files (e.g. GoatCounter <code>count.js</code> file).</li>
+  </ul>
 </details>
 
 <!-- markdown-enable MD033 --->
