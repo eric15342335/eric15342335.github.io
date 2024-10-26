@@ -55,7 +55,7 @@ function fetchCourses(callback) {
 function createCourseRow(course) {
   const row = document.createElement("tr");
   const codeCell = document.createElement("td");
-  codeCell.id = FIXED_WIDTH_FONT_CLASS;
+  codeCell.classList.add(FIXED_WIDTH_FONT_CLASS);
   codeCell.textContent = course[COURSE_PROPERTIES.CODE];
 
   const nameCell = document.createElement("td");
