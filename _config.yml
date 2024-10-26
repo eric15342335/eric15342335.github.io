@@ -1,7 +1,9 @@
 timezone: Asia/Hong_Kong
 markdown: kramdown
+url: https://eric15342335.github.io
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 feed:
   path: feed.xml
   title: Eric's Blog on GitHub Pages

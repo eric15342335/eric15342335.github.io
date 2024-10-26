@@ -46,6 +46,21 @@ jobs:
           find _site -name '*.css' -exec cleancss -o {} {} \;
           find _site -name '*.js' -exec terser --compress --mangle -o {} -- {} \;
 
+      - name: Add stylesheet to sitemap
+        run: |
+          SITEMAP_PATH="_site/sitemap.xml"
+          STYLESHEET_DECLARATION='<?xml-stylesheet type="text/xsl" href="/assets/xml-style.xslt"?>'
+          if [ -f "$SITEMAP_PATH" ]; then
+            if ! grep -q "$STYLESHEET_DECLARATION" "$SITEMAP_PATH"; then
+              sed -i "1a $STYLESHEET_DECLARATION" "$SITEMAP_PATH"
+              echo "Stylesheet declaration added to sitemap.xml"
+            else
+              echo "Stylesheet declaration already present in sitemap.xml"
+            fi
+          else
+            echo "sitemap.xml not found"
+          fi
+
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
