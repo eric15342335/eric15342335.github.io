@@ -57,14 +57,14 @@
         <h3>XML Sitemap - Eric's GitHub Pages</h3>
 
         <!-- List of sitemap URLs -->
-        <ul class="sitemap-menu">
+        <ul class="sitemap-menu" role="navigation" aria-label="Sitemap">
           <xsl:for-each select="sitemap:urlset/sitemap:url">
             <!-- Extract the location of each URL -->
             <xsl:variable name="sitemap_loc"><xsl:value-of select="sitemap:loc"/></xsl:variable>
             
             <!-- List item for each URL -->
             <li>
-              <a href="{$sitemap_loc}"><xsl:value-of select="sitemap:loc" /></a>
+              <a href="{$sitemap_loc}" role="link"><xsl:value-of select="sitemap:loc" /></a>
             </li>
           </xsl:for-each>
         </ul>
