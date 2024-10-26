@@ -1,7 +1,6 @@
 ---
-title: Homepage
+title: Index
 permalink: /
-long_description: Welcome to Eric's Github Pages! I am a HKU BASc(Applied AI) student passionate about programming. Explore my personal projects, courses taken, and interests in software development.
 github-top-langs: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=14&theme=radical
 github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical
 ---
@@ -11,34 +10,13 @@ github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - Eric's Github Pages</title>
+  <title>{{ page.title }} - {{ site.tagline }}</title>
 
 {% include head.html %}
 
 {% include analytics.html %}
 
-  <!-- SEO and metadata -->
-  <meta name="description" content="{{ page.long_description }}">
-  <meta name="keywords" content="Eric, eric15342335, Cheng Ho Ming, HKU, BASc(AppliedAI)">
-  <meta name="author" content="eric15342335">
-
-  <!-- Facebook -->
-  <meta property="og:url" content="https://eric15342335.github.io">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ page.title }} - Eric's Github Pages">
-  <meta property="og:description" content="{{ page.long_description }}">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ page.title }} - Eric's Github Pages">
-  <meta name="twitter:description" content="{{ page.long_description }}">
-  <meta name="twitter:image" content="/assets/meguru-big.png">
-
-  <!-- Google Search Console verification for my personal account -->
-  <meta name="google-site-verification" content="nKhf3k5Ab3PBY31uGwwA-9csMaoM8j2T96heECb4RuM">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://eric15342335.github.io/">
+{% seo %}
 </head>
 <body>
 {% include analytics-body.html %}
