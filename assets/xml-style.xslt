@@ -27,7 +27,10 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-V187TY0SPN');
+          gtag('config', 'G-V187TY0SPN', {
+            'cookie_flags': 'SameSite=None; Secure',
+            'cookie_domain': 'eric15342335.github.io'
+          });
         </script>
         <!-- End Google Analytics -->
 
