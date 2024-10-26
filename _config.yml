@@ -6,8 +6,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Site-wide metadata
-tagline: Eric's GitHub Pages
+title: Eric's GitHub Pages
 
 author:
   name: Cheng Ho Ming, Eric
