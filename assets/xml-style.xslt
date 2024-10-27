@@ -47,7 +47,7 @@
 
         <!-- GoatCounter -->
         <script data-goatcounter="https://eric310.goatcounter.com/count"
-          src="https://gc.zgo.at/count.js">//</script>
+          src="/src/thirdparty/count.js">//</script>
         <!-- End GoatCounter -->
       </head>
       <body>
