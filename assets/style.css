@@ -121,7 +121,7 @@ code {
   background-color: transparent;
   border-color: transparent;
   margin-left: 1em;
-  margin-top: calc(var(--scroll-indicator-height) + 2px);
+  margin-top: calc(var(--scroll-indicator-height) / 3);
 }
 
 .navbar .image-link .navbar-toggler-icon:hover {
