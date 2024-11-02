@@ -72,7 +72,7 @@ function createCourseRow(course) {
 function displayCourses(courses) {
   const loadingSpinner = document.getElementById("loading-spinner");
   const courseTables = document.getElementById("course-tables");
-  
+
   // Hide loading spinner and show course tables
   loadingSpinner.style.display = "none";
   courseTables.style.display = "block";
@@ -100,13 +100,13 @@ function displayCourses(courses) {
       const semesterCell = document.createElement("td");
       semesterCell.setAttribute("colspan", "2");
       semesterCell.textContent = semesterYear;
-      
+
       if (isCurrent) {
         semesterCell.textContent += currentTimeframeText;
       } else if (isFuture) {
         semesterCell.textContent += upcomingTimeframeText;
       }
-      
+
       semesterRow.appendChild(semesterCell);
       targetTable.appendChild(semesterRow);
     }
