@@ -1,59 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-{% include head.html %}
-
-{% include analytics.html %}
-
-{% seo %}
-
-  <!-- MathJax Configuration -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
-
-  <!-- Ensure MathJax equations are responsive on mobile devices -->
-  <style>
-    mjx-container[jax="CHTML"] {
-      overflow-x: auto;
-    }
-    @media (min-width: 800px) {
-      mjx-container[jax="CHTML"] {
-        overflow-x: visible;
-      }
-    }
-  </style>
-
-  <!-- MathJax -->
-  <script id="MathJax-script" defer crossorigin="anonymous"
-    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"
-    integrity="sha384-NuejywWq7I0qomITfCQmoQ6vhoRC4keD8iNHdUWSqnBoPoQIAccbA/d6uU7oZaic">
-  </script>
+{% include post-head.html %}
 </head>
 <body>
-{% include analytics-body.html %}
-<!-- Navbar -->
-{% include navbar.html %}
-
-<main>
-  <article class="text-description">
-    <h1>{{ page.title }}</h1>
-    <small>Post created: {{ page.date | date_to_rfc822 }}</small>
-    <br>
-    <div>
-      {{ content }}
-    </div>
-  </article>
-</main>
-
-{% include footer.html %}
-
+{% include post-body.html %}
 </body>
 </html>

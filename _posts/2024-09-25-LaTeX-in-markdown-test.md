@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-latex
 title: "LaTeX in Markdown Test"
 date: 2024-09-25 11:00:00 +0800
 categories: blog

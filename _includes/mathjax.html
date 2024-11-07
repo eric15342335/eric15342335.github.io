@@ -1,0 +1,26 @@
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+
+  <!-- Ensure MathJax equations are responsive on mobile devices -->
+  <style>
+    mjx-container[jax="CHTML"] {
+      overflow-x: auto;
+    }
+    @media (min-width: 800px) {
+      mjx-container[jax="CHTML"] {
+        overflow-x: visible;
+      }
+    }
+  </style>
+
+  <!-- MathJax -->
+  <script id="MathJax-script" defer crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"
+    integrity="sha384-NuejywWq7I0qomITfCQmoQ6vhoRC4keD8iNHdUWSqnBoPoQIAccbA/d6uU7oZaic">
+  </script>
