@@ -8,7 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Not Found - Page not available</title>
   
-  <meta http-equiv="refresh" content="10; url=/index.html">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <noscript>
+    <meta http-equiv="refresh" content="10; url=/index.html">
+  </noscript>
   <link rel="prefetch" href="/index.html">
   <link rel="prefetch" href="/assets/font/Inter-latin.woff2">
   <link rel="prefetch" href="/assets/style.css">
@@ -20,32 +23,26 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, Roboto, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      margin: 0.5em 0;
       background-color: #111;
-    }
-    .message {
       text-align: center;
       color: #eee;
-      max-width: 600px;
-      padding: 20px;
-    }
-    .message p {
-      margin: 0.5em 0;
+      max-width: none;
+      font-size: 1.2em;
     }
     a {
       color: #aaf;
-      text-decoration: underline;
     }
     a:hover, a:focus {
-      text-decoration: none;
+      color: #eee;
+      transition: color 0.3s ease;
     }
     #countdown {
-      font-size: 1.2em;
+      font-size: 1.5em;
       font-weight: bold;
     }
     @keyframes fadeInOut {
@@ -59,18 +56,13 @@
 </head>
 <body>
 <main>
-
-{% include analytics-body.html %}
-
-  <div class="message" role="alert">
-    <h1>404 Not Found</h1>
-    <p>We're sorry, but the page you're looking for cannot be found.</p>
-    <p>You will be redirected to the home page in <span id="countdown">10</span> seconds.</p>
-    <p>If you are not redirected automatically, please
-      <a href="/index.html" aria-label="Go to home page">
-        click here to go to the home page</a>.
-    </p>
-  </div>
+  <h1>404 Not Found</h1>
+  <p>We're sorry, but the page you're looking for cannot be found.</p>
+  <p>You will be redirected to the home page in <span id="countdown">10</span> seconds.</p>
+  <p>If you are not redirected automatically, please
+    <a href="/index.html" aria-label="Go to home page">
+      click here to go to the home page</a>.
+  </p>
 </main>
 
 <script>
@@ -88,6 +80,12 @@
         countdownElement.classList.add('animate');
     }
   }, 1000);
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Shift') {
+      clearInterval(intervalId); // Stop the countdown
+    }
+  });
 </script>
 </body>
 </html>
