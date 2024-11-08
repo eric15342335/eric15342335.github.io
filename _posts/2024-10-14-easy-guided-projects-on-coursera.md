@@ -27,11 +27,7 @@ But I quickly realized that even in this [Internet age][internet-age], there are
 
 I don't know if it was your case, but apparently some of my relatives (even younger ones) still do not have experience with [Google Docs][google-docs], for example. Some of them even have basic computer skills (like [opening and copying files from a USB][open-files-from-usb-and-copy]), but they do not get beyond that level.
 
-Then, I think these kinds of [Coursera guided projects][coursera-guided-projects] are perfectly suited for these kinds of people.
-
-Not to mention that [Coursera guided projects][coursera-guided-projects] are designed to be finished rather quickly, [under 2 hours][coursera-guided-projects-2hr-googleSearch]. From [my experience][my-linkedin-license&certs], it's like attending a regular university lecture but in a more fun and stress-free environment. Plus, you get a [certificate after completion][intro-google-docs-cert]!
-
-It certainly explores my curiosity into learning things after I was deeply defeated by [the (very) lengthy courses][intro-to-machine-learning] on Coursera.
+Not to mention that guided projects are designed to be finished rather quickly, [under 2 hours][coursera-guided-projects-2hr-googleSearch]. From [my experience][my-linkedin-license&certs], it's like attending a regular university lecture but in a more fun and stress-free environment. Plus, you get a [certificate after completion][intro-google-docs-cert]! It certainly explores my curiosity into learning things after I was deeply defeated by [the (very) lengthy courses][intro-to-machine-learning] on Coursera.
 
 ### Conclusion
 
@@ -39,7 +35,7 @@ If you don't know which courses to start due to their expected completion time, 
 
 #### Disclaimer
 
-This is not an advertisement of [Coursera guided projects][coursera-guided-projects]. Just my personal reflection, as [my university (HKU) got Coursera licenses][hku-coursera-license].
+This is not an advertisement of Coursera guided projects. Just my personal reflection, as [my university got Coursera licenses][hku-coursera-license].
 
 [coursera-guided-projects]: https://www.coursera.org/collections/popular-free-guided-projects
 [coursera-platform]: https://coursera.org
