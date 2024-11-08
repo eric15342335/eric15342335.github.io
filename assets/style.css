@@ -22,7 +22,6 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
   text-align: center;
   padding-top: 2.2em;
   padding-left: var(--body-margin-left-right);
@@ -51,7 +50,7 @@ code {
   word-wrap: break-word;
 }
 
-.navbar {
+nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -62,38 +61,40 @@ code {
   text-align: left;
 }
 
-.navbar ul,
-.navbar li {
+nav ul,
+nav li {
   float: left;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.navbar li a {
+nav li a {
   display: block;
   color: var(--text-color);
   text-align: center;
   padding: calc(0.9em - 1px);
   text-decoration: none;
+  font-weight: 400;
   background: none;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* Needed for firefox when using
-  .navbar li a:hover { outline: solid 1px var(--text-color);} */
+  nav li a:hover { outline: solid 1px var(--text-color);} */
   margin: 1px;
 }
 
-.navbar li a:hover,
-.navbar li button:hover,
-.navbar li a:focus,
-.navbar li button:focus {
+nav li a:hover,
+nav li button:hover,
+nav li a:focus,
+nav li button:focus {
   background-color: var(--navbar-hover-bg-color);
   outline: solid 1px var(--text-color);
+  text-decoration: none;
 }
 
-.navbar .image-link {
+nav .image-link {
   margin-top: var(--scroll-indicator-height);
   display: flex;
   align-self: center;
@@ -101,20 +102,20 @@ code {
   max-width: fit-content;
 }
 
-.navbar .image-link img {
+nav .image-link img {
   height: var(--navbar-image-size);
   width: var(--navbar-image-size);
   border-radius: 50%;
   object-fit: cover;
 }
 
-.navbar .image-link img:hover {
+nav .image-link img:hover {
   box-shadow: 0 0 0 1px white; /* Mimicking a white border using box-shadow */
   transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
 
 /* Navbar toggler for mobile */
-.navbar .image-link .navbar-toggler-icon {
+nav .image-link .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   height: var(--navbar-image-size);
   width: var(--navbar-image-size);
@@ -124,7 +125,7 @@ code {
   margin-top: calc(var(--scroll-indicator-height) / 3);
 }
 
-.navbar .image-link .navbar-toggler-icon:hover {
+nav .image-link .navbar-toggler-icon:hover {
   background-color: var(--navbar-hover-bg-color);
   outline: solid 1px var(--text-color);
   transition: background-color 0.3s ease;
@@ -191,14 +192,14 @@ code {
   padding: 0;
 }
 
-.text-description {
+article {
   text-align: left;
   padding-left: 8vw;
   padding-right: 8vw;
   margin: 0;
 }
 
-.text-description p {
+article p {
   margin-top: auto;
 }
 
@@ -239,10 +240,10 @@ code {
 }
 
 @media (min-width: 709px) {
-  .navbar {
+  nav {
     display: flex;
   }
-  .navbar ul {
+  nav ul {
     display: flex;
   }
   
@@ -257,15 +258,15 @@ code {
     padding-right: 3vw;
   }
 
-  .navbar {
+  nav {
     display: block;
   }
-  .navbar ul {
+  nav ul {
     display: none;
     max-height: 0;
   }
 
-  .navbar.open ul {
+  nav.open ul {
     display: block;
     max-height: 500px;
     opacity: 1;

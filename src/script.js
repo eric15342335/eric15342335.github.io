@@ -1,66 +1,20 @@
 "use strict";
 
-const RICKROLL_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-const CONFIRM_MESSAGE = "Are you sure you want to leave this page?";
-const RICKROLL_BUTTON_ID = "rickroll-button";
-const BUTTON_REMOVED_KEY = "rickrollButtonRemoved";
-
 const ORIGINAL_TITLE = document.title;
 const COMEBACK_TITLE = "Come back to " + ORIGINAL_TITLE + "!";
-
-const scrollDebounceTime = 15;
 
 document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("visibilitychange", handleVisibilityChange);
 
   window.addEventListener("scroll", handleWindowScroll);
 
-  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
-  // If the button was removed before, remove it again.
-  if (buttonClickedBefore()) {
-    removeRickrollButton();
-  } else if (rickrollButton) {
-    rickrollButton.addEventListener("click", redirectToYouTube);
-  } else {
-    console.warn('Button with ID "' + RICKROLL_BUTTON_ID + '" not found.');
-  }
-
   const navbarToggle = document.querySelector(".navbar-toggler-icon");
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector("nav");
   // Toggle the navbar when the toggle button is clicked, if it exists (for mobile).
   navbarToggle.addEventListener("click", function () {
     navbar.classList.toggle("open");
   });
 });
-
-/**
- * Redirects the user to the Rick Roll video if confirmed.
- * If not confirmed, removes the Rick Roll button.
- * The button is removed from the DOM in this session.
- */
-function redirectToYouTube() {
-  if (confirm(CONFIRM_MESSAGE)) {
-    window.location.href = RICKROLL_URL;
-  } else {
-    removeRickrollButton();
-    sessionStorage.setItem(BUTTON_REMOVED_KEY, "true");
-  }
-}
-
-function buttonClickedBefore() {
-  return sessionStorage.getItem(BUTTON_REMOVED_KEY) === "true";
-}
-
-function removeRickrollButton() {
-  const rickrollButton = document.getElementById(RICKROLL_BUTTON_ID);
-  if (rickrollButton) {
-    rickrollButton.style.display = "none";
-  } else {
-    console.warn(
-      'Button with ID "' + RICKROLL_BUTTON_ID + '" not found for removal.'
-    );
-  }
-}
 
 function handleVisibilityChange() {
   if (document.visibilityState === "hidden") {
@@ -80,6 +34,8 @@ function debounce(func, delay) {
     }, delay);
   };
 }
+
+const scrollDebounceTime = 15;
 
 const handleWindowScroll = debounce(function () {
   const scrollIndicator = document.querySelector(".scroll-indicator");
