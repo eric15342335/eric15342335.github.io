@@ -7,13 +7,11 @@
   <meta name="description" content="404 Not Found - Page not available">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Not Found - Page not available</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <noscript>
     <meta http-equiv="refresh" content="10; url=/index.html">
   </noscript>
   <link rel="prefetch" href="/index.html">
-  <link rel="prefetch" href="/assets/font/Inter-latin.woff2">
   <link rel="prefetch" href="/assets/style.css">
   <link rel="prefetch" href="/src/script.js">
 
@@ -22,8 +20,15 @@
 {% seo %}
 
   <style>
+    @font-face {
+      src: url(/assets/font/Inter-latin.woff2) format('woff2'), url(/assets/font/Inter-latin.woff) format('woff');
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+    }
     body {
-      font-family: -apple-system, Roboto, sans-serif;
+      font-family: -apple-system, 'Inter', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;

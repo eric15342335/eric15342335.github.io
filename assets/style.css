@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, 'Inter', sans-serif;
   text-align: center;
   padding-top: 2.2em;
   padding-left: var(--body-margin-left-right);
