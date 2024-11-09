@@ -23,32 +23,13 @@ permalink: /pages/cv.html
 </header>
 
 <main>
-  <p>
-    <a href="/assets/ChengHoMingCV.pdf">Download my CV</a><br>
-    <small>(Might not be as updated as the one below)</small>
-  </p>
-  <div id="loading-spinner" class="loading-spinner" style="display: block;"></div>
-  <div id="loading-spinner_text" style="display: block;">
-    <small>Loading latest version of my Curriculum Vitae...</small>
-  </div>
-  <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
-    padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;
-    display: none;"
-    id="canva-cv-iframe-div">
-    <iframe style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;
-        padding: 0;margin: 0;"
-      src="https://www.canva.com/design/DAGNYKEndbs/tRuxuTbhXdqrVeifVi_LDg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"
-      onload="hideSpinner()"
-      title="Cheng Ho Ming's Curriculum Vitae">
-    </iframe>
-  </div>
-  <script>
-    function hideSpinner() {
-      document.getElementById('loading-spinner').style.display = 'none';
-      document.getElementById('loading-spinner_text').style.display = 'none';
-      document.getElementById('canva-cv-iframe-div').style.display = 'block';
-    }
-  </script>
+  <object data="/assets/ChengHoMingCV.pdf" type="application/pdf"
+    style="height: 100%; width: 84%; min-height: 100vh;"">
+    <p>
+      It appears you don't have a PDF plugin for this browser.
+      You can <a href="/assets/ChengHoMingCV.pdf">click here to download the PDF file.</a>
+    </p>
+  </object>
 </main>
 
 {% include footer.html %}
