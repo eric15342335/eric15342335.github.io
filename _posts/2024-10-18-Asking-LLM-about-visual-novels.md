@@ -16,68 +16,54 @@ recognize it as a visual novel, but at least know I was talking about something 
 
 ### Qwen2.5 0.5b
 
-```js
+```shell
 PS C:\Users\123er> ollama run qwen2.5:0.5b-instruct-fp16
->>> Hoshizora no Memoria
-I understand you're looking for information on "Memoria Hoshizora," which refers to the memory of Senzō
-Hoshizō, the sixth emperor of Japan. While I am not a historian or expert in Japanese history, I can
-provide some general insights.
-
-Senzō Hoshizō was born around 1495 and died in 1560. He was an influential figure during the late Edo
-period (1867-1912), known for his efforts to harmonize Confucianism with traditional Japanese culture.
-His memory often comes up in discussions about historical figures who lived within that era.
-
-<the message continues here...>
 ```
+
+`>>>` Hoshizora no Memoria
+
+I understand you're looking for information on "Memoria Hoshizora," which refers to the memory of Senzō Hoshizō, the sixth emperor of Japan. While I am not a historian or expert in Japanese history, I can provide some general insights.
+
+Senzō Hoshizō was born around 1495 and died in 1560. He was an influential figure during the late Edo period (1867-1912), known for his efforts to harmonize Confucianism with traditional Japanese culture. His memory often comes up in discussions about historical figures who lived within that era.
+
+(the chat continues here...)
 
 ### Llama3.2 3b
 
 [`llama3.2:3b-instruct-q8_0`][llama3.2:3b-instruct-q8_0] at least guessed it as something ACG-related:
 
-```js
+```shell
 PS C:\Users\123er> ollama run llama3.2:3b-instruct-q8_0
->>> Hoshizora no Memoria
+```
+
+`>>>` Hoshizora no Memoria
+
 Hoshizora no Memoria (, lit. "Memories of the Horizon") is a Japanese manga series written and
 illustrated by Yura Mimiwa.
 
-The story follows a young girl named Akiha Hoshino, who possesses a unique ability to see and interpret
-the memories of others through their emotions. She uses this power to help people overcome their traumatic
-pasts and find closure.
+The story follows a young girl named Akiha Hoshino, who possesses a unique ability to see and interpret the memories of others through their emotions. She uses this power to help people overcome their traumatic pasts and find closure.
 
-<the chat continues here...>
-```
+(the chat continues here...)
 
 ### GPT-4o-mini
 
 [`GPT-4o-mini`][gpt-4o-mini] is more accurate, but still screwed up the details:
 
-```markdown
-**Hoshizora no Memoria** (星空のメモリア) is a visual novel developed by **Furukawa Shun** and released by
-**Hoshizora no Memoria Team**. It combines elements of romance and drama, featuring a rich story and
-character development.
+**Hoshizora no Memoria** (星空のメモリア) is a visual novel developed by **Furukawa Shun** and released by **Hoshizora no Memoria Team**. It combines elements of romance and drama, featuring a rich story and character development.
 
-<the chat continues here...>
-```
+(the chat continues here...)
 
 ### ChatGPT-4o-latest
 
 [`ChatGPT-4o-Latest`][ChatGPT-4o-Latest] was very accurate:
 
-```markdown
-**Hoshizora no Memoria -Wish upon a Shooting Star-** is a Japanese visual novel developed by **Favorite**,
-originally released in 2009. It is a romance visual novel that features branching storylines and multiple
-endings depending on the player's choices. The story revolves around the protagonist and his return to his
-hometown, where he reconnects with childhood memories and encounters mysterious events, particularly
-involving a promise made to a girl under the night sky.
+**Hoshizora no Memoria -Wish upon a Shooting Star-** is a Japanese visual novel developed by **Favorite**, originally released in 2009. It is a romance visual novel that features branching storylines and multiple endings depending on the player's choices. The story revolves around the protagonist and his return to his hometown, where he reconnects with childhood memories and encounters mysterious events, particularly involving a promise made to a girl under the night sky.
 
 ### Plot Summary
 
-The story begins with **Kogasaka You**, the protagonist, returning to his hometown after several years of
-living elsewhere. His mother has passed away, and he moves back with his younger sister, **Chinami**, to
-live with their aunt.
+The story begins with **Kogasaka You**, the protagonist, returning to his hometown after several years of living elsewhere. His mother has passed away, and he moves back with his younger sister, **Chinami**, to live with their aunt.
 
-<the chat continues here...>
-```
+(the chat continues here...)
 
 ## Final words
 
