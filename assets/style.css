@@ -181,19 +181,7 @@ nav .image-link .navbar-toggler-icon:hover {
   font-family: 'Consolas', monospace;
 }
 
-.external-images {
-  display: flex;
-  flex-direction: column;
-}
-
-.external-images img {
-  margin-bottom: 1em;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 12em;
-}
-
+/* Used in xslt sitemap stylesheet */
 .sitemap-menu {
   list-style-type: none;
   line-height: 1.5;
