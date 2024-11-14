@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Generating commit message via GitLens and Copilot"
-date: 2024-11-13 01:00:00 +0800
+date: 2024-11-14 21:00:00 +0800
 categories: blog
 ---
 
