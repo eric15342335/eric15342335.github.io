@@ -7,12 +7,12 @@ categories: blog
 
 ## Background
 
-I have recently discovered a nice feature for [GitLens][gitlens] integration on [GitHub Copilot][github-copilot], that lets you generate commit messages without the need of typing them.
+I have recently discovered a nice feature for [GitLens][gitlens] integration on [GitHub Copilot][github-copilot], that lets you generate commit messages using `o1-preview` or `o1-mini` without the need of typing them.
 
 ## Emm wait, isn't GitHub Copilot already have such feature?
 
 ![Figure: Already exists?](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image1.png)
-Yes, but it turns out that the extension uses `GPT-4o` models by default, and seems like there is no way to change it. ([Notify me][website-repo-issue] if there is indeed a way!)
+Yes, but it turns out that the extension uses `GPT-4o` models by default (source: trust me bro), and seems like there is no way to change it. If you want to use more advanced model (e.g. `o1` family from OpenAI), you can follow my steps. ([Notify me][website-repo-issue] if there is indeed a way!)
 
 This is how to use the feature:
 
