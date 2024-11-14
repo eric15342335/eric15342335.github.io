@@ -5,6 +5,8 @@ date: 2024-10-14 12:00:00 +0800
 categories: blog
 ---
 
+## Background
+
 I was amazed when I discovered these [guided projects][coursera-guided-projects] on [Coursera][coursera-platform]:
 
 1. [Create a Profile and Network on LinkedIn][linkedin-profile-network]
