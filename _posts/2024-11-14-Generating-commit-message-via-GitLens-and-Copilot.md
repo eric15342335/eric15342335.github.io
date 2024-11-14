@@ -11,7 +11,7 @@ I have recently discovered a nice feature for [GitLens][gitlens] integration on 
 
 ## Emm wait, isn't GitHub Copilot already have such feature?
 
-![Figure: Already exists?](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image1.png)
+![Figure: Already exists?](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image1.webp)
 Yes, but it turns out that the extension uses `GPT-4o` models by default (source: trust me bro), and seems like there is no way to change it. If you want to use more advanced model (e.g. `o1` family from OpenAI), you can follow my steps. ([Notify me][website-repo-issue] if there is indeed a way!)
 
 This is how to use the feature:
@@ -20,9 +20,9 @@ This is how to use the feature:
 2. Make changes by code something new
 3. Proceed to `Source Control`(press `Ctrl+Shift+G`, followed by `G`), hover on the `SOURCE CONTROL` collapsable menu, and click the three horizontal dot button (`More Actions...`)
 4. Click "Generate Commit Messages (GitLens)"
-![Generate Commit Messages (GitLens)](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image2.png)
+![Generate Commit Messages (GitLens)](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image2.webp)
 5. Choose a model you like
-![Choose a model](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image3.png)
+![Choose a model](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image3.webp)
 6. Wait, if you use `o1` models, it will take a long time
 
 ## Result
