@@ -4,6 +4,9 @@ title: "Generating commit message via GitLens and Copilot"
 date: 2024-11-13 01:00:00 +0800
 categories: blog
 ---
+
+## Background
+
 I have recently discovered a nice feature for [GitLens][gitlens] integration on [GitHub Copilot][github-copilot], that lets you generate commit messages without the need of typing them.
 
 ## Emm wait, isn't GitHub Copilot already have such feature?
@@ -21,7 +24,6 @@ This is how to use the feature:
 5. Choose a model you like
 ![Choose a model](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image3.png)
 6. Wait, if you use `o1` models, it will take a long time
-
 
 ## Result
 
