@@ -60,6 +60,12 @@ img {
   margin-bottom: 1em;
 }
 
+#github-stats {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
 nav {
   position: fixed;
   top: 0;
