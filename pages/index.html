@@ -89,7 +89,7 @@ github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342
 
   <div id="loading-spinner" class="loading-spinner" style="display: block;"></div>
 
-  <div id="github-stats"></div>
+  <div id="github-stats">
     <a href="{{ page.github-top-langs }}"><img src="{{ page.github-top-langs }}"
         alt="eric15342335 Most Used Languages" onload="hideSpinner()"></a>
     <a href="{{ page.github-user-stats }}"><img src="{{ page.github-user-stats }}"
@@ -103,7 +103,7 @@ github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342
       console.debug("Loaded images:", loadedImages);
       if (loadedImages === 2) {
         document.getElementById('loading-spinner').style.display = 'none';
-        document.getElementById('github-stats').style.display = 'block';
+        document.getElementById('github-stats').style.display = 'flex';
       }
     }
   </script>
