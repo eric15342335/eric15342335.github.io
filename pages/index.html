@@ -3,6 +3,7 @@ title: Index
 permalink: /
 github-top-langs: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=10&theme=radical&exclude_repo=comp2120,inspirematrix-buttons
 github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical
+leetcode-stats: https://leetcard.jacoblin.cool/eric15342335?theme=radical&font=Inter
 ---
 
 <!DOCTYPE html>
@@ -89,11 +90,13 @@ github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342
 
   <div id="loading-spinner" class="loading-spinner" style="display: block;"></div>
 
-  <div id="github-stats">
+  <div id="user-stats">
     <a href="{{ page.github-top-langs }}"><img src="{{ page.github-top-langs }}"
         alt="eric15342335 Most Used Languages" onload="hideSpinner()"></a>
     <a href="{{ page.github-user-stats }}"><img src="{{ page.github-user-stats }}"
         alt="eric15342335 Github Statistics" onload="hideSpinner()"></a>
+    <a href="{{ page.leetcode-stats }}"><img src="{{ page.leetcode-stats }}"
+      alt="eric15342335 LeetCode Statistics" onload="hideSpinner()"></a>
   </div>
 
   <script>
@@ -101,9 +104,9 @@ github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342
     function hideSpinner() {
       loadedImages++;
       console.debug("Loaded images:", loadedImages);
-      if (loadedImages === 2) {
+      if (loadedImages === 3) {
         document.getElementById('loading-spinner').style.display = 'none';
-        document.getElementById('github-stats').style.display = 'flex';
+        document.getElementById('user-stats').style.display = 'flex';
       }
     }
   </script>

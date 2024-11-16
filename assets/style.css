@@ -60,8 +60,10 @@ img {
   margin-bottom: 1em;
 }
 
-#github-stats {
+#user-stats {
   margin: 0;
+  padding-left: var(--body-margin-left-right);
+  padding-right: var(--body-margin-left-right);
   justify-content: center;
   align-items: center;
 }
