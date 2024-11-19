@@ -3,6 +3,7 @@ layout: post-latex
 title: "LaTeX in Markdown Test"
 date: 2024-09-25 11:00:00 +0800
 categories: blog
+description: "Watch LaTeX meet Markdown in action! Cheng Ho Ming tests LaTeX rendering by proving a classic sum of squares formula using mathematical induction. Math and Markdown—the perfect combo for your next project."
 ---
 
 ## Question
