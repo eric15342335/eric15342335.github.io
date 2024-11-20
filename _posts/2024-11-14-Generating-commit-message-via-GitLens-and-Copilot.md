@@ -17,8 +17,13 @@ Yes, but it turns out that the extension uses `GPT-4o` models by default (source
 This is how to use the feature:
 
 1. Install [GitLens extension][gitlens-extension] and [GitHub Copilot extension][github-copilot-extension]
+
+    Update (Nov 20, 2024): You need to switch GitLens to Pre-release edition after you have installed it to work with Copilot extension.
+    ![Pre-release version of GitLens](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-gitlens-pre-release.webp)
+    {: .encircled-text}
+
 2. Make changes by code something new
-3. Proceed to `Source Control`(press `Ctrl+Shift+G`, followed by `G`), hover on the `SOURCE CONTROL` collapsable menu, and click the three horizontal dot button (`More Actions...`)
+3. Proceed to `Source Control` (press `Ctrl+Shift+G`, followed by `G`), hover on the `SOURCE CONTROL` collapsable menu, and click the three horizontal dot button (`More Actions...`)
 4. Click "Generate Commit Messages (GitLens)"
 ![Generate Commit Messages (GitLens)](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image2.webp)
 5. Choose a model you like

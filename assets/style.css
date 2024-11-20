@@ -237,6 +237,13 @@ article p {
   margin: 20px auto;
 }
 
+/* Simplified version of github markdown alerts */
+.encircled-text {
+  display: inline-block;
+  border: 1px solid var(--text-color);
+  padding: 1em;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
