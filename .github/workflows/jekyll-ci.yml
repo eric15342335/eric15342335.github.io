@@ -42,7 +42,7 @@ jobs:
       - name: Minify HTML, CSS, and JS
         run: |
           npm install -g html-minifier terser clean-css-cli
-          find _site -name '*.html' -exec html-minifier --collapse-whitespace --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --minify-css true --minify-js true -o {} {} \;
+          find _site -name '*.html' -exec html-minifier --collapse-whitespace --remove-redundant-attributes --remove-script-type-attributes --minify-css true --minify-js true -o {} {} \;
           find _site -name '*.css' -exec cleancss -O2 -o {} {} \;
           find _site -name '*.js' -exec terser --compress --mangle -o {} -- {} \;
 
