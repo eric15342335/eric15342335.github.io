@@ -1,7 +1,7 @@
 # [eric15342335.github.io](https://eric15342335.github.io)
 
 [![powered by Jekyll](https://img.shields.io/badge/powered_by-Jekyll-yellow.svg)](https://jekyllrb.com)
-[![pages-build-deployment](https://github.com/eric15342335/eric15342335.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/eric15342335/eric15342335.github.io/actions/workflows/pages/pages-build-deployment)
+[![Jekyll Build and Deploy](https://github.com/eric15342335/eric15342335.github.io/actions/workflows/jekyll-ci.yml/badge.svg)](https://github.com/eric15342335/eric15342335.github.io/actions/workflows/jekyll-ci.yml)
 
 [![Rss](https://img.shields.io/badge/rss-F88900?style=for-the-badge&logo=rss&logoColor=white)](https://eric15342335.github.io/feed.xml)
 
@@ -42,7 +42,8 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
   <summary><code>assets/</code></summary>
   Static assets like fonts, images, and styles.
   <ul>
-    <li><code>font/</code>: Font files</li>
+    <li><code>font/</code>: Self host Inter font to reduce number of domain contacted.</li>
+    <li><code>images</code>: For blog posts, PWA manifest etc. Preferably stored in WebP to save size.</li>
   </ul>
 </details>
 
