@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarToggle = document.querySelector(".navbar-toggler-icon");
   const navbar = document.querySelector("nav");
   // Toggle the navbar when the toggle button is clicked, if it exists (for mobile).
-  navbarToggle.addEventListener("click", function () {
-    navbar.classList.toggle("open");
-  });
+  if (navbarToggle && navbar) {
+    navbarToggle.addEventListener("click", function () {
+      navbar.classList.toggle("open");
+    });
+  }
 });
 
 function handleVisibilityChange() {

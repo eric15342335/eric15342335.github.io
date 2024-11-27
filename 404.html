@@ -1,50 +1,26 @@
 ---
+title: 404 Not Found - Page not available
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="404 Not Found - Page not available">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Not Found - Page not available</title>
+{% include head.html %}
 
   <noscript>
     <meta http-equiv="refresh" content="10; url=/index.html">
   </noscript>
   <link rel="prefetch" href="/index.html">
-  <link rel="prefetch" href="/assets/style.css">
-  <link rel="prefetch" href="/src/script.js">
 
 {% include analytics.html %}
 
 {% seo %}
 
   <style>
-    @font-face {
-      src: url(/assets/font/Inter-latin.woff2) format('woff2'), url(/assets/font/Inter-latin.woff) format('woff');
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 100 900;
-      font-display: swap;
-    }
     body {
-      font-family: -apple-system, 'Inter', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0.5em 0;
-      background-color: #111;
-      text-align: center;
-      color: #eee;
-      max-width: none;
       font-size: 1.2em;
-    }
-    a {
-      color: #aaf;
-    }
-    a:hover, a:focus {
-      color: #eee;
-      transition: color 0.3s ease;
     }
     #countdown {
       font-size: 1.5em;
