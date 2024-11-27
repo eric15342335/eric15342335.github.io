@@ -6,14 +6,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-title: Eric's GitHub Pages
+title: Eric15342335's GitHub Pages \| HKU BASc(AppliedAI) Year 2
 
 author:
   name: Cheng Ho Ming, Eric
   email: eric310@connect.hku.hk
   url: https://eric15342335.github.io/
-  github: eric15342335
-  twitter: eric15342335
 
 social:
   name: eric15342335
