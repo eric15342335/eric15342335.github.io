@@ -102,14 +102,27 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
 
   <script>
     let loadedImages = 0;
+    const spinner = document.getElementById('loading-spinner');
+    const userStats = document.getElementById('user-stats');
+    // multiple triggers for this feature
+    function showUserStats() {
+      spinner.style.display = 'none';
+      userStats.style.display = 'flex';
+    }
+    // all images are loaded
     function hideSpinner() {
       loadedImages++;
       console.debug("Loaded images:", loadedImages);
       if (loadedImages === 3) {
-        document.getElementById('loading-spinner').style.display = 'none';
-        document.getElementById('user-stats').style.display = 'flex';
+        showUserStats();
       }
     }
+    // fail to load some images
+    setTimeout(() => {
+      if (loadedImages < 3) {
+        showUserStats();
+      }
+    }, 2000);
   </script>
 </main>
 
