@@ -7,17 +7,30 @@
 }
 
 :root {
-  --bg-color: #111;
-  --text-color: #fff;
-  --border-color: #beb;
-  --link-color: #aaf;
-  --navbar-bg-color: #333;
-  --navbar-hover-bg-color: #555;
+  --bg-color: #fff;
+  --text-color: #111;
+  --link-color: #44f;
+  --navbar-bg-color: #3b3;
+  --navbar-hover-bg-color: #5f5;
+  --border-color: #0a0;
+  /* Other variables not related to dark/light theme */
   --navbar-image-size: 2.5em;
   --body-margin-left-right: 2vw;
   --scroll-indicator-height: 0.25em;
   --z-index-navbar: 10;
   --z-index-scroll-indicator: 11;
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111;
+    --text-color: #fff;
+    --link-color: #aaf;
+    --navbar-bg-color: #333;
+    --navbar-hover-bg-color: #555;
+    --border-color: #beb;
+  }
 }
 
 body {
@@ -70,7 +83,7 @@ img {
 
 nav {
   position: fixed;
-  top: 0;
+  top: var(--scroll-indicator-height);
   right: 0;
   left: 0;
   width: 100%;
@@ -113,7 +126,6 @@ nav li button:focus {
 }
 
 nav .image-link {
-  margin-top: var(--scroll-indicator-height);
   display: flex;
   align-self: center;
   vertical-align: middle;
@@ -238,13 +250,6 @@ article p {
   margin: 20px auto;
 }
 
-/* Simplified version of github markdown alerts */
-.encircled-text {
-  display: inline-block;
-  border: 1px solid var(--text-color);
-  padding: 1em;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -252,6 +257,13 @@ article p {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Simplified version of github markdown alerts */
+.encircled-text {
+  display: inline-block;
+  border: 1px solid var(--text-color);
+  padding: 1em;
 }
 
 @media (min-width: 709px) {
