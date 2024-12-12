@@ -133,7 +133,7 @@ nav .image-link {
 }
 
 nav .image-link img {
-  margin: 0; /* Remove default margin */
+  margin: var(--scroll-indicator-height) 0;
   height: var(--navbar-image-size);
   width: var(--navbar-image-size);
   border-radius: 50%;
@@ -141,7 +141,7 @@ nav .image-link img {
 }
 
 nav .image-link img:hover {
-  box-shadow: 0 0 0 1px white; /* Mimicking a white border using box-shadow */
+  box-shadow: 0 0 0 1px var(--text-color);
   transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
 
@@ -153,7 +153,8 @@ nav .image-link .navbar-toggler-icon {
   background-color: transparent;
   border-color: transparent;
   margin-left: 1em;
-  margin-top: calc(var(--scroll-indicator-height) / 3);
+  margin-top: var(--scroll-indicator-height);
+  margin-bottom: var(--scroll-indicator-height);
 }
 
 nav .image-link .navbar-toggler-icon:hover {
@@ -266,7 +267,7 @@ article p {
   padding: 1em;
 }
 
-@media (min-width: 709px) {
+@media (min-width: 400px) {
   nav {
     display: flex;
   }
@@ -279,15 +280,12 @@ article p {
   }
 }
 
-@media (max-width: 709px) {
+@media (max-width: 400px) {
   .text-description {
     padding-left: 3vw;
     padding-right: 3vw;
   }
 
-  nav {
-    display: block;
-  }
   nav ul {
     display: none;
     max-height: 0;
@@ -295,7 +293,6 @@ article p {
 
   nav.open ul {
     display: block;
-    max-height: 500px;
     opacity: 1;
   }
 }
