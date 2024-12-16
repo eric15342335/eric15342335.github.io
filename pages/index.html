@@ -43,7 +43,7 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
   </article>
 
   <h2><a href="https://github.com/eric15342335?tab=repositories">Projects</a></h2>
-  <div class="projects-list">
+  <section class="projects-list">
     <p>
       Firefox Bookmark Invalidator
       <a href="https://github.com/eric15342335/firefox-bookmark-invalidation"
@@ -87,18 +87,73 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
         [Github]
       </a>
     </p>
-  </div>
+  </section>
+
+  <section>
+    <h2>As an AI student, you must use a lot of AI chatbot, right?</h2>
+    <p>
+      Yes, I use a lot of AI chatbot. Here are some of the providers I use and my thoughts on them:
+    </p>
+    <table class="course-table">
+      <thead>
+      <tr>
+        <th>Provider</th><th>Thoughts</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><a href="https://github.com/features/copilot">GitHub Copilot</a></td>
+        <td><a href="https://github.com/education">Education license</a> (see my <a href="/blog/2024/11/14/Generating-commit-message-via-GitLens-and-Copilot.html">blog</a> too!)</td>
+      </tr>
+      <tr>
+        <td><a href="https://poe.com">Poe.com</a></td>
+        <td>Lots of AI models to pick from, but the quota runs out fast if you use them a lot.</td>
+      </tr>
+      <tr>
+        <td><a href="https://2233.ai/i/ERIC310">2233.ai/chatgpt</a></td>
+        <td>Occasionally experiences bugs during chat.</td>
+      </tr>
+      <tr>
+        <td><a href="https://chatgpt.com">chatgpt.com</a></td>
+        <td><a href="https://protonvpn.com/free-vpn">Proton VPN</a> + <a href="https://bewildcard.com">bewildcard.com</a>, mainly for <a href="https://openai.com/o1/">o1</a> and Advanced Voice Mode (with video)</td>
+      </tr>
+      <tr>
+        <td><a href="https://aistudio.google.com/prompts/new_chat">Google AI Studio</a></td>
+        <td><a href="https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/">Gemini 2.0 Flash Experimental</a> currently has 1500 requests/day for free!</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/marketplace/models">GitHub Models</a></td>
+        <td><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits">Free 8 o1-preview and 12 o1-mini per day</a>, limited beta</td>
+      </tr>
+      <tr>
+        <td><a href="https://console.x.ai">Grok 2 API</a></td>
+        <td>free <a href="https://x.ai/blog/api">$25 per month</a> during Beta + <a href="https://openwebui.com/">Open-WebUI</a> (or <a href="https://librechat-librechat.hf.space/c/new">LibreChat</a>)</td>
+      </tr>
+      <tr>
+        <td><a href="https://ollama.com">Ollama</a></td>
+        <td>Mainly <a href="https://ollama.com/library/llama2-uncensored">uncensored llama models</a> for fun.</td>
+      </tr>
+      <tr>
+        <td><a href="https://openrouter.com">OpenRouter</a></td>
+        <td>The web interface is a bit clunky, especially when you zoom out.</td>
+      </tr>
+      </tbody>
+    </table>
+    <p>
+      The list is not exhaustive, and I will update it as I try more providers.
+    </p>
+  </section>
 
   <div id="loading-spinner" class="loading-spinner"></div>
 
-  <div id="user-stats" style="display: none;">
+  <section id="user-stats" style="display: none;">
     <a href="{{ page.github-top-langs }}"><img src="{{ page.github-top-langs }}"
         alt="eric15342335 Most Used Languages" onload="hideSpinner()"></a>
     <a href="{{ page.github-user-stats }}"><img src="{{ page.github-user-stats }}"
         alt="eric15342335 Github Statistics" onload="hideSpinner()"></a>
     <a href="{{ page.leetcode-stats }}"><img src="{{ page.leetcode-stats }}"
       alt="eric15342335 LeetCode Statistics" onload="hideSpinner()"></a>
-  </div>
+  </section>
 
   <script>
     let loadedImages = 0;
