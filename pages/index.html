@@ -1,9 +1,14 @@
 ---
 title: Index
 permalink: /
-github-top-langs: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=10&theme=radical&exclude_repo=comp2120,inspirematrix-buttons
-github-user-stats: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical
-leetcode-stats: https://leetcard.jacoblin.cool/eric15342335?theme=radical&font=Inter
+github-top-langs-dark: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=10&theme=radical&exclude_repo=comp2120,inspirematrix-buttons
+github-user-stats-dark: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical
+leetcode-stats-dark: https://leetcard.jacoblin.cool/eric15342335?theme=radical&font=Inter
+
+github-top-langs-light: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=10&theme=default&exclude_repo=comp2120,inspirematrix-buttons
+github-user-stats-light: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=default
+leetcode-stats-light: https://leetcard.jacoblin.cool/eric15342335?theme=light&font=Inter
+
 description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BASc(AppliedAI) undergraduate. Insights into technologies, open-source contributions, personal projects, and student life.
 ---
 
@@ -115,7 +120,7 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
       </tr>
       <tr>
         <td><a href="https://chatgpt.com">chatgpt.com</a></td>
-        <td><a href="https://protonvpn.com/free-vpn">Proton VPN</a> + <a href="https://bewildcard.com">bewildcard.com</a>, mainly for <a href="https://openai.com/o1/">o1</a> and Advanced Voice Mode (with video)</td>
+        <td><a href="https://protonvpn.com/free-vpn">Proton VPN</a> + <a href="https://bewildcard.com/i/ERIC310">bewildcard.com</a>, mainly for <a href="https://openai.com/o1/">o1</a> and Advanced Voice Mode (with video)</td>
       </tr>
       <tr>
         <td><a href="https://aistudio.google.com/prompts/new_chat">Google AI Studio</a></td>
@@ -147,12 +152,27 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
   <div id="loading-spinner" class="loading-spinner"></div>
 
   <section id="user-stats" style="display: none;">
-    <a href="{{ page.github-top-langs }}"><img src="{{ page.github-top-langs }}"
-        alt="eric15342335 Most Used Languages" onload="hideSpinner()"></a>
-    <a href="{{ page.github-user-stats }}"><img src="{{ page.github-user-stats }}"
-        alt="eric15342335 Github Statistics" onload="hideSpinner()"></a>
-    <a href="{{ page.leetcode-stats }}"><img src="{{ page.leetcode-stats }}"
-      alt="eric15342335 LeetCode Statistics" onload="hideSpinner()"></a>
+    <a href="{{ page.github-top-langs-dark }}">
+      <picture>
+        <source srcset="{{ page.github-top-langs-dark }}" media="(prefers-color-scheme: dark)">
+        <source srcset="{{ page.github-top-langs-light }}" media="(prefers-color-scheme: light)">
+        <img src="{{ page.github-top-langs-light }}" alt="eric15342335 Most Used Languages" onload="hideSpinner()">
+      </picture>
+    </a>
+    <a href="{{ page.github-user-stats-dark }}">
+      <picture>
+        <source srcset="{{ page.github-user-stats-dark }}" media="(prefers-color-scheme: dark)">
+        <source srcset="{{ page.github-user-stats-light }}" media="(prefers-color-scheme: light)">
+        <img src="{{ page.github-user-stats-light }}" alt="eric15342335 Github Statistics" onload="hideSpinner()">
+      </picture>
+    </a>
+    <a href="{{ page.leetcode-stats-dark }}">
+      <picture>
+        <source srcset="{{ page.leetcode-stats-dark }}" media="(prefers-color-scheme: dark)">
+        <source srcset="{{ page.leetcode-stats-light }}" media="(prefers-color-scheme: light)">
+        <img src="{{ page.leetcode-stats-light }}" alt="eric15342335 LeetCode Statistics" onload="hideSpinner()">
+      </picture>
+    </a>
   </section>
 
   <script>
