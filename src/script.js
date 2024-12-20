@@ -100,9 +100,10 @@ function toggleTheme(event) {
   console.log(`Dark mode is ${isDarkModeEnabled ? "enabled" : "disabled"}`);
 }
 
+
 /**
  * Initializes the theme based on the user's saved preference in localStorage.
- * If no preference is saved, it defaults to light mode.
+ * If no preference is saved, it defaults to the system's preferred color scheme.
  */
 function initializeTheme() {
   const themeToggleCheckbox = document.getElementById("theme-toggle");
@@ -110,15 +111,39 @@ function initializeTheme() {
 
   try {
     const savedTheme = localStorage.getItem("theme");
+
     if (savedTheme === "dark") {
+      // User has previously selected dark mode
       themeToggleCheckbox.checked = true;
       bodyElement.classList.add("dark");
-    } else {
+    } else if (savedTheme === "light") {
+      // User has previously selected light mode
       themeToggleCheckbox.checked = false;
       bodyElement.classList.remove("dark");
+    } else {
+      // No saved preference, detect system's preferred color scheme
+      initializeFallbackTheme();
     }
   } catch (error) {
     console.warn("Unable to access localStorage:", error);
+    initializeFallbackTheme();
+  }
+}
+
+/**
+ * Initializes the theme based on the system's preferred color scheme when no preference is saved.
+ */
+function initializeFallbackTheme() {
+  const themeToggleCheckbox = document.getElementById("theme-toggle");
+  const bodyElement = document.body;
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDarkScheme) {
+    themeToggleCheckbox.checked = true;
+    bodyElement.classList.add("dark");
+  } else {
+    themeToggleCheckbox.checked = false;
+    bodyElement.classList.remove("dark");
   }
 }
 
