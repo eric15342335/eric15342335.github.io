@@ -214,8 +214,8 @@ nav .image-link .navbar-toggler-icon:hover {
 
 article {
   text-align: left;
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
   margin: 0;
 }
 
@@ -267,7 +267,7 @@ article p {
   padding: 1em;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 410px) {
   nav {
     display: flex;
   }
@@ -280,10 +280,10 @@ article p {
   }
 }
 
-@media (max-width: 400px) {
-  .text-description {
-    padding-left: 3vw;
-    padding-right: 3vw;
+@media (max-width: 410px) {
+  article {
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
 
   nav ul {
