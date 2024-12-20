@@ -7,6 +7,7 @@
 }
 
 :root {
+  /* Light Theme Variables */
   --bg-color: #fff;
   --text-color: #111;
   --link-color: #44f;
@@ -21,16 +22,30 @@
   --z-index-scroll-indicator: 11;
 }
 
-/* Dark mode variables */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #111;
-    --text-color: #fff;
-    --link-color: #aaf;
-    --navbar-bg-color: #333;
-    --navbar-hover-bg-color: #555;
-    --border-color: #beb;
-  }
+/* Dark Theme Overrides */
+body.dark {
+  --bg-color: #111;
+  --text-color: #fff;
+  --link-color: #aaf;
+  --navbar-bg-color: #333;
+  --navbar-hover-bg-color: #555;
+  --border-color: #beb;
+}
+
+/* Style the theme toggle button */
+#theme-toggle {
+  display: none; /* Hide the checkbox */
+}
+
+#theme-toggle-label {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  z-index: var(--z-index-navbar);
 }
 
 body {
@@ -42,6 +57,7 @@ body {
   padding-bottom: 10vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -260,14 +276,14 @@ article p {
   }
 }
 
-/* Simplified version of github markdown alerts */
+/* Simplified version of GitHub markdown alerts */
 .encircled-text {
   display: inline-block;
   border: 1px solid var(--text-color);
   padding: 1em;
 }
 
-@media (min-width: 410px) {
+@media (min-width: 460px) {
   nav {
     display: flex;
   }
@@ -280,7 +296,7 @@ article p {
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 460px) {
   article {
     padding-left: 1vw;
     padding-right: 1vw;
