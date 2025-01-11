@@ -131,5 +131,12 @@
     "url": "https://commoncore.hku.hk/ccch5039/",
     "semester": 2,
     "year": 2024
+  },
+  {
+    "code": "STAT 3600",
+    "name": "Linear statistical analysis",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3600",
+    "semester": 2,
+    "year": 2024
   }
 ]
