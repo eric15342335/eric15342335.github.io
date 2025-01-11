@@ -1,11 +1,15 @@
 "use strict";
 
+// Constants for table element IDs
 const TABLE_IDS = {
   IN_PROGRESS: "in-progress-table",
   STUDIED: "studied-table"
 };
 
+// Get the current year
 const CURRENT_YEAR = new Date().getFullYear();
+
+// Determine the current semester based on the current month
 const CURRENT_SEMESTER = (function() {
   const now = new Date();
   const month = now.getMonth() + 1; // getMonth() returns 0-11
@@ -19,9 +23,13 @@ const CURRENT_SEMESTER = (function() {
   }
 })();
 
+// Path to the courses JSON file
 const COURSES_JSON_PATH = "/assets/courses.json";
+
+// CSS class for fixed-width fonts
 const FIXED_WIDTH_FONT_CLASS = "fixed-width-font";
 
+// Object keys for course properties
 const COURSE_PROPERTIES = {
   CODE: "code",
   NAME: "name",
@@ -30,98 +38,186 @@ const COURSE_PROPERTIES = {
   YEAR: "year"
 };
 
-const currentTimeframeText = " (current semester)";
-const upcomingTimeframeText = " (upcoming semester)";
+// Text indicators for current and upcoming semesters
+const CURRENT_TIMEFRAME_TEXT = " (current semester)";
+const UPCOMING_TIMEFRAME_TEXT = " (upcoming semester)";
 
-// Use XMLHttpRequest instead of fetch
+/**
+ * Fetch courses data using XMLHttpRequest.
+ * @param {Function} callback - Function to call with the fetched data or error.
+ */
 function fetchCourses(callback) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   xhr.open("GET", COURSES_JSON_PATH, true);
+
   xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      try {
-        var data = JSON.parse(xhr.responseText);
-        callback(null, data);
-      } catch (error) {
-        callback(error, []);
+    if (xhr.readyState === 4) { // Request is complete
+      if (xhr.status === 200) { // Success
+        try {
+          const data = JSON.parse(xhr.responseText);
+          callback(null, data);
+        } catch (parseError) {
+          callback(parseError, []);
+        }
+      } else { // Error
+        callback(new Error("Failed to fetch courses."), []);
       }
-    } else if (xhr.readyState === 4) {
-      callback(new Error("Failed to fetch courses."), []);
     }
   };
+
   xhr.send();
 }
 
+/**
+ * Create a table row for a course.
+ * @param {Object} course - The course object.
+ * @returns {HTMLElement} - The table row element.
+ */
 function createCourseRow(course) {
   const row = document.createElement("tr");
-  const codeCell = document.createElement("td");
-  codeCell.classList.add(FIXED_WIDTH_FONT_CLASS);
-  codeCell.textContent = course[COURSE_PROPERTIES.CODE];
 
+  // Create and configure the code cell
+  const codeCell = document.createElement("td");
+  codeCell.className = FIXED_WIDTH_FONT_CLASS;
+  codeCell.textContent = course[COURSE_PROPERTIES.CODE];
+  row.appendChild(codeCell);
+
+  // Create and configure the name cell with a link
   const nameCell = document.createElement("td");
   const link = document.createElement("a");
   link.href = course[COURSE_PROPERTIES.URL];
   link.textContent = course[COURSE_PROPERTIES.NAME];
+  link.target = "_blank"; // Open link in a new tab
   nameCell.appendChild(link);
-
-  row.appendChild(codeCell);
   row.appendChild(nameCell);
+
   return row;
 }
 
+/**
+ * Determine if a given course is current/future based on internal logic.
+ * This function treats "2024 Semester 2" logically as "2025 Semester 2" behind the scenes.
+ * @param {Number} originalYear
+ * @param {Number} originalSemester
+ * @returns {Object} - { isCurrent: Boolean, isFuture: Boolean }
+ */
+function computeSemesterStatus(originalYear, originalSemester) {
+  // We'll treat 2024 Semester 2 as if it were 2025 Semester 2 for logic only.
+  let logicYear = originalYear;
+  let logicSemester = originalSemester;
+
+  // If the course is 2024 Semester 2, override for logic
+  if (logicYear === 2024 && logicSemester === 2) {
+    logicYear = 2025;
+    logicSemester = 2;
+  }
+
+  // Evaluate if it's current or future based on the logicYear/logicSemester
+  const isCurrent =
+    (logicYear === CURRENT_YEAR && logicSemester === CURRENT_SEMESTER);
+  const isFuture =
+    (logicYear > CURRENT_YEAR) ||
+    (logicYear === CURRENT_YEAR && logicSemester > CURRENT_SEMESTER);
+
+  return {
+    isCurrent: isCurrent,
+    isFuture: isFuture
+  };
+}
+
+/**
+ * Display the list of courses in the appropriate tables.
+ * @param {Array} courses - Array of course objects.
+ */
 function displayCourses(courses) {
   const loadingSpinner = document.getElementById("loading-spinner");
   const courseTables = document.getElementById("course-tables");
 
   // Hide loading spinner and show course tables
-  loadingSpinner.style.display = "none";
-  courseTables.style.display = "block";
+  if (loadingSpinner) {
+    loadingSpinner.style.display = "none";
+  }
+  if (courseTables) {
+    courseTables.style.display = "block";
+  }
 
   const inProgressTable = document.getElementById(TABLE_IDS.IN_PROGRESS);
   const studiedTable = document.getElementById(TABLE_IDS.STUDIED);
 
-  let currentSemesterYear = null;
-  let currentTable = null;
+  let currentSemesterYearDisplayed = null;
+  let currentTargetTable = null;
 
-  for (var i = 0; i < courses.length; i++) {
-    var course = courses[i];
-    var year = course[COURSE_PROPERTIES.YEAR];
-    var semester = course[COURSE_PROPERTIES.SEMESTER];
-    var isCurrent = year === CURRENT_YEAR && semester === CURRENT_SEMESTER;
-    var isFuture = year > CURRENT_YEAR || (year === CURRENT_YEAR && semester > CURRENT_SEMESTER);
+  // Sort courses by year and semester in ascending order (as originally stored)
+  courses.sort(function(a, b) {
+    if (a[COURSE_PROPERTIES.YEAR] !== b[COURSE_PROPERTIES.YEAR]) {
+      return a[COURSE_PROPERTIES.YEAR] - b[COURSE_PROPERTIES.YEAR];
+    }
+    return a[COURSE_PROPERTIES.SEMESTER] - b[COURSE_PROPERTIES.SEMESTER];
+  });
 
-    var semesterYear = year + " Semester " + semester;
-    var targetTable = isCurrent || isFuture ? inProgressTable : studiedTable;
+  // Iterate through each course to display it in the appropriate table
+  for (let i = 0; i < courses.length; i++) {
+    const course = courses[i];
 
-    if (semesterYear !== currentSemesterYear || targetTable !== currentTable) {
-      currentSemesterYear = semesterYear;
-      currentTable = targetTable;
-      const semesterRow = document.createElement("tr");
-      const semesterCell = document.createElement("td");
-      semesterCell.setAttribute("colspan", "2");
-      semesterCell.textContent = semesterYear;
+    const originalYear = course[COURSE_PROPERTIES.YEAR];
+    const originalSemester = course[COURSE_PROPERTIES.SEMESTER];
+    const { isCurrent, isFuture } = computeSemesterStatus(originalYear, originalSemester);
 
+    // This is the text we actually show the user, preserving "2024 Semester 2"
+    const displayedSemesterYear = originalYear + " Semester " + originalSemester;
+
+    // Decide which table to put this course in
+    const targetTable = (isCurrent || isFuture) ? inProgressTable : studiedTable;
+
+    // If it's a new semester or a new table, add a semester header row
+    if (displayedSemesterYear !== currentSemesterYearDisplayed || targetTable !== currentTargetTable) {
+      currentSemesterYearDisplayed = displayedSemesterYear;
+      currentTargetTable = targetTable;
+
+      const semesterHeaderRow = document.createElement("tr");
+      const semesterHeaderCell = document.createElement("td");
+      semesterHeaderCell.setAttribute("colspan", "2");
+      semesterHeaderCell.textContent = displayedSemesterYear;
+
+      // Append timeframe indicators if applicable
       if (isCurrent) {
-        semesterCell.textContent += currentTimeframeText;
+        semesterHeaderCell.textContent += CURRENT_TIMEFRAME_TEXT;
       } else if (isFuture) {
-        semesterCell.textContent += upcomingTimeframeText;
+        semesterHeaderCell.textContent += UPCOMING_TIMEFRAME_TEXT;
       }
 
-      semesterRow.appendChild(semesterCell);
-      targetTable.appendChild(semesterRow);
+      semesterHeaderRow.appendChild(semesterHeaderCell);
+
+      if (targetTable) {
+        targetTable.appendChild(semesterHeaderRow);
+      }
     }
 
-    const row = createCourseRow(course);
-    targetTable.appendChild(row);
+    // Create and append the course row to the target table
+    if (targetTable) {
+      const courseRow = createCourseRow(course);
+      targetTable.appendChild(courseRow);
+    }
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+/**
+ * Initialize the course display process once the DOM is fully loaded.
+ */
+function initializeCourseDisplay() {
   fetchCourses(function(error, courses) {
     if (!error) {
       displayCourses(courses);
     } else {
       console.error("Error fetching courses:", error);
+      // Optionally, display an error message to the user
+      const loadingSpinner = document.getElementById("loading-spinner");
+      if (loadingSpinner) {
+        loadingSpinner.textContent = "Failed to load courses.";
+      }
     }
   });
-});
+}
+
+// Wait until DOM is ready, then initialize course display
+document.addEventListener("DOMContentLoaded", initializeCourseDisplay);
