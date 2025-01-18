@@ -3,14 +3,14 @@
 // Constants for table element IDs
 const TABLE_IDS = {
   IN_PROGRESS: "in-progress-table",
-  STUDIED: "studied-table"
+  STUDIED: "studied-table",
 };
 
 // Get the current year
 const CURRENT_YEAR = new Date().getFullYear();
 
 // Determine the current semester based on the current month
-const CURRENT_SEMESTER = (function() {
+const CURRENT_SEMESTER = (function () {
   const now = new Date();
   const month = now.getMonth() + 1; // getMonth() returns 0-11
 
@@ -35,7 +35,7 @@ const COURSE_PROPERTIES = {
   NAME: "name",
   URL: "url",
   SEMESTER: "semester",
-  YEAR: "year"
+  YEAR: "year",
 };
 
 // Text indicators for current and upcoming semesters
@@ -50,16 +50,19 @@ function fetchCourses(callback) {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", COURSES_JSON_PATH, true);
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) { // Request is complete
-      if (xhr.status === 200) { // Success
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      // Request is complete
+      if (xhr.status === 200) {
+        // Success
         try {
           const data = JSON.parse(xhr.responseText);
           callback(null, data);
         } catch (parseError) {
           callback(parseError, []);
         }
-      } else { // Error
+      } else {
+        // Error
         callback(new Error("Failed to fetch courses."), []);
       }
     }
@@ -96,32 +99,30 @@ function createCourseRow(course) {
 
 /**
  * Determine if a given course is current/future based on internal logic.
- * This function treats "2024 Semester 2" logically as "2025 Semester 2" behind the scenes.
+ * For any "Year Semester 2", internally treat it as "(Year+1) Semester 2" so that
+ * 2024 Semester 2 becomes 2025, 2025 Semester 2 becomes 2026, etc.
  * @param {Number} originalYear
  * @param {Number} originalSemester
  * @returns {Object} - { isCurrent: Boolean, isFuture: Boolean }
  */
 function computeSemesterStatus(originalYear, originalSemester) {
-  // We'll treat 2024 Semester 2 as if it were 2025 Semester 2 for logic only.
   let logicYear = originalYear;
   let logicSemester = originalSemester;
 
-  // If the course is 2024 Semester 2, override for logic
-  if (logicYear === 2024 && logicSemester === 2) {
-    logicYear = 2025;
-    logicSemester = 2;
+  // If it's Semester 2, bump the logic year
+  if (logicSemester === 2) {
+    logicYear += 1;
   }
 
-  // Evaluate if it's current or future based on the logicYear/logicSemester
   const isCurrent =
-    (logicYear === CURRENT_YEAR && logicSemester === CURRENT_SEMESTER);
+    logicYear === CURRENT_YEAR && logicSemester === CURRENT_SEMESTER;
   const isFuture =
-    (logicYear > CURRENT_YEAR) ||
+    logicYear > CURRENT_YEAR ||
     (logicYear === CURRENT_YEAR && logicSemester > CURRENT_SEMESTER);
 
   return {
-    isCurrent: isCurrent,
-    isFuture: isFuture
+    isCurrent,
+    isFuture,
   };
 }
 
@@ -148,7 +149,7 @@ function displayCourses(courses) {
   let currentTargetTable = null;
 
   // Sort courses by year and semester in ascending order (as originally stored)
-  courses.sort(function(a, b) {
+  courses.sort(function (a, b) {
     if (a[COURSE_PROPERTIES.YEAR] !== b[COURSE_PROPERTIES.YEAR]) {
       return a[COURSE_PROPERTIES.YEAR] - b[COURSE_PROPERTIES.YEAR];
     }
@@ -161,16 +162,23 @@ function displayCourses(courses) {
 
     const originalYear = course[COURSE_PROPERTIES.YEAR];
     const originalSemester = course[COURSE_PROPERTIES.SEMESTER];
-    const { isCurrent, isFuture } = computeSemesterStatus(originalYear, originalSemester);
+    const { isCurrent, isFuture } = computeSemesterStatus(
+      originalYear,
+      originalSemester
+    );
 
     // This is the text we actually show the user, preserving "2024 Semester 2"
-    const displayedSemesterYear = originalYear + " Semester " + originalSemester;
+    const displayedSemesterYear =
+      originalYear + " Semester " + originalSemester;
 
     // Decide which table to put this course in
-    const targetTable = (isCurrent || isFuture) ? inProgressTable : studiedTable;
+    const targetTable = isCurrent || isFuture ? inProgressTable : studiedTable;
 
     // If it's a new semester or a new table, add a semester header row
-    if (displayedSemesterYear !== currentSemesterYearDisplayed || targetTable !== currentTargetTable) {
+    if (
+      displayedSemesterYear !== currentSemesterYearDisplayed ||
+      targetTable !== currentTargetTable
+    ) {
       currentSemesterYearDisplayed = displayedSemesterYear;
       currentTargetTable = targetTable;
 
@@ -205,7 +213,7 @@ function displayCourses(courses) {
  * Initialize the course display process once the DOM is fully loaded.
  */
 function initializeCourseDisplay() {
-  fetchCourses(function(error, courses) {
+  fetchCourses(function (error, courses) {
     if (!error) {
       displayCourses(courses);
     } else {
