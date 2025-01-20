@@ -138,5 +138,26 @@
     "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3600",
     "semester": 2,
     "year": 2024
+  },
+  {
+    "code": "COMP 3278",
+    "name": "Introduction to database management systems",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2024/comp3278.html",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "COMP 3322",
+    "name": "Modern Technologies on World Wide Web",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2024/comp3322.html",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "APAI 3010",
+    "name": "Image processing and computer vision",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=APAI3010",
+    "semester": 2,
+    "year": 2024
   }
 ]
