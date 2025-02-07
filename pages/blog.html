@@ -21,11 +21,11 @@ description: "Follow Cheng Ho Ming, a University of Hong Kong undergraduate spec
 </header>
 
 <main>
-  <ul class="sitemap-menu">
+  <ul class="table-of-contents">
     {% for post in site.posts %}
       <li>
+        <small class="fixed-width-font">{{ post.date | date: "%Y-%m-%d" }}</small>
         <a href="{{ post.url }}">{{ post.title }}</a>
-        <small>({{ post.date | date_to_string: "ordinal", "US" }})</small>
       </li>
     {% endfor %}
   </ul>
