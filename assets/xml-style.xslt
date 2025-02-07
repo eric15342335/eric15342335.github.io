@@ -57,7 +57,7 @@
         <h3>XML Sitemap - Eric's GitHub Pages</h3>
 
         <!-- List of sitemap URLs -->
-        <ul class="sitemap-menu" role="navigation" aria-label="Sitemap">
+        <ul class="table-of-contents" role="navigation" aria-label="Sitemap">
           <xsl:for-each select="sitemap:urlset/sitemap:url">
             <!-- Extract the location of each URL -->
             <xsl:variable name="sitemap_loc"><xsl:value-of select="sitemap:loc"/></xsl:variable>

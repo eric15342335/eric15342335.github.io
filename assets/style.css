@@ -26,7 +26,7 @@
 body.dark {
   --bg-color: #111;
   --text-color: #fff;
-  --link-color: #aaf;
+  --link-color: #bbf;
   --navbar-bg-color: #333;
   --navbar-hover-bg-color: #555;
   --border-color: #beb;
@@ -214,24 +214,23 @@ nav .image-link .navbar-toggler-icon:hover {
   padding: 0.2em;
 }
 
-.course-table .fixed-width-font {
+.fixed-width-font {
   font-family: 'Consolas', monospace;
 }
 
-/* Used in xslt sitemap stylesheet */
-.sitemap-menu {
+.table-of-contents {
   list-style-type: none;
-  line-height: 1.5;
-  text-align: center;
+  line-height: 2;
+  text-align: left;
+  padding-left: calc(var(--body-margin-left-right) * 2);
+  padding-right: calc(var(--body-margin-left-right) * 2);
   word-wrap: break-word;
-  margin: 0;
-  padding: 0;
 }
 
 article {
   text-align: left;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  padding-left: calc(var(--body-margin-left-right) * 2);
+  padding-right: calc(var(--body-margin-left-right) * 2);
   margin: 0;
 }
 
