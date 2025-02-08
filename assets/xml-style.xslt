@@ -18,7 +18,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="referrer" content="unsafe-url" />
         <title>Sitemap for <xsl:value-of select="$hostname"/></title>
-        <link rel="stylesheet" href="/assets/style.css" />
+        <link rel="stylesheet" href="/lib/normalize.css" />
+        <link rel="stylesheet" href="/src/css/style.css" />
 
         <!-- Google Analytics -->
         <!-- Google tag (gtag.js) -->
@@ -47,7 +48,7 @@
 
         <!-- GoatCounter -->
         <script data-goatcounter="https://eric310.goatcounter.com/count"
-          src="/src/thirdparty/count.js">//</script>
+          src="/lib/count.js">//</script>
         <!-- End GoatCounter -->
       </head>
       <body>
