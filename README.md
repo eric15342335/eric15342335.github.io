@@ -15,7 +15,7 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 
 <details>
   <summary><code>_includes/</code></summary>
-  Shared HTML components (e.g., headers, footers).
+  Shared HTML components (e.g., headers, footers, analytics).
 </details>
 
 <details>
@@ -25,7 +25,12 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 
 <details>
   <summary><code>_posts/</code></summary>
-  Markdown files for blog posts.
+  Markdown files for blog posts with date-based naming (YYYY-MM-DD-title.md).
+</details>
+
+<details>
+  <summary><code>_config.yml</code></summary>
+  Jekyll configuration file containing site settings, plugins, and metadata.
 </details>
 
 <details>
@@ -40,10 +45,22 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 
 <details>
   <summary><code>assets/</code></summary>
-  Static assets like fonts, images, and styles.
+  Static assets and data files:
   <ul>
-    <li><code>font/</code>: Self host Inter font to reduce number of domain contacted.</li>
-    <li><code>images</code>: For blog posts, PWA manifest etc. Preferably stored in WebP to save size.</li>
+    <li><code>font/</code>: Self-hosted Inter font</li>
+    <li><code>images/</code>: WebP images for blog posts, PWA manifest etc.</li>
+    <li><code>manifest.json</code>: PWA configuration</li>
+    <li><code>courses.json</code>: Course data</li>
+  </ul>
+</details>
+
+<details>
+  <summary><code>lib/</code></summary>
+  Third-party libraries:
+  <ul>
+    <li>Syntax highlighting (<a href="https://highlightjs.org/">highlight.js</a>)</li>
+    <li>GoatCounter analytics (<a href="https://github.com/arp242/goatcounter">count.js</a>)</li>
+    <li>Copy button for code blocks (<a href="https://github.com/arronhunt/highlightjs-copy">highlightjs-copy</a>)</li>
   </ul>
 </details>
 
@@ -54,9 +71,10 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 
 <details>
   <summary><code>src/</code></summary>
-  JavaScript source files.
+  Source files:
   <ul>
-    <li><code>thirdparty/</code>: Minified external javascript files (e.g. GoatCounter <code>count.js</code> file).</li>
+    <li><code>css/</code>: Site styling</li>
+    <li><code>js/</code>: Site functionality and interactivity</li>
   </ul>
 </details>
 
