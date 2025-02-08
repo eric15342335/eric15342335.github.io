@@ -1,5 +1,8 @@
 timezone: Asia/Hong_Kong
 markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
 url: https://eric15342335.github.io
 plugins:
   - jekyll-feed
@@ -20,7 +23,6 @@ social:
     - https://www.linkedin.com/in/eric15342335/
     - https://www.instagram.com/ericcheng0310/
     - https://x.com/eric15342335/
-    - https://www.binance.com/en/square/profile/eric15342335
     - https://steamcommunity.com/id/eric15342335
 
 twitter:
