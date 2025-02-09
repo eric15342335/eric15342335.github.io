@@ -26,12 +26,12 @@ Essentially, please act as a tutor who is knowledgeable, patient, encouraging, a
 
 ## Some updates about Google AI Studio in general
 
-It seems that the LaTeX formatting issue mentioned [here]({% post_url 2025-01-27-How-to-fix-google-aistudio-latex-formatting %}) has been fixed from my trials. Also, I have discovered a potential bug with the 'Code Execution' feature, in which plots can fail to display if `plt.plot()` is executed before a `print()` statement:
+It seems that the [LaTeX formatting issue mentioned here]({% post_url 2025-01-27-How-to-fix-google-aistudio-latex-formatting %}) has been fixed from my trials. Also, I have discovered a potential bug with the 'Code Execution' feature, in which plots can fail to display if `plt.show()` is executed before a `print()` statement:
 
 ```python
 import matplotlib as plt
 # Some code here
-plt.plot()
+plt.show()
 print(a_variable_storing_calculation_results)
 ```
 
