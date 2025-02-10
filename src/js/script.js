@@ -80,70 +80,59 @@ function toggleNavigationMenu() {
 function toggleTheme(event) {
   const bodyElement = document.body;
   const isDarkModeEnabled = event.target.checked;
+  const lightThemeLink = document.querySelector('link[href="/lib/github.css"]');
+  const darkThemeLink = document.querySelector('link[href="/lib/github-dark.css"]');
 
   if (isDarkModeEnabled) {
     bodyElement.classList.add("dark");
-    try {
-      localStorage.setItem("theme", "dark");
-    } catch (error) {
-      console.warn("Unable to access localStorage:", error);
+    if (lightThemeLink && darkThemeLink) {
+      lightThemeLink.disabled = true;
+      darkThemeLink.disabled = false;
     }
+    // Save preference to sessionStorage
+    sessionStorage.setItem('prefersDark', 'true');
   } else {
     bodyElement.classList.remove("dark");
-    try {
-      localStorage.setItem("theme", "light");
-    } catch (error) {
-      console.warn("Unable to access localStorage:", error);
+    if (lightThemeLink && darkThemeLink) {
+      lightThemeLink.disabled = false;
+      darkThemeLink.disabled = true;
     }
+    // Save preference to sessionStorage
+    sessionStorage.setItem('prefersDark', 'false');
   }
 
   console.log(`Dark mode is ${isDarkModeEnabled ? "enabled" : "disabled"}`);
 }
 
-
 /**
- * Initializes the theme based on the user's saved preference in localStorage.
- * If no preference is saved, it defaults to the system's preferred color scheme.
+ * Initializes the theme based on the system's preferred color scheme.
  */
 function initializeTheme() {
   const themeToggleCheckbox = document.getElementById("theme-toggle");
   const bodyElement = document.body;
+  const lightThemeLink = document.querySelector('link[href="/lib/github.css"]');
+  const darkThemeLink = document.querySelector('link[href="/lib/github-dark.css"]');
 
-  try {
-    const savedTheme = localStorage.getItem("theme");
+  // Check sessionStorage first, fall back to system preference
+  const sessionPreference = sessionStorage.getItem('prefersDark');
+  const prefersDarkScheme = sessionPreference !== null 
+    ? sessionPreference === 'true'
+    : window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    if (savedTheme === "dark") {
-      // User has previously selected dark mode
-      themeToggleCheckbox.checked = true;
-      bodyElement.classList.add("dark");
-    } else if (savedTheme === "light") {
-      // User has previously selected light mode
-      themeToggleCheckbox.checked = false;
-      bodyElement.classList.remove("dark");
-    } else {
-      // No saved preference, detect system's preferred color scheme
-      initializeFallbackTheme();
-    }
-  } catch (error) {
-    console.warn("Unable to access localStorage:", error);
-    initializeFallbackTheme();
-  }
-}
-
-/**
- * Initializes the theme based on the system's preferred color scheme when no preference is saved.
- */
-function initializeFallbackTheme() {
-  const themeToggleCheckbox = document.getElementById("theme-toggle");
-  const bodyElement = document.body;
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
+  themeToggleCheckbox.checked = prefersDarkScheme;
+  
   if (prefersDarkScheme) {
-    themeToggleCheckbox.checked = true;
     bodyElement.classList.add("dark");
+    if (lightThemeLink && darkThemeLink) {
+      lightThemeLink.disabled = true;
+      darkThemeLink.disabled = false;
+    }
   } else {
-    themeToggleCheckbox.checked = false;
     bodyElement.classList.remove("dark");
+    if (lightThemeLink && darkThemeLink) {
+      lightThemeLink.disabled = false;
+      darkThemeLink.disabled = true;
+    }
   }
 }
 

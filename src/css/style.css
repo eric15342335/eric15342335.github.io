@@ -57,7 +57,11 @@ body {
   padding-bottom: 10vh;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add separate class for transitions */
+body.theme-transition {
+  transition: background-color 1s ease-in-out, color 0.6s ease-in-out;
 }
 
 a {
@@ -77,6 +81,15 @@ code {
   font-family: 'Consolas', monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+pre {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1em 0;
+  overflow: auto;
 }
 
 img {
