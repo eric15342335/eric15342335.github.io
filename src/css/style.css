@@ -295,6 +295,21 @@ article p {
   padding: 1em;
 }
 
+
+.friend-list {
+  list-style: none;
+  padding: 0;
+}
+.friend-list li {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+.friend-list img {
+  margin: 0 1em 0 0;
+  border-radius: 50%;
+}
+
 @media (min-width: 460px) {
   nav {
     display: flex;
