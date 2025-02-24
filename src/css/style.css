@@ -145,6 +145,18 @@ nav li a {
   margin: 1px;
 }
 
+@media (max-width: 420px) {
+  nav li a {
+    padding: calc(0.7em - 1px);
+  }
+}
+
+@media (max-width: 390px) {
+  nav li a {
+    padding: calc(0.55em - 1px);
+  }
+}
+
 nav li a:hover,
 nav li button:hover,
 nav li a:focus,
@@ -310,7 +322,7 @@ article p {
   border-radius: 50%;
 }
 
-@media (min-width: 460px) {
+@media (min-width: 510px) {
   nav {
     display: flex;
   }
@@ -323,7 +335,7 @@ article p {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 510px) {
   article {
     padding-left: 1vw;
     padding-right: 1vw;
