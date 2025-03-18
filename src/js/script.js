@@ -80,8 +80,8 @@ function toggleNavigationMenu() {
 function toggleTheme(event) {
   const bodyElement = document.body;
   const isDarkModeEnabled = event.target.checked;
-  const lightThemeLink = document.querySelector('link[href="/lib/github.css"]');
-  const darkThemeLink = document.querySelector('link[href="/lib/github-dark.css"]');
+  const lightThemeLink = document.getElementById('light-highlight-theme');
+  const darkThemeLink = document.getElementById('dark-highlight-theme');
 
   if (isDarkModeEnabled) {
     bodyElement.classList.add("dark");
@@ -89,7 +89,6 @@ function toggleTheme(event) {
       lightThemeLink.disabled = true;
       darkThemeLink.disabled = false;
     }
-    // Save preference to sessionStorage
     sessionStorage.setItem('prefersDark', 'true');
   } else {
     bodyElement.classList.remove("dark");
@@ -97,7 +96,6 @@ function toggleTheme(event) {
       lightThemeLink.disabled = false;
       darkThemeLink.disabled = true;
     }
-    // Save preference to sessionStorage
     sessionStorage.setItem('prefersDark', 'false');
   }
 
@@ -110,8 +108,8 @@ function toggleTheme(event) {
 function initializeTheme() {
   const themeToggleCheckbox = document.getElementById("theme-toggle");
   const bodyElement = document.body;
-  const lightThemeLink = document.querySelector('link[href="/lib/github.css"]');
-  const darkThemeLink = document.querySelector('link[href="/lib/github-dark.css"]');
+  const lightThemeLink = document.getElementById('light-highlight-theme');
+  const darkThemeLink = document.getElementById('dark-highlight-theme');
 
   // Check sessionStorage first, fall back to system preference
   const sessionPreference = sessionStorage.getItem('prefersDark');
