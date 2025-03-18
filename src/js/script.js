@@ -164,11 +164,24 @@ function attachEventListeners() {
   initializeTheme();
 }
 
+function displayVisitorCount() {
+  let path = location.pathname === '/index.html' ? '/' : location.pathname;
+  let request = new XMLHttpRequest();
+  request.addEventListener('load', function() {
+    let response = JSON.parse(this.responseText);
+    document.querySelector('#goatcounter-stats-number').innerText = response.count;
+    document.querySelector('#goatcounter-stats').style.display = 'block';
+  });
+  request.open('GET', 'https://eric310.goatcounter.com/counter/' + encodeURIComponent(path) + '.json');
+  request.send();
+}
+
 /**
  * Ensures that all functionalities are initialized once the DOM is fully loaded.
  */
 function initializeApp() {
   attachEventListeners();
+  displayVisitorCount();
 }
 
 // Attach the initialization function to the DOMContentLoaded event

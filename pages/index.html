@@ -35,7 +35,7 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
     </p>
 
     <p>
-      Currently, I am studying multivariable calculus, linear algebra, probability, and statistics to build a solid foundation for future work in artificial intelligence. Previously, I worked at <a href="https://inspirelab.hk">InspireLab Limited</a>, where I developed embedded software for STEM education under the guidance of <a href="https://www.hkucs.org/seminar/bio-vincent.htm">Dr. Vincent Lau</a>.
+      Currently, I am studying linear statistical analysis (regression, ANOVA), database management systems (MySQL), image processing and computer vision, and web development (LAMP/Node/React) to build a solid foundation for future work in computer science and artificial intelligence. Previously, I worked at <a href="https://inspirelab.hk">InspireLab Limited</a>, where I developed embedded software for STEM education using an HKD$7 RISC-V microcontroller (CH32V003F4P6). My boss, <a href="https://www.hkucs.org/seminar/bio-vincent.htm">Dr. Vincent Lau</a>, and I attended the <a href="https://mp.weixin.qq.com/s/AU62LdSAO62kztfuiURXfg">Hong Kong RISC-V Day + AI Con 2024</a> at the <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a> to showcase the product.
     </p>
 
     <p>
@@ -95,77 +95,56 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
   </section>
 
   <section>
-    <h2>As an AI student, you must use a lot of AI chatbot, right?</h2>
-    <p>
-      Yes, I use a lot of AI chatbot. Here are some of the providers I use and my thoughts on them:
-    </p>
+    <h2>Chatbot Providers that I currently use</h2>
     <table class="course-table">
       <thead>
       <tr>
-        <th>Provider</th><th>Thoughts</th><th>Would recommend?</th>
+        <th>Provider</th><th>Comment</th>
       </tr>
       </thead>
       <tbody>
       <tr>
+        <td><a href="https://grok.com">Grok</a></td>
+        <td>Currently the most convenient option to use in Hong Kong, since it does not require an VPN. Login with another Google account once I hit the rate limit.</td>
+      </tr>
+      <tr>
         <td><a href="https://github.com/features/copilot">GitHub Copilot</a></td>
         <td><a href="https://github.com/education">Education license</a> (see my <a href="/blog/2024/11/14/Generating-commit-message-via-GitLens-and-Copilot.html">blog</a> too!)</td>
-        <td>Yes</td>
       </tr>
       <tr>
         <td><a href="https://aistudio.google.com/prompts/new_chat">Google AI Studio</a></td>
-        <td><a href="https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/">Gemini 2.0 Flash Experimental</a> currently has 1500 requests/day for free!</td>
-        <td>Yes</td>
+        <td>Their models like Gemini 2.0 Pro (experimental) offers 2 Million context window for free. You can upload videos to it too.</td>
       </tr>
       <tr>
         <td><a href="https://chatgpt.com">chatgpt.com</a></td>
         <td><a href="https://protonvpn.com/free-vpn">Proton VPN</a> + <a href="https://bewildcard.com/i/ERIC310">bewildcard.com</a>, mainly for <a href="https://openai.com/o1/">o1</a> and Advanced Voice Mode (with video)</td>
-        <td>Yes</td>
       </tr>
       <tr>
         <td><a href="https://github.com/marketplace/models">GitHub Models</a></td>
-        <td><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits">Free 8 o1-preview and 12 o1-mini per day</a>, limited beta</td>
-        <td>Yes</td>
+        <td>I enrolled in their beta program. <a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits">It is nice to have some free API usage of the popular models!</td>
       </tr>
       <tr>
-        <td><a href="https://chat.deepseek.com/">DeepSeek chat</a></td>
-        <td>My sister reports that it is good at answering chinese chemistry questions compared to chatgpt-4o. It is free to use!</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.perplexity.ai/">Perplexity</a></td>
-        <td>They offered me a free Pro subscription during 2024 December. Convenient without the need for a VPN.</td>
-        <td>Yes</td>
+        <td><a href="https://openrouter.com">OpenRouter</a></td>
+        <td>You can save money if you want to try out new models (e.g. GPT-4.5 Preview), but if you don't want to pay for a ChatGPT Plus or Poe subscription, you can use OpenRouter to save some money. Note that they charge a fee for payment.</td>
       </tr>
       <tr>
         <td><a href="https://poe.com">Poe.com</a></td>
-        <td>Lots of AI models to pick from, but the quota runs out fast if you use them a lot.</td>
-        <td>Maybe</td>
+        <td>Lots of AI models to pick from, but the quota runs out fast if you use them a lot. Consider using them sparingly.</td>
+      </tr>
+      <tr>
+        <td><a href="https://chat.deepseek.com/">DeepSeek</a></td>
+        <td>Server is busy. Please try again later.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.perplexity.ai/">Perplexity</a></td>
+        <td>They offered me a free Pro subscription during December 2024. Convenient without the need for a VPN.</td>
       </tr>
       <tr>
         <td><a href="https://ollama.com">Ollama</a></td>
         <td>Mainly <a href="https://ollama.com/library/llama2-uncensored">uncensored llama models</a> for fun.</td>
-        <td>Maybe</td>
-      </tr>
-      <tr>
-        <td><a href="https://openrouter.com">OpenRouter</a></td>
-        <td>The web interface is a bit clunky, especially when you zoom out. (pay-as-you-go)</td>
-        <td>No</td>
-      </tr>
-      <tr>
-        <td><a href="https://console.x.ai">Grok 2 API</a></td>
-        <td><s>free <a href="https://x.ai/blog/api">$25 per month</a> during Beta + <a href="https://openwebui.com/">Open-WebUI</a> (or <a href="https://librechat-librechat.hf.space/c/new">LibreChat</a>).</s> Not free anymore.</td>
-        <td>No</td>
-      </tr>
-      <tr>
-        <td><a href="https://2233.ai/i/ERIC310">2233.ai/chatgpt</a></td>
-        <td>Occasionally experiences bugs during chat.</td>
-        <td>No</td>
       </tr>
       </tbody>
     </table>
-    <p>
-      The list is not exhaustive, and I will update it as I try more providers.
-    </p>
   </section>
 
   <div id="loading-spinner" class="loading-spinner"></div>
@@ -195,6 +174,7 @@ description: Explore the journey of Ho Ming Cheng, a University of Hong Kong BAS
   </section>
 
   <script>
+    // Handles the loading spinner animation of the #user-stats section
     let loadedImages = 0;
     const spinner = document.getElementById('loading-spinner');
     const userStats = document.getElementById('user-stats');

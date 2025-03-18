@@ -227,16 +227,20 @@ nav .image-link .navbar-toggler-icon:hover {
 }
 
 .course-table {
-  margin: 0.5em auto 0;
   border: 1px solid var(--border-color);
   border-collapse: collapse;
-  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .course-table th,
 .course-table td {
   border: 1px solid var(--border-color);
   padding: 0.2em;
+}
+
+.course-table tr td:nth-child(2) {
+  text-align: left;
 }
 
 .fixed-width-font {
