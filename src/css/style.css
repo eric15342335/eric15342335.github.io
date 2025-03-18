@@ -263,6 +263,18 @@ article p {
   margin-top: auto;
 }
 
+article img._75_percent_width {
+  width: 75%;
+}
+
+article img._50_percent_width {
+  width: 50%;
+}
+
+article img._25_percent_width {
+  width: 25%;
+}
+
 .projects-list p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
