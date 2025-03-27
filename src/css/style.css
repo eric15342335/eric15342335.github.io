@@ -6,9 +6,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Claude Sans';
+  src: url(/assets/font/Claude-Sans-Std-Regular.otf) format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  font-size: 125%;
+}
+
 :root {
   /* Light Theme Variables */
-  --bg-color: #fff;
+  --bg-color: #eee;
   --text-color: #111;
   --link-color: #44f;
   --navbar-bg-color: #3b3;
@@ -20,6 +29,17 @@
   --scroll-indicator-height: 0.25em;
   --z-index-navbar: 10;
   --z-index-scroll-indicator: 11;
+  --even-day-font: 'Claude Sans', sans-serif;
+  --odd-day-font: 'Inter', -apple-system, sans-serif;
+}
+
+html.even-day {
+  font-family: var(--even-day-font);
+  font-size: 110%;
+}
+
+html.odd-day {
+  font-family: var(--odd-day-font);
 }
 
 /* Dark Theme Overrides */
@@ -39,8 +59,8 @@ body.dark {
 
 #theme-toggle-label {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 0.4em;
+  right: 0.4em;
   background: none;
   border: none;
   cursor: pointer;
@@ -49,7 +69,6 @@ body.dark {
 }
 
 body {
-  font-family: -apple-system, 'Inter', sans-serif;
   text-align: center;
   padding-top: 2.2em;
   padding-left: var(--body-margin-left-right);
@@ -345,7 +364,7 @@ article img._25_percent_width {
   nav ul {
     display: flex;
   }
-  
+
   .navbar-toggler-icon {
     display: none;
   }
