@@ -174,10 +174,34 @@ function displayVisitorCount() {
   request.send();
 }
 
+function setEvenOddDayFont() {
+  // Get the current day of the month
+  const today = new Date();
+  const dayOfMonth = today.getDate();
+  
+  // Check if the day is divisible by 2 (even day)
+  const isEvenDay = dayOfMonth % 2 === 0;
+  
+  // Get the HTML element
+  const htmlElement = document.documentElement;
+  
+  // Add the appropriate class based on the day
+  if (isEvenDay) {
+    htmlElement.classList.add('even-day');
+  } else {
+    htmlElement.classList.add('odd-day');
+  }
+  
+  // Optional: log to console for debugging
+  console.log(`Today is day ${dayOfMonth}, which is an ${isEvenDay ? 'even' : 'odd'} day.`);
+  console.log(`Font set to: ${isEvenDay ? 'Claude Sans' : 'Inter'}`);
+}
+
 /**
  * Ensures that all functionalities are initialized once the DOM is fully loaded.
  */
 function initializeApp() {
+  setEvenOddDayFont();
   attachEventListeners();
   displayVisitorCount();
 }
