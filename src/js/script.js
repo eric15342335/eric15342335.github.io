@@ -181,17 +181,16 @@ function setEvenOddDayFont() {
   
   // Check if the day is divisible by 2 (even day)
   const isEvenDay = dayOfMonth % 2 === 0;
-  
-  // Get the HTML element
-  const htmlElement = document.documentElement;
+  // Get the body element 
+  const bodyElement = document.body;
   
   // Add the appropriate class based on the day
   if (isEvenDay) {
-    htmlElement.classList.add('even-day');
+    bodyElement.classList.add('even-day');
   } else {
-    htmlElement.classList.add('odd-day');
+    bodyElement.classList.add('odd-day');
   }
-  
+
   // Optional: log to console for debugging
   console.log(`Today is day ${dayOfMonth}, which is an ${isEvenDay ? 'even' : 'odd'} day.`);
   console.log(`Font set to: ${isEvenDay ? 'Claude Sans' : 'Inter'}`);
