@@ -33,12 +33,12 @@
   --odd-day-font: 'Inter', -apple-system, sans-serif;
 }
 
-html.even-day {
+body.even-day {
   font-family: var(--even-day-font);
   font-size: 110%;
 }
 
-html.odd-day {
+body.odd-day {
   font-family: var(--odd-day-font);
 }
 
@@ -59,13 +59,15 @@ body.dark {
 
 #theme-toggle-label {
   position: fixed;
-  top: 0.4em;
-  right: 0.4em;
+  top: 0.6rem;
+  right: 0.2rem;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 2rem;
+  font-family: sans-serif;
   z-index: var(--z-index-navbar);
+  transition: background-color 0.3s ease;
 }
 
 body {
