@@ -232,6 +232,7 @@ nav .image-link .navbar-toggler-icon:hover {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
+  max-width: calc(100% - var(--body-margin-left-right) * 2);
 }
 
 .course-table th,
