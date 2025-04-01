@@ -5,71 +5,71 @@ date: 2025-03-18 20:22:00 +0800
 categories: blog
 ---
 
-> This blog post author is not a certified psychologist. If you have any mental health problems or want to talk with someone, please consult a local nearby clinical psychologist for assistance.
+> Quick note: I'm definitely not a psychologist. If you're dealing with serious mental health issues or feel like talking to someone professionally, please reach out to a local clinical psychologist near you.
 
 ## Preliminary
 
-When we talk about emotional crashes, some people may have experienced them before, while some may not. Some people may have crashed but aren’t aware of it. Some are even suspicious of themselves, thinking they "will have" or "are going to" crash "very soon." Emotional crashes are an ongoing topic for discussion, primarily due to their overwhelming impact on a typical (university) student. Therefore, many people realize it’s important to address what an emotional crash is, what the signs of an impending crash are, and how to avoid or face it. This short blog post aims to cover information about emotional crashes extensively, in the hope that most readers can benefit from understanding them.
+When it comes to emotional crashes, some of us might have experienced them before, while others maybe not yet. Some people might have had one without even realising it, while others could be worrying they're about to have one anytime soon. Emotional crashes are a hot topic - especially for us university students - mainly because they can hit us pretty hard. I think it's important that we talk openly about what an emotional crash is, how to spot one coming, and how to handle it. I hope this blog post helps you understand emotional crashes better.
 
 ## What is an Emotional Crash
 
-Most people might have a sense that not working on something or being productive for several days (or even a week or two) is an emotional crash. I believe mostly those are consequences of not having a regular, consistent life (study) schedule, or the influence from your environment. To be fair, I’m not saying those aren’t "crashes," but I believe the "emotional crash" I’m talking about here may have a different definition from what you’ve learned previously. For me, an emotional crash is a short moment where an enormous amount of negative emotions explodes upon your head, making you feel extremely uncomfortable with what you’re currently doing, wanting to stop every task you’ve assigned to yourself, and being unproductive.
+Usually, when people haven't been productive or haven't studied for several days (or even a week or two), they might call this an "emotional crash." Personally, I think those situations happen mostly because we don't stick to a regular schedule or because stuff around us got pretty distracting. Not saying that doesn't count as crasing, but when I say "emotional crash," I'm talking about that sudden moment when a huge wave of negative feelings hits you out of nowhere. It makes you feel totally uncomfortable, wanting to stop everything you're doing right at that moment, and making it almost impossible to be productive.
 
 ## When Will You Crash
 
-It’s not something we can confidently forecast. But sometimes, having a 4-hour consecutive lecture might increase the risk of an emotional disaster. Insufficient sleep might also come into play.
+Honestly speaking, we can't really predict exactly when we'll crash. But sometimes having a long, non-stop lecture (like those 4-hour ones...) might push you closer to a meltdown. Also, not getting enough sleep definitely doesn't help either.
 
 ## Am I Really Crashing?
 
-"Crashes" are subjective. It’s hard to have a generalized rule that applies to everyone. But usually, when you’re crashing, you prioritize short-term benefits over long-term rewards. You actively seek entertainment activities or refuse to do anything productive. (Doomscrolling usually happens after this, though doomscrolling can be a cause of a crash too.)
+Crashes are pretty subjective; different people feel them differently. But usually, when you're crashing, you'll focus more on short-term distractions rather than things that reward you later on. You might just keep scrolling social media (doomscroll alert!) or avoid all productive tasks. It's sort of a cycle - doomscrolling can cause crashes, and crashes can lead to doomscrolling.
 
 ## Some Important Facts About Emotional Crashes
 
-1. Emotional burst. Ineffective to manage (lost the ability to do so).  
-2. Walking zombie.
+1. Sudden surge of emotions, difficult (or impossible) to handle.  
+2. Becoming a "walking zombie."
 
 ## What You Really Need to Do When There Is a Crash
 
-1. Take a deep breath. Start walking around. According to my own experience, walking inside HKU from CYM Canteen to Centennial Campus for 2-3 times is beneficial to your mental wellbeing, physical health, and understanding of life.  
-2. Do not dodge your challenges/tasks immediately. Instead, (while you’re walking) slow down your thinking for a moment.  
-3. You might want to negotiate with yourself: how much entertainment do you really want? Perhaps a short 30-minute break would suffice, instead of spending the upcoming 4 hours on some leisure activity.
+1. First thing to do: Take a deep breath, step away from your desk and walk around. From my own experience, I find that walking around HKU (from CYM Canteen all the way to Centennial Campus, a couple times at least) is great for clearing your mind, improving your mood, and reflecting a bit on life.
+2. Don’t immediately run away from your challenges or tasks - instead, use that walk to slow down your mind a bit and gain some perspective.
+3. Bargain with yourself. If you really need a break, ask yourself: would maybe a short 30-minute break be good enough? It's likely better than spending the next four hours on Netflix or Instagram.
 
 ## What Should You Do When Others Crash
 
-It’s common to see others suddenly cancelling tasks or events that might have previously meant a lot to them. It’s quite normal for people who are experiencing an emotional downhill or "crash." You shouldn’t really be glad of this (though no need to feel guilty if you’re an introvert like me—I’d feel happy when someone cancels an appointment with me, unless it’s a study meeting!), because when you see their message, it usually reflects a (deep) trust built upon you (that’s why you’re seeing it).
+We've probably all seen friends cancel plans or suddenly ditch important meetings and events. That kind of behaviour is pretty normal for people experiencing an emotional slump or "crash." You shouldn't feel good about it (although honestly, if you're an introvert like me, cancelled plans can feel like a secret relief - except if it's a study meeting!). But more importantly, when friends tell you they're having a tough time, it usually means they really trust you enough to open up (seriously, you should feel honored).
 
 ### Don’t
 
 1. Ignore the message.  
-2. Say "Okay." and go away.  
-3. Send "Hope you will get well soon!" (It’s more like a harmless but unhelpful message that’s too generic to be considered useful.)
+2. Reply with just "Okay" and leave it at that.  
+3. Send something generic like "Hope you'll feel better soon!" (I mean, it's harmless, but it's kind of too cliché to actually help.)
 
 ### Do’s
 
-1. If you have an understanding of their recent activities, that’s a good sign! Relate their message to what they recently posted on social media (like having an exam, revising for a quiz, etc.). You might be able to build an understanding of why they said it this way.  
-2. Realize what they really need. This is hard. You might use this clue: Focus on what events/tasks they have cancelled yet. If they need your help on that task, simply saying "Whenever you need me, just give me a call" would significantly boost your mental intelligence.
+1. If you sort of know what's been going on in their life lately, that's a great start! Connect your reply with what they've shared recently (maybe they're stressed about exams, revision, or group projects?). This helps you better understand why they've messaged you about it.
+2. Try to really get a sense of what they actually need. Okay, I know this is pretty hard. One tip is to pay attention to what events/tasks they're cancelling. If it's something important and you're involved, you could say something simple but helpful like, "Whenever you feel ready, just hit me up and I'll be around!" Trust me, that'll boost your emotional IQ points.
 
 ## How to Sense Others Having a Crash
 
-I think this is easy, given that you have an understanding of the person. The difficult part comes from overcoming your ignorance towards the crash and actually putting yourself into the context of what others need at the beginning of your logic flow.
+Actually, I think sensing when someone's crashing is easier if you already know that person pretty well. What's harder, though, is paying enough attention to pick up on these signals - basically stopping yourself from casually brushing off their problems and instead genuinely thinking about what they might need at that moment.
 
 ## Final Notes
 
-Life is not easy. It’s multifaceted and full of variety. We almost surely won’t walk the same path on our life journey, whether it’s the course enrollment order, skills learning priorities, or any other experiences and knowledge. But it’s important to consider that no one is not unique.
+Life isn't easy. It's complicated and messy, and honestly, we're probably never walking exactly the same path as anyone else in our lives - be it class schedules, skills, interests, or personal goals. It's always worth remembering: Everyone's unique in their own complicated way.
 
-Hope this helps!
+I really hope you found something helpful here!
 
 ## Recent Updates
 
-I’m having some major mid-terms in the upcoming weeks. It’s very important for me to keep a consistent study/sleeping schedule from now on.  
-Some gibberish:  
+Midterms are coming real soon, and it's pretty important for me right now to keep my study/sleep schedule steady.  
+Anyway, some random life updates about me:  
 
-* I got an offer from RTHK for a summer internship. This somewhat makes me feel secure about my Year 2 summer internship period, despite it only being 2 months.  
-* The vast amount of knowledge I’ve been exposed to recently (over the past few months) is worrying. I believe I won’t be able to memorize every detail and word from the lecture notes, despite examinations possibly testing them.  
-* A pattern I’ve noticed: for some subjects (e.g., database/SQL), it’s quite difficult for me to forget the knowledge (e.g., how to write MySQL queries). But for some courses like STAT3600 Linear Statistical Analysis (severe), APAI3010 Computer Vision (mild), and web development (mild), I don’t understand why I forget stuff so quickly (like within several days or weeks). I believe this is due to a lack of practice (of the key concepts via exercises).  
-* I don’t really recommend people take 6 courses per semester… It’s somewhat a mental stress test. Doing that is only good if you’ve already mastered at least 50% of the content for, like, 3 courses. Disclaimer: The numbers might not apply to everyone, depending on their study patterns and intelligence/perseverance.
+* Got an offer from RTHK for a summer internship - feeling relieved and sort-of-secured now for my Year 2 summer break, even though the internship is just about 2 months.  
+* Recently I've noticed a huge flood of information coming in from classes. I'm kinda worried there’s NO WAY I'll perfectly remember all lecture note details, especially since they might be asked in exams.  
+* Something odd I've noticed is that certain subjects stick better in my memory (like database/SQL - I find it easy to write MySQL queries). But other classes like STAT3600 Linear Statistical Analysis (this one’s quite serious), APAI3010 Computer Vision (mildly forgetful), and web development (same here, mild) seem to disappear from my memory very quickly, like within just a few days or a week. Probably because I haven't practiced those key concepts enough?
+* Oh, and seriously: taking six courses per semester? I don't really recommend it... It's a HUGE mental pressure test. Maybe it's doable if you have already mastered like half the content for at least three courses beforehand. (Quick disclaimer: Not everyone is the same! Different people handle academic stress differently, totally depends on your learning style and stamina.)
 
 ## Some interesting information if you want to know about me
 
-* I’m ISTP-T. If you’ve finished an MBTI test before, you’ll know what it means.  
-* I have no dating experience (why would someone ask me this?).  
+* I'm ISTP-T. (If you've taken the MBTI test before, you'll know what this means. However, my MBTI type is not a fixed thing, and it can change over time. I think it's more about how you feel at that moment.)  
+* Zero dating experience so far (wait, why would anyone even ask this?).  
