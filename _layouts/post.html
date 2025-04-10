@@ -14,7 +14,7 @@
 {% else %}
   {% assign other_lang = 'zh-CN' %}
   {% assign filename = page.path | split: '/' | last %}
-  {% assign zh_post = site.posts_zhcn | where: "slug", page.slug | first %}
+  {% assign zh_post = site.posts_zh-CN | where: "slug", page.slug | first %}
   {% if zh_post %}
     {% assign other_url = zh_post.url %}
   {% else %}
@@ -27,7 +27,7 @@
   {% if page.lang == 'zh-CN' %}
     <a href="{{ other_url }}" hreflang="en">English</a>
   {% else %}
-    {% assign zh_post = site.posts_zhcn | where: "slug", page.slug | first %}
+    {% assign zh_post = site.posts_zh-CN | where: "slug", page.slug | first %}
     {% if zh_post %}
       <a href="{{ zh_post.url }}" hreflang="zh-CN">简体中文</a>
     {% else %}

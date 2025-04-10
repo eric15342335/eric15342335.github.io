@@ -107,13 +107,13 @@ Static site powered by **Jekyll** and hosted via **GitHub Pages**.
 2. **Serve locally**:
 
    ```bash
-   bundle exec jekyll serve --profile
+   bundle exec jekyll serve --profile --livereload
    ```
 
    Optional for local network testing:
 
    ```bash
-   bundle exec jekyll serve --host <YOUR_LOCAL_IP>
+   bundle exec jekyll serve --profile --livereload --host <YOUR_LOCAL_IP>
    ```
 
 3. **Visit**:  
