@@ -12,7 +12,7 @@ plugins:
 collections:
   posts_zh-CN:
     output: true
-    permalink: "/zh-CN/:year/:month/:day/:title/"
+    permalink: "/blog/zh-CN/:year/:month/:day/:title.html"
 
 defaults:
   - scope:
