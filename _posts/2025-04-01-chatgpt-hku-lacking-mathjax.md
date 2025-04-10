@@ -5,6 +5,10 @@ date: 2025-04-01 23:45:00 +0800
 categories: blog
 ---
 
+## Update
+
+I've emailed HKU ITS and they shipped this feature (seeing $\LaTeX$ in chatgpt.hku.hk) within a week. Now the issue is rather whether the LLM model is adhering to outputting math symbols in the correct $\LaTeX$ format e.g. `$` or `$$` etc.
+
 ## Background
 
 If you're studying in HKU, you would know that the University provides access to [DeepSeek-r1](https://deepseek.com/) at [chatgpt.hku.hk](https://chatgpt.hku.hk) (with no restrictions or rate limits, unlike previous models like [GPT-4o](https://openai.com/index/gpt-4o-system-card/), which billed 500,000 tokens monthly). However, as of when this blog was written, the web UI does not render $\LaTeX{}$, which is a major drawback for students who are studying mathematics or related subjects.
@@ -16,7 +20,7 @@ Follow these steps:
 1. Include the following in your prompt:
 
     ```txt
-    Enclose LaTeX in $ and don't use double/triple ticks.
+    Enclose LaTeX in $ (inline math) or $$ (multi-line math). Use appropriate delimiters for your equations.
     ```
 
 2. Simply paste this code into your browser console:
