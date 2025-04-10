@@ -2,14 +2,14 @@
 Hash: SHA512
 
 Contact: mailto:eric310@connect.hku.hk
-Expires: 2025-01-20T12:00:00.000Z
+Expires: 2026-01-18T16:00:00.000Z
 Encryption: https://eric15342335.github.io/.well-known/pgp-key.txt
 Preferred-Languages: en, zh
 Canonical: https://eric15342335.github.io/.well-known/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQRvDza6l35+Cpt5WjRkelHwkrE7kgUCZvarYgAKCRBkelHwkrE7
-kpY7AP0UaEaFl8gi9gdLBsV0dEQseA0YZOMmXzLJC/HhSpntngD9GR7OeAdzTnfS
-HbWpXeOLon8djeCFhrQCx0ZKxVeo6gk=
-=QEdT
+iHUEARYKAB0WIQRvDza6l35+Cpt5WjRkelHwkrE7kgUCZ/gVQwAKCRBkelHwkrE7
+kk6uAQDb/vkvdyBtaJ/9ZxLTSVcMJVK7Ov0pIt20SOeUJAI6NwD/WRXeFvFI7rS9
+MP7wOn/SHqQZBQPYwQsnikHCUFm0RAo=
+=c9X4
 -----END PGP SIGNATURE-----
