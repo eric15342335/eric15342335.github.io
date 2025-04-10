@@ -1,0 +1,42 @@
+---
+title: 博客
+permalink: /zh-CN/blog/
+description: ""
+lang: zh-CN
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{% include head.html %}
+
+{% include analytics.html %}
+
+{% seo %}
+</head>
+<body>
+{% include navbar.html %}
+
+<header>
+  <h1>欢迎来到Eric的个人博客页面！</h1>
+</header>
+
+<main>
+  <div class="language-switch">
+    <a href="/blog/" hreflang="en">English</a>
+  </div>
+  
+  <ul class="table-of-contents">
+    {% for post in site.posts_zh-CN %}
+      <li>
+        <small class="fixed-width-font">{{ post.date | date: "%Y-%m-%d" }}</small>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>

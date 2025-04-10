@@ -8,7 +8,7 @@
 
 :root {
   /* Light Theme Variables */
-  --bg-color: #eee;
+  --bg-color: #fff;
   --text-color: #111;
   --link-color: #44f;
   --navbar-bg-color: #3b3;
@@ -339,6 +339,37 @@ article img._25_percent_width {
   margin: 0 1em 0 0;
   border-radius: 50%;
 }
+
+.language-switch {
+  position: fixed;
+  top: 4.5em;
+  right: 1.25em;
+  background-color: #f0f0f0;
+  padding-top: 0.3125em;
+  padding-right: 0.625em;
+  padding-bottom: 0.3125em;
+  padding-left: 0.625em;
+  border-radius: 0.25em;
+  z-index: 100;
+}
+
+body.dark .language-switch {
+  background-color: var(--navbar-bg-color);
+  color: var(--text-color);
+}
+
+.translate-button {
+  margin-top: 1.25em;
+  padding-top: 0.3125em;
+  padding-right: 0.625em;
+  padding-bottom: 0.3125em;
+  padding-left: 0.625em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
 
 @media (min-width: 510px) {
   nav {

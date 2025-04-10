@@ -9,6 +9,24 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+collections:
+  posts_zh-CN:
+    output: true
+    permalink: "/zh-CN/:year/:month/:day/:title/"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      lang: "en"
+  - scope:
+      path: ""
+      type: "posts_zh-CN"
+    values:
+      lang: "zh-CN"
+      layout: "post"
+
 title: Eric15342335 \| HKU AppliedAI Year 2
 
 author:
