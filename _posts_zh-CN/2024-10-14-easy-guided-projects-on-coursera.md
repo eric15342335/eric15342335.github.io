@@ -4,7 +4,7 @@ title: "轻松的Coursera Guided Projects"
 date: 2024-10-14 12:00:00 +0800
 categories: blog
 lang: zh-CN
-slug: LaTeX-in-markdown-test
+slug: easy-guided-projects-on-coursera
 ---
 
 ## 背景
