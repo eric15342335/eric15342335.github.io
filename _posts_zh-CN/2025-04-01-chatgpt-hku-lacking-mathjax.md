@@ -4,7 +4,7 @@ title: "chatgpt.hku.hk 无法渲染LaTeX的解决方案"
 date: 2025-04-01 23:45:00 +0800
 categories: blog
 lang: zh-CN
-slug:  
+slug: chatgpt-hku-lacking-mathjax
 ---
 
 ## 更新
@@ -25,11 +25,11 @@ slug:
     Enclose LaTeX in $ (inline math) or $$ (multi-line math). Use appropriate delimiters for your equations.
     ```
 
-    这句话的意思是提示模型使用标准的`$`或`$$`符号来划分公式，这样渲染起来更规范。
+    这句话的意思是提示模型使用标准的 `$` 或 `$$` 符号来划分公式，这样渲染起来更规范。
 
 2. 然后在浏览器的控制台（Console）中直接粘贴以下代码即可：
 
-    Update: I made a Chrome extension to automate this process. [Check it out here!](https://github.com/eric15342335/mathjax-injector-extension)
+    我后来直接开发了一个Chrome扩展，如果你需要经常处理公式，不妨试试：[mathjax-injector-extension](https://github.com/eric15342335/mathjax-injector-extension)
     {: .encircled-text}
 
     ```javascript
@@ -92,7 +92,3 @@ slug:
         });
     };
     ```
-
-搞定！其实，这段脚本的原理也挺简单的，就是自动引入了一下MathJax（一个网页用来实时渲染LaTeX公式的库），并且盯着网页里不断出现的新内容进行重新渲染（所以就算聊天记录往下无限延伸或者追加新消息，也能无缝地正确显示公式）。对做科研或学数学的人来说，这个技巧真的是超级方便，谁用谁知道。
-
-顺带一提，为了进一步简化上述的过程，我后来直接开发了一个Chrome扩展，如果你需要经常处理公式，不妨试试：[mathjax-injector-extension](https://github.com/eric15342335/mathjax-injector-extension)。
