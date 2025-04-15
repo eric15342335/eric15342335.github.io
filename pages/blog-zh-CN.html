@@ -31,7 +31,8 @@ lang: zh-CN
   </p>
 
   <ul class="table-of-contents">
-    {% for post in site.posts_zh-CN %}
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+    {% for post in sorted_posts %}
       <li>
         <small class="fixed-width-font">{{ post.date | date: "%Y-%m-%d" }}</small>
         <a href="{{ post.url }}">{{ post.title }}</a>
