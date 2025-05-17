@@ -7,7 +7,6 @@ Sitemap: https://eric15342335.github.io/ch19_html/sitemap.xml
 Sitemap: https://eric15342335.github.io/comp2113/sitemap.xml
 Sitemap: https://eric15342335.github.io/c-repo-template/sitemap.xml
 Sitemap: https://eric15342335.github.io/comp2396/sitemap.xml
-Sitemap: https://eric15342335.github.io/ges-linear-regression/sitemap.xml
 Sitemap: https://eric15342335.github.io/misc/sitemap.xml
 Sitemap: https://eric15342335.github.io/desn9002-education-platform/sitemap.xml
 Sitemap: https://eric15342335.github.io/WebExcel/sitemap.xml
