@@ -2,8 +2,7 @@
 
 // Constants for table element IDs
 const TABLE_IDS = {
-  IN_PROGRESS: "in-progress-table",
-  STUDIED: "studied-table",
+  COMBINED: "combined-table",
 };
 
 // Get the current year
@@ -12,7 +11,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 // Determine the current semester based on the current month
 const CURRENT_SEMESTER = (function () {
   const now = new Date();
-  const month = now.getMonth() + 1; // getMonth() returns 0-11
+  const month = now.getMonth() + 1;
 
   if (month >= 9 && month <= 12) {
     return 1; // September to December
@@ -36,10 +35,9 @@ const COURSE_PROPERTIES = {
   URL: "url",
   SEMESTER: "semester",
   YEAR: "year",
+  RELATED_ITEMS: "relatedItems",
 };
 
-// Text indicators for current and upcoming semesters
-const CURRENT_TIMEFRAME_TEXT = " (current semester)";
 const UPCOMING_TIMEFRAME_TEXT = " (upcoming semester)";
 
 /**
@@ -52,9 +50,7 @@ function fetchCourses(callback) {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-      // Request is complete
       if (xhr.status === 200) {
-        // Success
         try {
           const data = JSON.parse(xhr.responseText);
           callback(null, data);
@@ -62,7 +58,6 @@ function fetchCourses(callback) {
           callback(parseError, []);
         }
       } else {
-        // Error
         callback(new Error("Failed to fetch courses."), []);
       }
     }
@@ -79,20 +74,31 @@ function fetchCourses(callback) {
 function createCourseRow(course) {
   const row = document.createElement("tr");
 
-  // Create and configure the code cell
   const codeCell = document.createElement("td");
   codeCell.className = FIXED_WIDTH_FONT_CLASS;
   codeCell.textContent = course[COURSE_PROPERTIES.CODE];
   row.appendChild(codeCell);
 
-  // Create and configure the name cell with a link
   const nameCell = document.createElement("td");
   const link = document.createElement("a");
   link.href = course[COURSE_PROPERTIES.URL];
   link.textContent = course[COURSE_PROPERTIES.NAME];
-  link.target = "_blank"; // Open link in a new tab
+  link.target = "_blank";
   nameCell.appendChild(link);
   row.appendChild(nameCell);
+
+  const relatedItemsCell = document.createElement("td");
+  if (course[COURSE_PROPERTIES.RELATED_ITEMS]) {
+    course[COURSE_PROPERTIES.RELATED_ITEMS].forEach((item) => {
+      const itemLink = document.createElement("a");
+      itemLink.href = item.url;
+      itemLink.textContent = item.displayText;
+      itemLink.target = "_blank";
+      itemLink.style.marginRight = "10px";
+      relatedItemsCell.appendChild(itemLink);
+    });
+  }
+  row.appendChild(relatedItemsCell);
 
   return row;
 }
@@ -109,13 +115,11 @@ function computeSemesterStatus(originalYear, originalSemester) {
   let logicYear = originalYear;
   let logicSemester = originalSemester;
 
-  // If it's Semester 2, bump the logic year
   if (logicSemester === 2) {
     logicYear += 1;
   }
 
-  const isCurrent =
-    logicYear === CURRENT_YEAR && logicSemester === CURRENT_SEMESTER;
+  const isCurrent = logicYear === CURRENT_YEAR && logicSemester === CURRENT_SEMESTER;
   const isFuture =
     logicYear > CURRENT_YEAR ||
     (logicYear === CURRENT_YEAR && logicSemester > CURRENT_SEMESTER);
@@ -134,7 +138,6 @@ function displayCourses(courses) {
   const loadingSpinner = document.getElementById("loading-spinner");
   const courseTables = document.getElementById("course-tables");
 
-  // Hide loading spinner and show course tables
   if (loadingSpinner) {
     loadingSpinner.style.display = "none";
   }
@@ -142,70 +145,66 @@ function displayCourses(courses) {
     courseTables.style.display = "block";
   }
 
-  const inProgressTable = document.getElementById(TABLE_IDS.IN_PROGRESS);
-  const studiedTable = document.getElementById(TABLE_IDS.STUDIED);
+  const combinedTable = document.getElementById(TABLE_IDS.COMBINED);
 
-  let currentSemesterYearDisplayed = null;
-  let currentTargetTable = null;
+  const futureCourses = [];
+  const pastCourses = [];
 
-  // Sort courses by year and semester in ascending order (as originally stored)
-  courses.sort(function (a, b) {
+  for (let i = 0; i < courses.length; i++) {
+    const course = courses[i];
+    const originalYear = course[COURSE_PROPERTIES.YEAR];
+    const originalSemester = course[COURSE_PROPERTIES.SEMESTER];
+    const { isCurrent, isFuture } = computeSemesterStatus(
+      originalYear,
+      originalSemester,
+    );
+    if (isCurrent || isFuture) {
+      futureCourses.push(course);
+    } else {
+      pastCourses.push(course);
+    }
+  }
+
+  futureCourses.sort(function (a, b) {
     if (a[COURSE_PROPERTIES.YEAR] !== b[COURSE_PROPERTIES.YEAR]) {
       return a[COURSE_PROPERTIES.YEAR] - b[COURSE_PROPERTIES.YEAR];
     }
     return a[COURSE_PROPERTIES.SEMESTER] - b[COURSE_PROPERTIES.SEMESTER];
   });
 
-  // Iterate through each course to display it in the appropriate table
-  for (let i = 0; i < courses.length; i++) {
-    const course = courses[i];
+  pastCourses.sort(function (a, b) {
+    if (a[COURSE_PROPERTIES.YEAR] !== b[COURSE_PROPERTIES.YEAR]) {
+      return b[COURSE_PROPERTIES.YEAR] - a[COURSE_PROPERTIES.YEAR];
+    }
+    return b[COURSE_PROPERTIES.SEMESTER] - a[COURSE_PROPERTIES.SEMESTER];
+  });
 
+  const allCourses = [...futureCourses, ...pastCourses];
+
+  let currentSemesterYearDisplayed = null;
+  for (let i = 0; i < allCourses.length; i++) {
+    const course = allCourses[i];
     const originalYear = course[COURSE_PROPERTIES.YEAR];
     const originalSemester = course[COURSE_PROPERTIES.SEMESTER];
-    const { isCurrent, isFuture } = computeSemesterStatus(
-      originalYear,
-      originalSemester
-    );
+    const { isFuture } = computeSemesterStatus(originalYear, originalSemester);
+    const displayedSemesterYear = originalYear + " Semester " + originalSemester;
 
-    // This is the text we actually show the user, preserving "2024 Semester 2"
-    const displayedSemesterYear =
-      originalYear + " Semester " + originalSemester;
-
-    // Decide which table to put this course in
-    const targetTable = isCurrent || isFuture ? inProgressTable : studiedTable;
-
-    // If it's a new semester or a new table, add a semester header row
-    if (
-      displayedSemesterYear !== currentSemesterYearDisplayed ||
-      targetTable !== currentTargetTable
-    ) {
+    if (displayedSemesterYear !== currentSemesterYearDisplayed) {
       currentSemesterYearDisplayed = displayedSemesterYear;
-      currentTargetTable = targetTable;
-
       const semesterHeaderRow = document.createElement("tr");
       const semesterHeaderCell = document.createElement("td");
-      semesterHeaderCell.setAttribute("colspan", "2");
+      semesterHeaderCell.setAttribute("colspan", "3");
+      semesterHeaderCell.style.textAlign = "left";
       semesterHeaderCell.textContent = displayedSemesterYear;
 
-      // Append timeframe indicators if applicable
-      if (isCurrent) {
-        semesterHeaderCell.textContent += CURRENT_TIMEFRAME_TEXT;
-      } else if (isFuture) {
+      if (isFuture) {
         semesterHeaderCell.textContent += UPCOMING_TIMEFRAME_TEXT;
       }
-
       semesterHeaderRow.appendChild(semesterHeaderCell);
-
-      if (targetTable) {
-        targetTable.appendChild(semesterHeaderRow);
-      }
+      combinedTable.appendChild(semesterHeaderRow);
     }
-
-    // Create and append the course row to the target table
-    if (targetTable) {
-      const courseRow = createCourseRow(course);
-      targetTable.appendChild(courseRow);
-    }
+    const courseRow = createCourseRow(course);
+    combinedTable.appendChild(courseRow);
   }
 }
 
@@ -218,7 +217,6 @@ function initializeCourseDisplay() {
       displayCourses(courses);
     } else {
       console.error("Error fetching courses:", error);
-      // Optionally, display an error message to the user
       const loadingSpinner = document.getElementById("loading-spinner");
       if (loadingSpinner) {
         loadingSpinner.textContent = "Failed to load courses.";
@@ -227,5 +225,4 @@ function initializeCourseDisplay() {
   });
 }
 
-// Wait until DOM is ready, then initialize course display
 document.addEventListener("DOMContentLoaded", initializeCourseDisplay);
