@@ -256,15 +256,22 @@ nav .image-link .navbar-toggler-icon:hover {
   list-style-type: none;
   line-height: 2;
   text-align: left;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+main {
   padding-left: calc(var(--body-margin-left-right) * 2);
   padding-right: calc(var(--body-margin-left-right) * 2);
-  word-wrap: break-word;
+}
+
+section#cs-quote {
+  font-style: italic;
+  text-align: left;
 }
 
 article {
   text-align: left;
-  padding-left: calc(var(--body-margin-left-right) * 2);
-  padding-right: calc(var(--body-margin-left-right) * 2);
   margin: 0;
 }
 
