@@ -9,7 +9,7 @@ slug: Quick-setup-chat-with-GrokAI
 
 ## 前言
 
-今天这篇文章，我会教大家如何快速地免费用上Elon Musk家的Grok AI，没有任何套路，也不用担心什么付费墙之类的麻烦。
+今天这篇文章，我会教大家如何快速地免费用上Elon Musk家的Grok AI。
 
 ### 预计阅读时间：1分钟
 
@@ -25,5 +25,3 @@ slug: Quick-setup-chat-with-GrokAI
 5. 好了，白嫖了价值25美元的Grok API额度，就这么简单！
 
 搞定收工！
-
-（如果你觉得25美金额度不够玩，还可以用多个Google账号多撸几个API额度，自己开心就好，懂的都懂～）

@@ -74,10 +74,4 @@ Emmm……看起来大部分文件都跟我们想看的内容没什么关系。 
 
 ![VSCode中Copilot Tab配置的位置](/assets/images/2025-03-18-Breaking-VPL-SQL-assignment-make-vscode-like-cursor.webp){:class="_50_percent_width"}
 
-*建议把其他可选配置也折腾一下，说不定还能发现点意料之外的好东西！信我，没骗你。*
-
----
-
-再安利一个翻车史：之前我尝试用了`copilot-more`，结果被GitHub直接ban了（hhh）。现在大概仓库都被删干净了。不过你要真好奇的话，它的作用就是把GitHub Copilot的大语言模型（Large Language Models）包装成与 *OpenAI的API兼容* 的格式。使用目的嘛，说实话，一开始想用的原因就很简单：如果你是用GitHub Education学生认证，基本相当于白嫖一个免费的类似最新 *Claude 3.7 Sonnet (thinking)* API之类的模型了！
-
-**但我真的不建议你模仿我的做法。** 后来怎样了呢？简单点说，我的GitHub Copilot Pro权限就这么被暂停了。后来我去联系了GitHub Support，乖乖认错，保证再也不乱搞了，于是人家也很厚道地帮我解封了权限，就这么点事（笑）。——希望这个故事满足你的好奇心，也顺便防止你重蹈我的覆辙被GitHub给ban掉！
+*建议把其他可选配置也折腾一下，说不定还能发现点意料之外的好东西！*
