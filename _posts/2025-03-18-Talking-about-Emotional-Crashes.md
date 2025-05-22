@@ -68,8 +68,3 @@ Anyway, some random life updates about me:
 * Recently I've noticed a huge flood of information coming in from classes. I'm kinda worried there’s NO WAY I'll perfectly remember all lecture note details, especially since they might be asked in exams.  
 * Something odd I've noticed is that certain subjects stick better in my memory (like database/SQL - I find it easy to write MySQL queries). But other classes like STAT3600 Linear Statistical Analysis (this one’s quite serious), APAI3010 Computer Vision (mildly forgetful), and web development (same here, mild) seem to disappear from my memory very quickly, like within just a few days or a week. Probably because I haven't practiced those key concepts enough?
 * Oh, and seriously: taking six courses per semester? I don't really recommend it... It's a HUGE mental pressure test. Maybe it's doable if you have already mastered like half the content for at least three courses beforehand. (Quick disclaimer: Not everyone is the same! Different people handle academic stress differently, totally depends on your learning style and stamina.)
-
-## Some interesting information if you want to know about me
-
-* I'm ISTP-T. (If you've taken the MBTI test before, you'll know what this means. However, my MBTI type is not a fixed thing, and it can change over time. I think it's more about how you feel at that moment.)  
-* Zero dating experience so far (wait, why would anyone even ask this?).  
