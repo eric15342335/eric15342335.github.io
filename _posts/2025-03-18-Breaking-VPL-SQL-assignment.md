@@ -73,9 +73,3 @@ If you want to make VSCode (and GitHub Copilot) work like Cursor Tab, make sure 
 ![VSCode Copilot Tab setting location](/assets/images/2025-03-18-Breaking-VPL-SQL-assignment-make-vscode-like-cursor.webp){:class="_50_percent_width"}
 
 *I recommend trying out other options too! I can’t say for sure, but some might surprise you!*
-
----
-
-Also, I used `copilot-more` and got banned (lol). The repository should be deleted by GitHub by now. If you’re curious: it’s a tool that exposes GitHub Copilot’s (Large Language) Models as an *OpenAI-compatible* API. The reason you might want to use it (at first) is that if you have *GitHub Education status* as a student, it’s like getting free access to something equivalent to the latest *Claude 3.7 Sonnet (thinking)* API!
-
-**I don’t recommend doing this.** Though, if you’re wondering what happened after I used it, it’s simple: my GitHub Copilot Pro got suspended. I reached out to GitHub Support, asked for reinstatement, promised not to abuse the system anymore, and they kindly re-enabled it. That’s it. (I hope this satisfies your curiosity and stops you from making the same mistake I did and getting banned too!)

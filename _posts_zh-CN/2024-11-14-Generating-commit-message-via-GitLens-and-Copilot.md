@@ -15,7 +15,7 @@ slug: Generating-commit-message-via-GitLens-and-Copilot
 
 ![Figure: Already exists?](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-image1.webp)
 
-确实，Copilot本身就自带了自动生成commit信息的功能嘛。可是实际用下来发现，这个自带功能默认调用的似乎是`GPT-4o`模型（出处：trust me bro😜），目前好像也并没有提供让用户自行更改模型的选项。如果你也想选用一些更先进的模型（比如来自OpenAI的`o1`系列），可以跟着我这个指南走一遍。（如果后面官方确实有了方法，[请记得提醒一下我][website-repo-issue]！🙋）
+确实，Copilot本身就自带了自动生成commit信息的功能。可是实际用下来发现，这个自带功能默认调用的似乎是`GPT-4o`模型，目前好像也并没有提供让用户自行更改模型的选项。如果你也想选用一些更先进的模型（比如来自OpenAI的`o1`系列），可以跟着我这个指南走一遍。（如果后面官方确实有了方法，[请记得提醒一下我][website-repo-issue]！）
 
 使用步骤如下：
 
@@ -26,7 +26,7 @@ slug: Generating-commit-message-via-GitLens-and-Copilot
     ![Pre-release version of GitLens](/assets/images/2024-11-14-Generating-commit-message-via-GitLens-and-Copilot-gitlens-pre-release.webp)
     {: .encircled-text}
 
-2. 接下来，就愉快地写几行代码吧，随便做些修改。
+2. 接下来，就写几行代码，随便做些修改。
 3. 进入`Source Control`页面（快捷键`Ctrl+Shift+G`，然后再按个`G`），将鼠标移到`SOURCE CONTROL`标题右侧，点击出现的三个点的图标（`More Actions...`）。
 4. 点击"Generate Commit Messages (GitLens)"。
 
@@ -47,8 +47,6 @@ Add guide on generating commit messages with GitLens
 - Introduce a blog post explaining how to use GitLens and GitHub Copilot to automatically generate commit messages without typing.
 - Include screenshots and update CSS to enhance image display.
 - Organize image assets and update references for better structure.
-
-效果嘛，说实话，还挺到位！自动帮我梳理好了主要做了啥修改，清晰明了，一点也不拖泥带水。
 
 [github-copilot]: https://github.com/features/copilot
 [github-copilot-extension]: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
