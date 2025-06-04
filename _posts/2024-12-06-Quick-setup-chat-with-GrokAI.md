@@ -7,7 +7,7 @@ categories: blog
 
 ## Summary
 
-In this post, I will quickly teach you how to chat with Elon Musk's Grok AI with no bullshit or paywalls whatsoever.
+In this post, I will quickly teach you how to chat with Elon Musk's Grok AI.
 
 **Time to read: 1 minute.**
 
@@ -23,9 +23,3 @@ In this post, I will quickly teach you how to chat with Elon Musk's Grok AI with
 5. Profit $25 USD Grok quota!
 
 Done!
-
-(You can repeat this via multiple google accounts if you want to use more than $25 API credits for fun.)
-
-### Self promotion (you can ignore this)
-
-Chat with GPT-4o without using an VPN in Hong Kong or China: <https://2233.ai/i/ERIC310>
