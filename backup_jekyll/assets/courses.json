@@ -1,0 +1,191 @@
+[
+  {
+    "code": "APAI 1001",
+    "name": "Artificial intelligence: foundation, philosophy and ethics",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=APAI1001",
+    "semester": 1,
+    "year": 2023
+  },
+  {
+    "code": "BASC 9001",
+    "name": "Approaching Interdisciplinarity: Knowledge Beyond Disciplines",
+    "url": "https://www4.hku.hk/pubunit/drcd/files/ugdr2023-24/SocSc/BASc.pdf",
+    "semester": 1,
+    "year": 2023
+  },
+  {
+    "code": "CCST 9003",
+    "name": "Everyday Computing and the Internet",
+    "url": "https://commoncore.hku.hk/ccst9003/",
+    "semester": 1,
+    "year": 2023
+  },
+  {
+    "code": "COMP 1117",
+    "name": "Computer programming",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp1117.html",
+    "semester": 1,
+    "year": 2023
+  },
+  {
+    "code": "COMP 2121",
+    "name": "Discrete mathematics",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp2121.html",
+    "semester": 1,
+    "year": 2023
+  },
+  {
+    "code": "MATH 1013",
+    "name": "University mathematics II",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=MATH1013",
+    "semester": 1,
+    "year": 2023
+  },
+  {
+    "code": "CCGL 9059",
+    "name": "Water in a Changing World",
+    "url": "https://commoncore.hku.hk/ccgl9059/",
+    "semester": 2,
+    "year": 2023
+  },
+  {
+    "code": "COMP 2113",
+    "name": "Programming technologies",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp2113.html",
+    "semester": 2,
+    "year": 2023,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://github.com/eric15342335/comp2113-engg1340-group-project",
+        "displayText": "Project"
+      }
+    ]
+  },
+  {
+    "code": "COMP 2120",
+    "name": "Computer organization",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2023/comp2120.html",
+    "semester": 2,
+    "year": 2023
+  },
+  {
+    "code": "STAT 1016",
+    "name": "Data science 101",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT1016",
+    "semester": 2,
+    "year": 2023,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://github.com/eric15342335/stat1016",
+        "displayText": "Project"
+      }
+    ]
+  },
+  {
+    "code": "STAT 2601",
+    "name": "Probability and statistics I",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT2601",
+    "semester": 2,
+    "year": 2023
+  },
+  {
+    "code": "CCHU 9071",
+    "name": "Man Up: Masculinities in the Making",
+    "url": "https://commoncore.hku.hk/cchu9071",
+    "semester": 1,
+    "year": 2024
+  },
+  {
+    "code": "COMP 2119",
+    "name": "Introduction to data structures and algorithms",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2024/comp2119.html",
+    "semester": 1,
+    "year": 2024
+  },
+  {
+    "code": "COMP 2396",
+    "name": "Object-oriented programming and Java",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2024/comp2396.html",
+    "semester": 1,
+    "year": 2024
+  },
+  {
+    "code": "DESN 9002",
+    "name": "Sustainable leadership",
+    "url": "https://www4.hku.hk/pubunit/drcd/files/ugdr2023-24/SocSc/BASc.pdf",
+    "semester": 1,
+    "year": 2024,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://eric15342335.github.io/desn9002-education-platform/menu",
+        "displayText": "Project"
+      }
+    ]
+  },
+  {
+    "code": "MATH 2014",
+    "name": "Multivariable calculus and linear algebra",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=MATH2014",
+    "semester": 1,
+    "year": 2024
+  },
+  {
+    "code": "STAT 2602",
+    "name": "Probability and statistics II",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT2602",
+    "semester": 1,
+    "year": 2024
+  },
+  {
+    "code": "CAES 9821",
+    "name": "Professional and Technical Communication for Statistical Sciences",
+    "url": "https://caes.hku.hk/courses/ugc/core-courses/english-in-the-discipline-courses/sci/caes9821/",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "CCCH 5039",
+    "name": "Curing the Chinese: Medicine and Society in Modern China (Online)",
+    "url": "https://commoncore.hku.hk/ccch5039/",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "STAT 3600",
+    "name": "Linear statistical analysis",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3600",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "COMP 3278",
+    "name": "Introduction to database management systems",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2024/comp3278.html",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "COMP 3322",
+    "name": "Modern Technologies on World Wide Web",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2024/comp3322.html",
+    "semester": 2,
+    "year": 2024
+  },
+  {
+    "code": "APAI 3010",
+    "name": "Image processing and computer vision",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=APAI3010",
+    "semester": 2,
+    "year": 2024,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://github.com/eric15342335/realfill",
+        "displayText": "Project"
+      }
+    ]
+  }
+]
