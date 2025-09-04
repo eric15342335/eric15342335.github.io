@@ -30,7 +30,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'  # Use the latest version of Ruby
+          ruby-version: '3.4'  # Use the latest version of Ruby
 
       - name: Install dependencies
         run: |

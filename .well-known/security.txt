@@ -8,8 +8,8 @@ Preferred-Languages: en, zh
 Canonical: https://eric15342335.github.io/.well-known/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQRvDza6l35+Cpt5WjRkelHwkrE7kgUCZ/gVQwAKCRBkelHwkrE7
-kk6uAQDb/vkvdyBtaJ/9ZxLTSVcMJVK7Ov0pIt20SOeUJAI6NwD/WRXeFvFI7rS9
-MP7wOn/SHqQZBQPYwQsnikHCUFm0RAo=
-=c9X4
+iHUEARYKAB0WIQRvDza6l35+Cpt5WjRkelHwkrE7kgUCaLnH7AAKCRBkelHwkrE7
+kiaJAQC6gwruHvmyj4gVMDaPux1NTDjYAbHmEC9HsYlRYTD1nQEAhrdmmkYTR3Av
+sLoebDKmE5fX/TO8OKB87NQIUBs+HAY=
+=D0az
 -----END PGP SIGNATURE-----
