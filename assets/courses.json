@@ -187,5 +187,75 @@
         "displayText": "Project"
       }
     ]
+  },
+  {
+    "code": "COMP 3354",
+    "name": "Statistical Learning",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3354.html",
+    "semester": 1,
+    "year": 2025
+  },
+  {
+    "code": "COMP 3356",
+    "name": "Robotics",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3356.html",
+    "semester": 1,
+    "year": 2025
+  },
+  {
+    "code": "CSCI 9001",
+    "name": "Practical Chinese for Science Students",
+    "url": "https://www.clep.hku.hk/zh/coursedetail#:~:text=Practical%20Chinese%20for%20Science%20Students",
+    "semester": 1,
+    "year": 2025
+  },
+  {
+    "code": "MATH 3904",
+    "name": "Introduction to optimization",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=MATH3904",
+    "semester": 1,
+    "year": 2025
+  },
+  {
+    "code": "STAT 3612",
+    "name": "Statistical machine learning",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3612",
+    "semester": 1,
+    "year": 2025
+  },
+  {
+    "code": "APAI 4013",
+    "name": "Applied high-performance computing and parallel programming",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=APAI4013",
+    "semester": 2,
+    "year": 2025
+  },
+  {
+    "code": "COMP 3252",
+    "name": "Algorithm design and analysis",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2026/comp3252.html",
+    "semester": 2,
+    "year": 2025
+  },
+  {
+    "code": "COMP 3340",
+    "name": "Introduction to deep learning",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2026/comp3340.html",
+    "semester": 2,
+    "year": 2025
+  },
+  {
+    "code": "COMP 3520",
+    "name": "Special topics in data science",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2026/comp3520.html",
+    "semester": 2,
+    "year": 2025
+  },
+  {
+    "code": "MATH 2101",
+    "name": "Linear algebra I",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=MATH2101",
+    "semester": 2,
+    "year": 2025
   }
 ]
