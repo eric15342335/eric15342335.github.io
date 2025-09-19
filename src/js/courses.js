@@ -105,24 +105,38 @@ function createCourseRow(course) {
 
 /**
  * Determine if a given course is current/future based on internal logic.
- * For any "Year Semester 2", internally treat it as "(Year+1) Semester 2" so that
- * 2024 Semester 2 becomes 2025, 2025 Semester 2 becomes 2026, etc.
- * @param {Number} originalYear
- * @param {Number} originalSemester
+ * An academic "Year" begins with Semester 1 in the fall. Semesters 2 and 3
+ * of that academic year occur in the next calendar year.
+ * @param {Number} originalYear - The academic year of the course.
+ * @param {Number} originalSemester - The semester of the course (1, 2, or 3).
  * @returns {Object} - { isCurrent: Boolean, isFuture: Boolean }
  */
 function computeSemesterStatus(originalYear, originalSemester) {
-  let logicYear = originalYear;
-  let logicSemester = originalSemester;
-
-  if (logicSemester === 2) {
-    logicYear += 1;
+  // Determine the calendar year the course takes place in.
+  // Semesters 2 (Spring) and 3 (Summer) occur in the calendar year after the academic year starts.
+  let calendarYear = originalYear;
+  if (originalSemester === 2 || originalSemester === 3) {
+    calendarYear += 1;
   }
 
-  const isCurrent = logicYear === CURRENT_YEAR && logicSemester === CURRENT_SEMESTER;
+  const isCurrent =
+    calendarYear === CURRENT_YEAR && originalSemester === CURRENT_SEMESTER;
+
+  // To correctly compare semesters, we must account for their chronological order (2 -> 3 -> 1).
+  // We can create a comparable value for each semester.
+  const getSemesterOrderValue = (semester) => {
+    if (semester === 1) return 3; // Fall is last
+    if (semester === 2) return 1; // Spring is first
+    if (semester === 3) return 2; // Summer is second
+    return 0;
+  };
+
+  const courseOrderValue = getSemesterOrderValue(originalSemester);
+  const currentOrderValue = getSemesterOrderValue(CURRENT_SEMESTER);
+
   const isFuture =
-    logicYear > CURRENT_YEAR ||
-    (logicYear === CURRENT_YEAR && logicSemester > CURRENT_SEMESTER);
+    calendarYear > CURRENT_YEAR ||
+    (calendarYear === CURRENT_YEAR && courseOrderValue > currentOrderValue);
 
   return {
     isCurrent,
