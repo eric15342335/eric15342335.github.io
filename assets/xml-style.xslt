@@ -21,31 +21,6 @@
         <link rel="stylesheet" href="/lib/normalize.css" />
         <link rel="stylesheet" href="/src/css/style.css" />
 
-        <!-- Google Analytics -->
-        <!-- Google tag (gtag.js) -->
-        <script src="https://www.googletagmanager.com/gtag/js?id=G-V187TY0SPN">//</script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-V187TY0SPN', {
-            'cookie_flags': 'SameSite=None; Secure',
-            'cookie_domain': 'eric15342335.github.io'
-          });
-        </script>
-        <!-- End Google Analytics -->
-
-        <!-- Microsoft Clarity -->
-        <script type="text/javascript">
-          (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            t.setAttribute('fetchpriority', 'low');
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "o9poktpwjv");
-        </script>
-        <!-- End Microsoft Clarity -->
-
         <!-- GoatCounter -->
         <script data-goatcounter="https://eric310.goatcounter.com/count"
           src="/lib/count.js">//</script>
