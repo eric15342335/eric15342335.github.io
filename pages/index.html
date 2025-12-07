@@ -1,12 +1,8 @@
 ---
 title: Index
 permalink: /
-github-top-langs-dark: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=10&theme=radical&exclude_repo=comp2120,inspirematrix-buttons&hide=html,jupyter%20notebook
-github-user-stats-dark: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=radical
-leetcode-stats-dark: https://leetcard.jacoblin.cool/eric15342335?theme=radical&font=Inter
 
-github-top-langs-light: https://github-readme-stats.vercel.app/api/top-langs/?username=eric15342335&layout=compact&langs_count=10&theme=default&exclude_repo=comp2120,inspirematrix-buttons&hide=html,jupyter%20notebook
-github-user-stats-light: https://github-readme-stats.vercel.app/api?username=eric15342335&show_icons=true&theme=default
+leetcode-stats-dark: https://leetcard.jacoblin.cool/eric15342335?theme=radical&font=Inter
 leetcode-stats-light: https://leetcard.jacoblin.cool/eric15342335?theme=light&font=Inter
 
 description: ""
@@ -59,20 +55,6 @@ description: ""
   <div id="loading-spinner" class="loading-spinner"></div>
 
   <section id="user-stats" style="display: none;">
-    <a href="{{ page.github-top-langs-dark }}">
-      <picture>
-        <source srcset="{{ page.github-top-langs-dark }}" media="(prefers-color-scheme: dark)">
-        <source srcset="{{ page.github-top-langs-light }}" media="(prefers-color-scheme: light)">
-        <img src="{{ page.github-top-langs-light }}" alt="eric15342335 Most Used Languages" loading="lazy" onload="hideSpinner()">
-      </picture>
-    </a>
-    <a href="{{ page.github-user-stats-dark }}">
-      <picture>
-        <source srcset="{{ page.github-user-stats-dark }}" media="(prefers-color-scheme: dark)">
-        <source srcset="{{ page.github-user-stats-light }}" media="(prefers-color-scheme: light)">
-        <img src="{{ page.github-user-stats-light }}" alt="eric15342335 Github Statistics" loading="lazy" onload="hideSpinner()">
-      </picture>
-    </a>
     <a href="{{ page.leetcode-stats-dark }}">
       <picture>
         <source srcset="{{ page.leetcode-stats-dark }}" media="(prefers-color-scheme: dark)">
@@ -96,13 +78,13 @@ description: ""
     function hideSpinner() {
       loadedImages++;
       console.debug("Loaded images:", loadedImages);
-      if (loadedImages === 3) {
+      if (loadedImages === 1) {
         showUserStats();
       }
     }
     // fail to load some images
     setTimeout(() => {
-      if (loadedImages < 3) {
+      if (loadedImages < 1) {
         showUserStats();
       }
     }, 2000);
