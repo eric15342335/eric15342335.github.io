@@ -11,7 +11,7 @@ Note: This is a cross-post from my Kaggle competition discussion. It is private 
 
 Anyway, lets talk about our main topic: Future Data Leakage.
 
-In Electronic Health Records (abbr: EHR) datasets, we (usually) have one row per patient admission as our base prediction unit. Unfortunately (and logically), some admissions are correlated, as they could come from the same patient (obviously), or there was an public incident (disasters), pandemic outbreak, or annual events, etc.
+In Electronic Health Records (abbr: EHR) datasets, we (usually) have variable number of rows per patient admission, and one label (corresponding to that admission) as our base prediction unit. Unfortunately (and logically), some admissions are correlated, as they could come from the same patient (obviously), or there was an public incident (disasters), pandemic outbreak, or annual events, etc.
 
 We are going to talk about the *Readmission Prediction* task. Our job is given a list (time series within 1 admission) of patient vitals (E.g. blood pressure, heart rate, laboratory test results), medicine adminstrated, patient demographics (age, ethnicity, gender), etc., to predict whether the patient will be readmitted within 30 days after his hospital discharge (aka. come back within 30 days after he leaves the hospital).
 
