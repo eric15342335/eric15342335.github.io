@@ -15,10 +15,12 @@ In Electronic Health Records (abbr: EHR) datasets, we (usually) have variable nu
 
 We are going to talk about the *Readmission Prediction* task. Our job is given a list (time series within 1 admission) of patient vitals (E.g. blood pressure, heart rate, laboratory test results), medicine adminstrated, patient demographics (age, ethnicity, gender), etc., to predict whether the patient will be readmitted within 30 days after his hospital discharge (aka. come back within 30 days after he leaves the hospital).
 
-There was one particular flaw (or, a feature?) in the subset of dataset we received (the professor gave us in [HKU STAT3612](https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3612)), in which, if the patient only appear once in the dataset, then we can successfully infer that he didn't come back hospital after his only recorded admission in our database. Normally, this won't happen in real life, because:
+There was one particular flaw (or, a feature?) in the subset of dataset we received (the professor gave us in [HKU STAT3612](https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3612)), in which, if the patient only appear once in the dataset, then we can successfully infer that he didn't come back hospital after his only recorded admission in our database.
 
-1. Patient records are incomplete.
-2. Hospitals usually don't synchronize databases with each other well, there might have delays, missing data, corrupted/lost records, etc.
+This approach has two problems:
+
+1. It won't work for patient databases that are incomplete. E.g. we don't have all the admissions of a patient, or the patient moved to another hospital after his first admission.
+2. The model is biased when predicting patients with only one admission in the dataset (e.g. predict `False` for most of them). While it might work well in this particular dataset, it won't generalize well to real-life data, especially if the real-life patient admission is diverse enough. For example, under a pandemic situation, many patients might only have one admission (the first time they got infected), but they might come back again later (e.g. due to complications). In this case, a model focusing on patient vitals and demographics would be more robust (in terms of distribution shift) than a model relying on admission counts.
 
 But apparently, with a simple logic like this, we were able to boost our AUROC (Area Under Receiver Operating Characteristic curve) score from 0.5 (basically means the model is guessing randomly) to 0.617:
 
