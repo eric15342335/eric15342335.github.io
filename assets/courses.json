@@ -252,9 +252,16 @@
     "year": 2025
   },
   {
-    "code": "MATH 2101",
-    "name": "Linear algebra I",
-    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=MATH2101",
+    "code": "COMP 3234",
+    "name": "Computer and communication networks",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3234.html",
+    "semester": 2,
+    "year": 2025
+  },
+  {
+    "code": "COMP 3323",
+    "name": "Advanced Database Systems",
+    "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3323.html",
     "semester": 2,
     "year": 2025
   }
