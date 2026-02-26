@@ -1,4 +1,12 @@
 -----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User ID:	git signing key <eric310@connect.hku.hk>
+Comment: Valid from:	1/25/2024 8:39 PM
+Comment: Valid until:	7/26/2026 11:58 PM
+Comment: Type:	255-bit EdDSA
+Comment: Usage:	Signing, Encryption, Certifying User IDs
+Comment: Fingerprint:	6F0F36BA977E7E0A9B795A34647A51F092B13B92
+
+
 mDMEZbJWhxYJKwYBBAHaRw8BAQdAvtqsXaRTD29yRS1x8mDaQfarAWAu9TGpO+B9
 bE256tu0KGdpdCBzaWduaW5nIGtleSA8ZXJpYzMxMEBjb25uZWN0LmhrdS5oaz6I
 mQQTFgoAQQIbAwULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgBYhBG8PNrqXfn4K
