@@ -221,7 +221,14 @@
     "name": "Statistical machine learning",
     "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=STAT3612",
     "semester": 1,
-    "year": 2025
+    "year": 2025,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://github.com/eric15342335/STAT3612-MIMIC-IV-Readmission-Prediction-Demo",
+        "displayText": "Project"
+      }
+    ]
   },
   {
     "code": "APAI 4013",
