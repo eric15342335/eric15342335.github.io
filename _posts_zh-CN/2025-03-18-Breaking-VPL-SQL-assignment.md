@@ -42,7 +42,7 @@ ORDER BY rental_income DESC, cs.station_ID ASC;
 
 一番Google下来，我发现SQLite其实可以直接在查询过程中执行shell命令的！所以我赶紧用一下最简单的`ls`命令查看当前目录下都有些啥：
 
-```bash
+```shell
 .shell ls
 ```
 
@@ -50,7 +50,7 @@ ORDER BY rental_income DESC, cs.station_ID ASC;
 
 好了，现在文件列表看到了，那我们当然得瞅瞅每个文件的内容：
 
-```bash
+```shell
 .shell cat *
 ```
 
@@ -58,7 +58,7 @@ ORDER BY rental_income DESC, cs.station_ID ASC;
 
 Emmm……看起来大部分文件都跟我们想看的内容没什么关系。 不过我觉得，题目相关的文件估计是`.txt`或`.sql`扩展名，所以再挑明一下：
 
-```bash
+```shell
 .shell cat *.txt *.sql
 ```
 
