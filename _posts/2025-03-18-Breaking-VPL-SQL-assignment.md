@@ -40,7 +40,7 @@ But someone on Moodle pointed out that the database is actually SQLite (In case 
 
 By Googling, I learned we can execute shell commands inside an SQLite query. First, I listed the files in the current directory:
 
-```bash
+```shell
 .shell ls
 ```
 
@@ -48,7 +48,7 @@ By Googling, I learned we can execute shell commands inside an SQLite query. Fir
 
 Obviously, we need to inspect each file to see what we’ve got:
 
-```bash
+```shell
 .shell cat *
 ```
 
@@ -56,7 +56,7 @@ Obviously, we need to inspect each file to see what we’ve got:
 
 Hmm. Most of the files aren’t related to the assignment or the test cases themselves. Let’s check the `*.txt` and `*.sql` files since I strongly suspect they’re tied to this particular question:
 
-```bash
+```shell
 .shell cat *.txt *.sql
 ```
 
