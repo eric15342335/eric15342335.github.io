@@ -249,14 +249,33 @@
     "name": "Introduction to deep learning",
     "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3340.html",
     "semester": 2,
-    "year": 2025
+    "year": 2025,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://eric15342335.github.io/shallow-vs-deep-alignment/",
+        "displayText": "Project"
+      },
+      {
+        "type": "PPTX",
+        "url": "/assets/COMP3340%20Group%208%20(Shallow%20alignment).pptx",
+        "displayText": "PPTX"
+      }
+    ]
   },
   {
     "code": "COMP 3520",
     "name": "Special topics in data science",
     "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3520.html",
     "semester": 2,
-    "year": 2025
+    "year": 2025,
+    "relatedItems": [
+      {
+        "type": "Project",
+        "url": "https://github.com/eric15342335/COMP3520GP",
+        "displayText": "Project"
+      }
+    ]
   },
   {
     "code": "COMP 3234",
