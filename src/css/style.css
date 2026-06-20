@@ -339,24 +339,6 @@ article img._25_percent_width {
   border-radius: 50%;
 }
 
-.language-switch {
-  position: fixed;
-  top: 4.5em;
-  right: 1.25em;
-  background-color: #f0f0f0;
-  padding-top: 0.3125em;
-  padding-right: 0.625em;
-  padding-bottom: 0.3125em;
-  padding-left: 0.625em;
-  border-radius: 0.25em;
-  z-index: 100;
-}
-
-body.dark .language-switch {
-  background-color: var(--navbar-bg-color);
-  color: var(--text-color);
-}
-
 @media (min-width: 510px) {
   nav {
     display: flex;
@@ -384,10 +366,5 @@ body.dark .language-switch {
   nav.open ul {
     display: block;
     max-height: fit-content;
-  }
-
-  .language-switch {
-    top: unset; /* Reset top */
-    bottom: 1.25em;
   }
 }
