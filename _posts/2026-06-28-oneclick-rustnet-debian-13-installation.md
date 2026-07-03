@@ -7,9 +7,15 @@ categories: blog
 
 ## Background
 
-As of now, [RustNet](https://github.com/domcyrus/rustnet) is not available in the official Debian 13 repositories. [Manual installation is required](https://github.com/domcyrus/rustnet/blob/cfab164c93c7ef8ac757d1a7847bb7aae6bf54ff/INSTALL.md#debianubuntu-deb-packages), which downloads debian packages from GitHub releases. We can call GitHub public API to retrieve the latest release and download the debian package automatically.
+As of now, [RustNet](https://github.com/domcyrus/rustnet) is not available in the official Debian 13 repositories.
 
-Also, rustnet supports [GeoLite2 database for IP geolocation](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/). We can download the latest GeoLite2 database from *unofficial* GitHub releases and place it in `/root` directory. When you login as the root user, rustnet will automatically load the GeoLite2 database in `/root` directory. You could put the database in any of the supported paths too. (If you have an MaxMind account, you could use the tool `sudo apt install geoipupdate mmdb-bin` instead`.)
+[Manual installation is required](https://github.com/domcyrus/rustnet/blob/cfab164c93c7ef8ac757d1a7847bb7aae6bf54ff/INSTALL.md#debianubuntu-deb-packages), which downloads Debian packages from GitHub releases. We can call the GitHub public API to retrieve the latest release and download the Debian package automatically.
+
+Also, rustnet supports [GeoLite2 database for IP geolocation](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
+
+We can download the latest GeoLite2 database from *unofficial* GitHub releases and place it in the `/root` directory. When you log in as the root user, rustnet will automatically load the GeoLite2 database in the `/root` directory. You can put the database in any of the supported paths too.
+
+(If you have a MaxMind account, you could use the tool `sudo apt install geoipupdate mmdb-bin` instead.)
 
 ```sh
 root@localhost:~# rustnet -h
@@ -32,7 +38,7 @@ Options:
 
 ## Script
 
-This script assumes root user. Run `sudo su` first if you are not root.
+This script assumes the root user. Run `sudo su` first if you are not root.
 
 ```sh
 deb="/root/rustnet.deb"
