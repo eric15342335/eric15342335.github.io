@@ -243,6 +243,7 @@ Perhaps a simple [Dockerfile][dockerfile] will work, too.
 [azure]: https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account
 [btop]: https://github.com/aristocratos/btop
 [chatgpt]: https://chatgpt.com/
+[chatgpt-plus]: https://chatgpt.com/plans/plus/
 [chatgpt-pro]: https://chatgpt.com/plans/pro/
 [chatgpt-work]: https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex
 [cloudflare-managed-oauth]: https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/managed-oauth/
