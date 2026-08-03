@@ -13,13 +13,13 @@ Go to [Billing and Cost Management](https://console.aws.amazon.com/billing/home?
 
 ## Step 2
 
-![Go to Bills and click Expand All](/assets/images/2026-07-03-AWS-Lightsail-free-90days-1.png)
+![Go to Bills and click Expand All](/assets/images/2026-07-03-AWS-Lightsail-free-90days-1.webp)
 
 Go to **Bills** and click **Expand All**.
 
 ## Step 3
 
-![Lightsail resource line item showing the trial usage](/assets/images/2026-07-03-AWS-Lightsail-free-90days-2.png)
+![Lightsail resource line item showing the trial usage](/assets/images/2026-07-03-AWS-Lightsail-free-90days-2.webp)
 
 Go check the [Lightsail](https://aws.amazon.com/lightsail/) resource. The `$0.00 per Hrs from 0 to 750 for BundleUsage:2GB in Asia Pacific (Singapore)` will appear. $0 indicates your resource usage is under the new customer 90 days free benefit.
 

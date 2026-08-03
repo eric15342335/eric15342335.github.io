@@ -101,7 +101,7 @@ support.
       ChatGPT plugins do not support a static, unchanged
       `Authorization: Bearer` header.
 
-![Nginx reverse-proxy configuration](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-nginx.png)
+![Nginx reverse-proxy configuration](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-nginx.webp)
 
 `/etc/nginx/sites-available/default`:
 
@@ -131,11 +131,11 @@ server {
 
 Fill in `[server] -> api_key`:
 
-![OpenSandbox TOML configuration](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-sandbox_toml.png)
+![OpenSandbox TOML configuration](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-sandbox_toml.webp)
 
 Fill in `OPEN_SANDBOX_API_KEY` in `.bashrc` with the same value:
 
-![OpenSandbox API key configuration](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-open_sandbox_api_key.png)
+![OpenSandbox API key configuration](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-open_sandbox_api_key.webp)
 
 `source ~/.bashrc`.
 
@@ -157,31 +157,31 @@ root@OpenSandbox:~/OpenSandbox/sdks/mcp/sandbox/python# uv run opensandbox-mcp -
 
 Select `Protect and Connect -> Networking -> Tunnel`:
 
-![Cloudflare Tunnel installation](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-cloudflare_tunnels.png)
+![Cloudflare Tunnel installation](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-cloudflare_tunnels.webp)
 
 Create a tunnel.
 
-![Create a Cloudflare Tunnel](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-create_tunnel.png)
+![Create a Cloudflare Tunnel](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-create_tunnel.webp)
 
 Follow the installation instructions to install `cloudflared` on your VPS.
 
 Configure routes.
 
-![Cloudflare Tunnel routes](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-routes.png)
+![Cloudflare Tunnel routes](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-routes.webp)
 
 Configure the Published Application to point to your Nginx reverse proxy.
 
-![Published Application MCP port](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-published_application.png)
+![Published Application MCP port](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-published_application.webp)
 
 ### ChatGPT Setup
 
 First, go to [Plugins][developer-mode].
 
-![ChatGPT Plugins screen](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-plugin.png)
+![ChatGPT Plugins screen](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-plugin.webp)
 
 Then, add a new plugin.
 
-![Add a new ChatGPT plugin](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-plugin2.png)
+![Add a new ChatGPT plugin](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-plugin2.webp)
 
 Configure your plugin with the `None` authentication method, and use the long
 `openssl rand -hex 32` string you generated as the HTTP path. For example:
@@ -190,16 +190,16 @@ Configure your plugin with the `None` authentication method, and use the long
 https://opensandbox-mcp.example.com/b1b823517ddb64de407ba18f8766c493097b22d8c13622f2c994710332282c57/mcp
 ```
 
-![Create the ChatGPT plugin](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-create_plugin.png)
+![Create the ChatGPT plugin](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-create_plugin.webp)
 
 Then, enable all permissions for the AI to use the MCP server to perform
 `rm -rf` on your Dockerized sandbox.
 
-![Elevated-risk permissions](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-elevated_risk.png)
+![Elevated-risk permissions](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-elevated_risk.webp)
 
 Then, check your plugin profile. You should be able to see the plugin MCP tools.
 
-![OpenSandbox MCP tools in ChatGPT](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-plugin_mcp_tools_desc.png)
+![OpenSandbox MCP tools in ChatGPT](/assets/images/2026-08-03-how-to-enjoy-chatgpt-plus-or-pro-unlimited-chat-quota-for-agentic-coding-tasks-plugin_mcp_tools_desc.webp)
 
 ### Usage
 
