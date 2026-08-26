@@ -125,6 +125,11 @@ server {
   - Follow the [official Docker Engine installation guide][docker-installation].
 - Set up the [OpenSandbox server][opensandbox-server].
   - Run `uv sync` inside `~/OpenSandbox/server`.
+
+```bash
+root@OpenSandbox:~/OpenSandbox/server# uv run opensandbox-server init-config --example docker
+```
+
 - Set up the [OpenSandbox MCP server][opensandbox-mcp-server].
   - Run `uv sync` inside `~/OpenSandbox/sdks/mcp/sandbox/python`.
 - Configure API access keys in `.bashrc` and `.sandbox.toml`.
@@ -203,6 +208,12 @@ Then, check your plugin profile. You should be able to see the plugin MCP tools.
 
 ### Usage
 
+Simply tell ChatGPT "Use OpenSandbox". It will figure out how to best utilize it.
+
+### Maintenance
+
+If your VPS is low on disk space, you might want to add `0 10 * * * /usr/bin/docker system prune -a -f >> /var/log/docker-prune.log 2>&1` to your `crontab -e` to clean up Docker cached images.
+
 ## Why This Works
 
 Because ChatGPT Chat has a virtually unlimited quota for Plus and above users.
@@ -276,7 +287,7 @@ Perhaps a simple [Dockerfile][dockerfile] will work, too.
 [openai]: https://openai.com/
 [opensandbox]: https://github.com/opensandbox-group/OpenSandbox
 [opensandbox-mcp-server]: https://github.com/opensandbox-group/OpenSandbox/tree/main/sdks/mcp/sandbox/python
-[opensandbox-server]: https://github.com/opensandbox-group/OpenSandbox/tree/main/server
+[opensandbox-server]: https://github.com/opensandbox-group/OpenSandbox/tree/main#create-a-code-interpreter-and-execute-commandscodes
 [python]: https://www.python.org/
 [raspberry-pi]: https://www.raspberrypi.com/
 [raspberry-pi-zero-2-w]: https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/
