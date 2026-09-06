@@ -2,7 +2,8 @@
 
 // Constants for table element IDs
 const TABLE_IDS = {
-  COMBINED: "combined-table",
+  HKU: "combined-table",
+  FUDAN: "fudan-table",
 };
 
 // Get the current year
@@ -32,6 +33,8 @@ const FIXED_WIDTH_FONT_CLASS = "fixed-width-font";
 const COURSE_PROPERTIES = {
   CODE: "code",
   NAME: "name",
+  NAME_ZH: "nameZh",
+  UNIVERSITY: "university",
   URL: "url",
   SEMESTER: "semester",
   YEAR: "year",
@@ -82,7 +85,11 @@ function createCourseRow(course) {
   const nameCell = document.createElement("td");
   const link = document.createElement("a");
   link.href = course[COURSE_PROPERTIES.URL];
+  const chineseName = course[COURSE_PROPERTIES.NAME_ZH];
   link.textContent = course[COURSE_PROPERTIES.NAME];
+  if (course[COURSE_PROPERTIES.UNIVERSITY] === "fudan" && chineseName) {
+    link.textContent += " (" + chineseName + ")";
+  }
   link.target = "_blank";
   nameCell.appendChild(link);
   row.appendChild(nameCell);
@@ -159,7 +166,24 @@ function displayCourses(courses) {
     courseTables.style.display = "block";
   }
 
-  const combinedTable = document.getElementById(TABLE_IDS.COMBINED);
+  const coursesByUniversity = { hku: [], fudan: [] };
+  for (const course of courses) {
+    const university = course[COURSE_PROPERTIES.UNIVERSITY] || "hku";
+    if (coursesByUniversity[university]) {
+      coursesByUniversity[university].push(course);
+    }
+  }
+  displayUniversityCourses(coursesByUniversity.hku, TABLE_IDS.HKU);
+  displayUniversityCourses(coursesByUniversity.fudan, TABLE_IDS.FUDAN);
+}
+
+/**
+ * Render one university's courses using the shared semester ordering.
+ * @param {Array} courses - Courses belonging to this university.
+ * @param {string} tableId - Destination table ID.
+ */
+function displayUniversityCourses(courses, tableId) {
+  const combinedTable = document.getElementById(tableId);
 
   const futureCourses = [];
   const pastCourses = [];
@@ -201,7 +225,8 @@ function displayCourses(courses) {
     const originalYear = course[COURSE_PROPERTIES.YEAR];
     const originalSemester = course[COURSE_PROPERTIES.SEMESTER];
     const { isFuture } = computeSemesterStatus(originalYear, originalSemester);
-    const displayedSemesterYear = originalYear + " Semester " + originalSemester;
+    const academicYear = originalYear + "-" + String(originalYear + 1).slice(-2);
+    const displayedSemesterYear = academicYear + " Semester " + originalSemester;
 
     if (displayedSemesterYear !== currentSemesterYearDisplayed) {
       currentSemesterYearDisplayed = displayedSemesterYear;

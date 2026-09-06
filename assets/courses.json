@@ -290,5 +290,103 @@
     "url": "https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2025/comp3323.html",
     "semester": 2,
     "year": 2025
+  },
+  {
+    "code": "APAI 3799",
+    "name": "Directed studies in applied AI",
+    "url": "https://webapp.science.hku.hk/sr4/servlet/enquiry?Type=Course&course_code=APAI3799",
+    "semester": 2,
+    "year": 2026
+  },
+  {
+    "code": "COMP 3259",
+    "name": "Principles of programming languages",
+    "url": "https://ai.hku.hk/index.php/programmes/course-offered?infile=2026/comp3259.html",
+    "semester": 2,
+    "year": 2026
+  },
+  {
+    "code": "COMP 3297",
+    "name": "Software engineering",
+    "url": "https://ai.hku.hk/index.php/programmes/course-offered?infile=2026/comp3297.html",
+    "semester": 2,
+    "year": 2026
+  },
+  {
+    "code": "COMP 3358",
+    "name": "Distributed and Parallel Computing",
+    "url": "https://ai.hku.hk/index.php/programmes/course-offered?infile=2026/comp3358.html",
+    "semester": 2,
+    "year": 2026
+  },
+  {
+    "code": "COMP 3513",
+    "name": "Big Data Systems",
+    "url": "https://ai.hku.hk/index.php/programmes/course-offered?infile=2026/comp3513.html",
+    "semester": 2,
+    "year": 2026
+  },
+  {
+    "code": "CS40025",
+    "name": "Frontier Exploration and Practice of Artificial Intelligence",
+    "nameZh": "人工智能前沿探索实践",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1002003",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS30031",
+    "name": "Operating Systems",
+    "nameZh": "操作系统",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1043873",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS30055",
+    "name": "Cloud Computing and Virtualization Technology",
+    "nameZh": "云计算与虚拟化技术",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044006",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS30075",
+    "name": "Software Design",
+    "nameZh": "软件设计",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044011",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS30074",
+    "name": "Cloud Native Software Technology",
+    "nameZh": "云原生软件技术",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044010",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CSEC20005",
+    "name": "Introduction to Information Security",
+    "nameZh": "信息安全导论",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044017",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS40033",
+    "name": "Parallel Computing and Performance Engineerings",
+    "nameZh": "并行计算与性能优化",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044015",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
   }
 ]
