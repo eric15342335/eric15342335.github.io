@@ -327,10 +327,26 @@
     "year": 2026
   },
   {
-    "code": "CS40025",
-    "name": "Frontier Exploration and Practice of Artificial Intelligence",
-    "nameZh": "人工智能前沿探索实践",
-    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1002003",
+    "code": "CS40008",
+    "name": "Natural Language Processing and Large Language Models",
+    "nameZh": "自然语言处理与大语言模型",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CSEC30015",
+    "name": "Information Systems Security",
+    "nameZh": "信息系统安全",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS30074",
+    "name": "Cloud Native Software Technology",
+    "nameZh": "云原生软件技术",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044010",
     "semester": 1,
     "year": 2026,
     "university": "fudan"
@@ -340,6 +356,24 @@
     "name": "Operating Systems",
     "nameZh": "操作系统",
     "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1043873",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS40033",
+    "name": "Parallel Computing and Performance Engineerings",
+    "nameZh": "并行计算与性能优化",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044015",
+    "semester": 1,
+    "year": 2026,
+    "university": "fudan"
+  },
+  {
+    "code": "CS40025",
+    "name": "Frontier Exploration and Practice of Artificial Intelligence",
+    "nameZh": "人工智能前沿探索实践",
+    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1002003",
     "semester": 1,
     "year": 2026,
     "university": "fudan"
@@ -358,33 +392,6 @@
     "name": "Software Design",
     "nameZh": "软件设计",
     "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044011",
-    "semester": 1,
-    "year": 2026,
-    "university": "fudan"
-  },
-  {
-    "code": "CS30074",
-    "name": "Cloud Native Software Technology",
-    "nameZh": "云原生软件技术",
-    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044010",
-    "semester": 1,
-    "year": 2026,
-    "university": "fudan"
-  },
-  {
-    "code": "CSEC20005",
-    "name": "Introduction to Information Security",
-    "nameZh": "信息安全导论",
-    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044017",
-    "semester": 1,
-    "year": 2026,
-    "university": "fudan"
-  },
-  {
-    "code": "CS40033",
-    "name": "Parallel Computing and Performance Engineerings",
-    "nameZh": "并行计算与性能优化",
-    "url": "https://fdjwgl.fudan.edu.cn/student/for-all/lesson-search/teachingSyllabusInfo/1044015",
     "semester": 1,
     "year": 2026,
     "university": "fudan"
