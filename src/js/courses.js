@@ -83,14 +83,17 @@ function createCourseRow(course) {
   row.appendChild(codeCell);
 
   const nameCell = document.createElement("td");
-  const link = document.createElement("a");
-  link.href = course[COURSE_PROPERTIES.URL];
+  const courseUrl = course[COURSE_PROPERTIES.URL];
+  const link = document.createElement(courseUrl ? "a" : "span");
+  if (courseUrl) {
+    link.href = courseUrl;
+    link.target = "_blank";
+  }
   const chineseName = course[COURSE_PROPERTIES.NAME_ZH];
   link.textContent = course[COURSE_PROPERTIES.NAME];
   if (course[COURSE_PROPERTIES.UNIVERSITY] === "fudan" && chineseName) {
     link.textContent += " (" + chineseName + ")";
   }
-  link.target = "_blank";
   nameCell.appendChild(link);
   row.appendChild(nameCell);
 
