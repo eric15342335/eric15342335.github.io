@@ -16,7 +16,9 @@ defaults:
     values:
       lang: "en"
 
-title: Eric15342335 \| HKU AppliedAI Year 3
+title: Cheng Ho Ming, Eric
+description: >-
+  HKU BASc(AppliedAI) undergraduate with a second major in Computer Science.
 
 author:
   name: Cheng Ho Ming, Eric
@@ -24,7 +26,7 @@ author:
   url: https://eric15342335.github.io/
 
 social:
-  name: eric15342335
+  name: Cheng Ho Ming, Eric
   links:
     - https://github.com/eric15342335
     - https://www.linkedin.com/in/eric15342335/
