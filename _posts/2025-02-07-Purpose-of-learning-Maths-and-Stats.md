@@ -18,3 +18,6 @@ This post is inspired by [ThisIsXXZ](https://thisisxxz.com/) posts:
   * Side note: He mentioned the new way of taking notes which I found pretty inspirational.
 * [Meanings of Life](https://thisisxxz.com/2024/01/19/ANTH2350/)
   * Literally, meaning of life. I have fallen into the "meaning of life" the society fabricated many times - and is not really what I want.
+
+Note: I revised this post in September 2026. The original version included a long attempt to answer the questions above. I no longer think that answer reflects how I understand mathematics, statistics, or learning, so I decided to leave the questions here and remove the old answer.
+{: .encircled-text}
