@@ -9,19 +9,19 @@ categories: blog
 
 ## Preliminary
 
-When it comes to emotional crashes, some of us might have experienced them before, while others maybe not yet. Some people might have had one without even realising it, while others could be worrying they're about to have one anytime soon. Emotional crashes are a hot topic - especially for us university students - mainly because they can hit us pretty hard. I think it's important that we talk openly about what an emotional crash is, how to spot one coming, and how to handle it. I hope this blog post helps you understand emotional crashes better.
+When it comes to emotional crashes, some of us might have experienced them before, while others maybe not yet. Some people might have had one without even realising it, while others could be worrying they're about to have one anytime soon. Emotional crashes are a hot topic - especially for us university students - mainly because they can hit us pretty hard. In this post, I use "emotional crash" informally to describe my own experience. I hope this blog post helps you understand what I mean by emotional crashes better.
 
 ## What is an Emotional Crash
 
-Usually, when people haven't been productive or haven't studied for several days (or even a week or two), they might call this an "emotional crash." Personally, I think those situations happen mostly because we don't stick to a regular schedule or because stuff around us got pretty distracting. Not saying that doesn't count as crasing, but when I say "emotional crash," I'm talking about that sudden moment when a huge wave of negative feelings hits you out of nowhere. It makes you feel totally uncomfortable, wanting to stop everything you're doing right at that moment, and making it almost impossible to be productive.
+Usually, when I haven't been productive or haven't studied for several days (or even a week or two), I wouldn't necessarily call this an "emotional crash." Personally, those situations happen mostly because I don't stick to a regular schedule or because stuff around me got pretty distracting. When I say "emotional crash," I'm talking about that sudden moment when a huge wave of negative feelings hits me out of nowhere. It makes me feel totally uncomfortable, wanting to stop everything I'm doing right at that moment, and making it almost impossible to be productive.
 
 ## When Will You Crash
 
-Honestly speaking, we can't really predict exactly when we'll crash. But sometimes having a long, non-stop lecture (like those 4-hour ones...) might push you closer to a meltdown. Also, not getting enough sleep definitely doesn't help either.
+Honestly speaking, I can't really predict exactly when I'll crash. But sometimes having a long, non-stop lecture (like those 4-hour ones...) might push me closer to a meltdown. Also, not getting enough sleep definitely doesn't help either.
 
 ## Am I Really Crashing?
 
-Crashes are pretty subjective; different people feel them differently. But usually, when you're crashing, you'll focus more on short-term distractions rather than things that reward you later on. You might just keep scrolling social media (doomscroll alert!) or avoid all productive tasks. It's sort of a cycle - doomscrolling can cause crashes, and crashes can lead to doomscrolling.
+Crashes are pretty subjective; different people feel them differently. But usually, when I'm crashing, I'll focus more on short-term distractions rather than things that reward me later on. I might just keep scrolling social media (doomscroll alert!) or avoid all productive tasks. It's sort of a cycle - doomscrolling can make a crash worse, and a crash can lead to more doomscrolling.
 
 ## Some Important Facts About Emotional Crashes
 
